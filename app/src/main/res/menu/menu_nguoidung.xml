@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:id="@+id/thongtinkhach"
+            android:title="@string/nav_thongtin"
+            >
+        </item>
+        <item android:id="@+id/tinhtrang"
+            android:title="@string/nav_tinhtrang"
+            >
+        </item>
+        <item android:id="@+id/giaynam"
+            android:title="@string/nav_giaynam"
+            >
+        </item>
+        <item android:id="@+id/giaynu"
+            android:title="@string/nav_giaynu"
+            >
+        </item>
+        <item android:id="@+id/giaykid"
+            android:title="@string/nav_giaykid"
+            >
+        </item>
+        <item android:id="@+id/logout"
+            android:title="@string/nav_logout"
+            >
+        </item>
+</menu>

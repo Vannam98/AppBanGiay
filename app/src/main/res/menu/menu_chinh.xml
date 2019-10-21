@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sign_in"
+        android:title="@string/txt_login"
+        >
+    </item>
+    <item
+        android:id="@+id/registration"
+        android:title="@string/txt_register"
+        >
+    </item>
+</menu>

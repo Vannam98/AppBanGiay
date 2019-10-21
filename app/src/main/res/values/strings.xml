@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">AppBanGiay</string>
+    <string name="txt_register">Đăng Ký</string>
+    <string name="txt_login">Đăng Nhập </string>
+    <string name="txt_name"> Tên </string>
+    <string name="txt_fullname"> Họ và Tên </string>
+    <string name="txt_date">Ngày Sinh </string>
+    <string name="txt_email">Email  </string>
+    <string name="txt_phone">Phone  </string>
+    <string name="txt_user"> Tên Đăng Nhập  </string>
+    <string name="txt_password"> Mật khẩu  </string>
+    <string name="txt_confirmpass"> Nhập lại mật khẩu </string>
+    <string name="txt_gioitinh"> Giới Tính  </string>
+    <string name="txt_nam"> Nam  </string>
+    <string name="txt_nu"> Nu  </string>
+    <string name="btn_link_to_register"> Bạn chưa có tài khoản đăng kí ngay !!  </string>
+    <string name="btn_login"> Login  </string>
+    <string name="sign_up_button"> Đăng Ký  </string>
+    <string name="have_account"> Có tài khoản , đăng nhập ngay  </string>
+    <string name="open">Nav </string>
+    <string name="close">Nav </string>
+
+    <string name="nav_thongtin">Thông Tin khách hàng</string>
+    <string name="nav_tinhtrang">Tình trạn đơn hàng</string>
+    <string name="nav_giaynam">Giầy Nam</string>
+    <string name="nav_giaynu">Giầy Nữ</string>
+    <string name="nav_giaykid">Giầy trẻ em</string>
+    <string name="nav_logout">Đăng Xuất</string>
+
+    <string name="txt_shoename">Tên Giày</string>
+    <string name="txt_shoedescription">Hãng</string>
+    <string name="txt_shoesize">Size</string>
+    <string name="txt_shoesoluong">Số Lượng</string>
+    <string name="txt_shoeprice">Giá Giày</string>
+    <string name="btn_choose">Chọn</string>
+    <string name="btn_upload">Tải lên</string>
+
+</resources>
