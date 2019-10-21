@@ -19,14 +19,12 @@
     <string name="have_account"> Có tài khoản , đăng nhập ngay  </string>
     <string name="open">Nav </string>
     <string name="close">Nav </string>
-
     <string name="nav_thongtin">Thông Tin khách hàng</string>
     <string name="nav_tinhtrang">Tình trạn đơn hàng</string>
     <string name="nav_giaynam">Giầy Nam</string>
     <string name="nav_giaynu">Giầy Nữ</string>
     <string name="nav_giaykid">Giầy trẻ em</string>
     <string name="nav_logout">Đăng Xuất</string>
-
     <string name="txt_shoename">Tên Giày</string>
     <string name="txt_shoedescription">Hãng</string>
     <string name="txt_shoesize">Size</string>
@@ -34,5 +32,5 @@
     <string name="txt_shoeprice">Giá Giày</string>
     <string name="btn_choose">Chọn</string>
     <string name="btn_upload">Tải lên</string>
-
+    //
 </resources>
