@@ -1,6 +1,250 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="fill_vertical"
+            android:orientation="vertical">
+            //madonhang
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_madonhang_vanchuyennv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_Madonhang_dsvanchuyen"
+                    android:textColor="@color/txt_black" />
+
+                <TextView
+                    android:id="@+id/txt_madonhang_vanchuyennv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/txt_black" />
+            </LinearLayout>
+            //tensanpham
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_tensanpham_vanchuyennv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_tensanpham__dsvanchuyen"
+                    android:textColor="@color/txt_black" />
+
+
+                <TextView
+                    android:id="@+id/txt_tensanpham_vanchuyennv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_margin"
+                    android:textColor="@color/txt_black" />
+
+            </LinearLayout>
+            // soluong
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_soluong_vanchuyennv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_soluong_dsvanchuyen"
+                    android:textColor="@color/txt_black" />
+                <TextView
+                    android:id="@+id/txt_soluong_vanchuyennv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/txt_black" />
+
+            </LinearLayout>
+            // size
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_size_vanchuyennv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_size_dsvanchuyen"
+                    android:textColor="@color/txt_black" />
+                <TextView
+                    android:id="@+id/txt_size_vanchuyennv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/txt_black" />
+
+            </LinearLayout>
+            //mau
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_mau_vanchuyennv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_mau_dsvanchuyen"
+                    android:textColor="@color/txt_black" />
+                <TextView
+                    android:id="@+id/txt_mau_vanchuyennv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/txt_black" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="fill_vertical"
+            android:orientation="vertical">
+            //tinh trang
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_tinhtrang_vanchuyennv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_tinhtrang_dsvanchuyen"
+                    android:textColor="@color/txt_black" />
+                <TextView
+                    android:id="@+id/txt_tinhtrang_vanchuyennv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/txt_black" />
+            </LinearLayout>
+            //tenkhachhang
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txt_tenkhachhang_vanchuyennv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_tenkhachhang_dsvanchuyen"
+                    android:textColor="@color/txt_black" />
+                <TextView
+                    android:id="@+id/txt_tenkhachhang_vanchuyennv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_margin"
+                    android:textColor="@color/txt_black" />
+
+            </LinearLayout>
+            //sodienthoai
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_sodienthoai_vanchuyennv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_sodienthoai_dsvanchuyen"
+                    android:textColor="@color/txt_black" />
+
+                <TextView
+                    android:id="@+id/txt_sodienthoai_vanchuyennv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/txt_black" />
+
+            </LinearLayout>
+
+            //diachi
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txt_diachikhachhang_vanchuyennv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_diachikhachhang_dsvanchuyen"
+                    android:textColor="@color/txt_black" />
+                <TextView
+                    android:id="@+id/txt_diachikhachhang_vanchuyennv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_margin"
+                    android:textColor="@color/txt_black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_xacnhan_dsvanchuyen"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/buttonlist"
+            android:layout_margin="@dimen/layout_margin"
+            android:background="@drawable/vienbutton"
+            android:text="@string/btn_xacnhan_dsvanchuyen"
+            android:textColor="@color/txt_black" />
+        <Button
+            android:id="@+id/btn_Huy_dsvanchuyen_lsv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/buttonlist"
+            android:layout_margin="@dimen/layout_margin"
+            android:background="@drawable/vienbutton"
+            android:text="@string/btn_huy_dsvanchuyen"
+            android:textColor="@color/txt_black" />
+
+
+    </LinearLayout>
 
 </LinearLayout>

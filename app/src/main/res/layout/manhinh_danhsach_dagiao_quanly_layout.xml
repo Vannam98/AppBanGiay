@@ -3,4 +3,83 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:background="@color/color_backroud"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/text_size"
+            android:text="@string/txt_danhsachnguoigiao_dsdonhangdagiaoqly"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:background="@color/color_backroud"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin"
+            android:text="@string/txt_timkiem_dsdonhangdagiaoqly"
+            android:textColor="@color/txt_black" />
+
+        <SearchView
+            android:id="@+id/sv_Dsdonhangdagiaoqly"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:background="@drawable/vien"
+            android:layout_margin="@dimen/layout_margin" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6">
+
+        <ListView
+            android:id="@+id/lv_Dsdagiaoqly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/color_backroud">
+        <Button
+            android:id="@+id/btn_trolai_dsvanchuyenqly"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button"
+            android:layout_margin="@dimen/layout_margin"
+            android:background="@drawable/vienbutton"
+            android:text="@string/btn_trolai_dsdonhangdagiaoqly"
+            android:textColor="@color/txt_black" />
+        <Button
+            android:id="@+id/btn_Huy_dsvanchuyenqly"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button"
+            android:layout_margin="@dimen/layout_margin"
+            android:background="@drawable/vienbutton"
+            android:text="@string/btn_huy_dsdonhangdagiaoqly"
+            android:textColor="@color/txt_black" />
+
+    </LinearLayout>
 </LinearLayout>

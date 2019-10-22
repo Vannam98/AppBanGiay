@@ -18,13 +18,14 @@
         <activity android:name=".Manager.DetailActivity" ></activity>
         <activity android:name=".Manager.MainActivity" ></activity>
         <activity android:name=".User.NavMainActivity">
+
+        </activity>
+        <activity android:name=".User.RegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".User.RegisterActivity">
         </activity>
         <activity android:name=".User.LoginActivity" ></activity>
         <activity android:name=".User.MemberActivity"></activity>

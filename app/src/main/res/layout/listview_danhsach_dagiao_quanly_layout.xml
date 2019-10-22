@@ -1,6 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="fill_vertical"
+            android:orientation="vertical">
+            /masanpham
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txt_madonhang_dsdagiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_Madonhang_dsdonhangdagiaoqly"
+                    android:textColor="@color/txt_black" />
+                <TextView
+                    android:id="@+id/txt_madonhang_dsdagiao2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:textColor="@color/txt_black" />
+            </LinearLayout>
+            //tensanpham
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txt_tensanpham_dsdagiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_tensanpham_dsdonhangdagiaoqly"
+                    android:textColor="@color/txt_black" />
+                <TextView
+                    android:id="@+id/txt_tensanpham_dsdagiao2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:textColor="@color/txt_black" />
+            </LinearLayout>
+
+            //soluong
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txt_soluong_dsdagiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_soluong_dsdonhangdagiaoqly"
+                    android:textColor="@color/txt_black" />
+                <TextView
+                    android:id="@+id/txt_soluong_dsdagiao2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:textColor="@color/txt_black" />
+            </LinearLayout>
+            //tenkhachhang
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txt_tenkhachhang_dsdagiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_tenkhachhang_dsdonhangdagiaoqly"
+                    android:textColor="@color/txt_black" />
+                <TextView
+                    android:id="@+id/txt_tenkhachhang_dsdagiao2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:textColor="@color/txt_black" />
+            </LinearLayout>
+            //sdt
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_sodienthoaikhachhang_dsdagiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_sodienthoaikhachhang_dsdonhangdagiaoqly"
+                    android:textColor="@color/txt_black" />
+                <TextView
+                    android:id="@+id/txt_sodienthoaikhachhang_dsdagiao2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:textColor="@color/txt_black" />
+            </LinearLayout>
+            //diachi
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txt_diachi_dsdagiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_diachi_dsdonhangdagiaoqly"
+                    android:textColor="@color/txt_black" />
+                <TextView
+                    android:id="@+id/txt_diachi_dsdagiao2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:textColor="@color/txt_black" />
+            </LinearLayout>
+            //tongtien
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txt_tongtien_dsdagiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/btn_tongtien_dsdonhangdagiaoqly"
+                    android:textColor="@color/txt_black" />
+                <TextView
+                    android:id="@+id/txt_tongtien_dsdagiao2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:textColor="@color/txt_black" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin_thongtin"
+                    android:text="@string/btn_tinhtrang_dsdonhangdagiao"
+                    android:textColor="@color/txt_black" />
+
+                <TextView
+                    android:id="@+id/tinhtrang_dsdagiaoqly_lsv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin_thongtin"
+                    android:textColor="@color/txt_black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 
 </LinearLayout>
+

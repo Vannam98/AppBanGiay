@@ -17,6 +17,12 @@
 
     <color name="chk_color">#59E20E</color>
     <color name="txt_color">#000000</color>
+    <!-- Của long -->
+    <color name="color_button">#2196f3</color>
+    <color name="color_backroud">#d5eafb</color>
+    <color name="txt_black">#000</color>
+    <color name="color_item_xac_nhan">#99000000</color>
+    <!-- Hết Của long -->
 
 
 </resources>
