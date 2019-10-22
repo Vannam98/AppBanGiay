@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_ID"
+                android:textColor="@color/txt_color"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:id="@+id/txt_ID"
+                >
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/txt_color"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
+                android:id="@+id/txt_id"
+                >
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_maNV"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_maNV"
+                >
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_MNV"
+                >
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_tenNV"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_tenNV">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_TNV">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_ngaySinh"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_ngaySinh"
+                >
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_NS"
+                >
+
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_soDTNV"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_soDTNV">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_SDTNV">
+
+            </TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_diaChiNV"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_diaChiNV">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_DCNV">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_email"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_email">
+
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_E">
+
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_chucVu"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_chucVu">
+
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_CV">
+
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/img_hinhAnh"
+            android:layout_gravity="right">
+
+
+        </ImageView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_chinhSua"
+            android:id="@+id/btn_chinhSua"
+            android:minWidth="@dimen/min_Width"
+            android:minHeight="@dimen/min_Height"
+            android:paddingLeft="@dimen/padding_Left_10dp"
+            android:paddingRight="@dimen/padding_Right_10dp"
+            android:paddingTop="@dimen/padding_Top_10dp"
+            android:paddingBottom="@dimen/padding_Bottom_10dp"
+            android:background="@drawable/vienbutton"
+            android:layout_marginTop="@dimen/layout_margin_Top_20dp"
+            android:layout_gravity="right">
+        </Button>
+    </LinearLayout>
+</LinearLayout>
