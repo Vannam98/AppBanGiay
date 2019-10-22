@@ -12,11 +12,12 @@
     <color name="input_login_hint">#999999</color>
     <color name="btn_login">#26ae90</color>
     <color name="btn_login_bg">#eceef1</color>
-
-
-
     <color name="chk_color">#59E20E</color>
     <color name="txt_color">#000000</color>
 
+    //Màu của tài
+    <color name="diveder_color">#f000</color>
+    <color name="bg_item_dhxn">#99000000</color>
+    <color name="bg_item_dhxn1">#2196f3</color>
 
 </resources>

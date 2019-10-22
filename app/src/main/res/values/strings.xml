@@ -34,5 +34,74 @@
     <string name="txt_shoeprice">Giá Giày</string>
     <string name="btn_choose">Chọn</string>
     <string name="btn_upload">Tải lên</string>
+    //
 
+    //string của tài
+    <string name="txt_DSDH">Danh sách đơn hàng</string>
+    <string name="txt_DSDHXN">Danh sác xác nhận(NV)</string>
+    <string name="txt_DSHuy">Danh sách đã hủy(NV)</string>
+    <string name="txt_DSQLNV">Quản lý nhân viên</string>
+    <string name="txt_taoTKNV">Tạo tài khoản nhân viên</string>
+    <string name="txt_DSDXN_QL">Danh sách đã xác nhận(QL)</string>
+
+    <string name="txt_ID">ID:</string>
+    <string name="txt_MaSP">Mã Sản Phẩm:</string>
+    <string name="txt_TenSP">Tên Sản Phẩm:</string>
+    <string name="txt_SoLuong">Số lượng:</string>
+    <string name="txt_Size">Size:</string>
+    <string name="txt_TongTien">Tổng Tiền:</string>
+
+    <string name="txt_maDH">Mã đơn hàng:</string>
+    <string name="txt_tenKH">Tên khách hàng:</string>
+    <string name="txt_soDTKH">Số ĐT khách hàng:</string>
+    <string name="txt_diaChiKH">Địa chỉ khách hàng:</string>
+
+    <string name="txt_tinhTrang">Tình trạng:</string>
+    <string name="txt_liDoHuy">Lí do hủy:</string>
+
+    <string name="txt_maNV">Mã nhân viên:</string>
+    <string name="txt_tenNV">Tên nhân viên:</string>
+    <string name="txt_soDTNV">SĐT nhân viên:</string>
+    <string name="txt_diaChiNV">Địa chỉ nhân viên:</string>
+    <string name="txt_diaChi">Địa chỉ:</string>
+    <string name="txt_chucVu">Chức vụ:</string>
+    <string name="txt_ngaySinh">Ngày sinh</string>
+
+    <string name="txt_passWord">Password</string>
+
+    <string name="txt_timKiem">Tìm kiếm</string>
+
+    <string name="btn_ThanhToan">Thanh Toán</string>
+    <string name="btn_Thoat">Thoát</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_TroVe">Trở về</string>
+    <string name="btn_XacNhan">Xác nhận</string>
+    <string name="btn_Huy">Hủy</string>
+    <string name="btn_chinhSua">Chỉnh sửa</string>
+    <string name="btn_Tao">Tạo</string>
+    <string name="btn_taoTK">Tạo tài khoản</string>
+
+    <string name="edt_tenNV">nhập tên nhân viên</string>
+    <string name="edt_soDT">nhập số điện thoại</string>
+    <string name="edt_email">nhập email</string>
+    <string name="edt_diachi">Nhập địa chỉ</string>
+    <string name="edt_password">nhập mật khẩu</string>
+    <string name="edt_ngaySinh">Nhâp ngày sinh</string>
+
+    <array name="spn_size">
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+    </array>
+
+    <string name="hint_lido">Nhập lí do hủy đơn hàng....</string>
+    //
 </resources>

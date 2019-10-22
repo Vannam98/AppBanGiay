@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/background_inside">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_DSQLNV"
+            android:textSize="@dimen/text_size"
+            android:id="@+id/txt_QLNV"
+            android:textColor="@color/txt_color">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@color/background_inside">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/diveder_color"
+            android:dividerHeight="@dimen/diveder_Height"
+            android:id="@+id/list_QLNV">
+
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/background_inside">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_taoTK"
+            android:id="@+id/btn_taoTK"
+            android:background="@drawable/vienbutton"
+            android:layout_marginRight="@dimen/layout_margin_Right_70dp"
+            >
+
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_Huy"
+            android:background="@drawable/vienbutton"
+            android:id="@+id/btn_Huy">
+
+        </Button>
+    </LinearLayout>
+</LinearLayout>
