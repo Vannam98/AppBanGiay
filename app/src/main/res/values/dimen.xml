@@ -30,4 +30,24 @@
     <dimen name="layout_margin_10dp">10dp</dimen>
     <dimen name="layout_margin_40dp">40dp</dimen>
 
+    //dimen của tài
+    <dimen name="layout_margin_Bottom">24dp</dimen>
+    <dimen name="layout_margin_Bottom_10dp">10dp</dimen>
+
+    <dimen name="diveder_Height">1dp</dimen>
+
+    <dimen name="padding_Left_10dp">10dp</dimen>
+    <dimen name="padding_Left_20dp">20dp</dimen>
+
+    <dimen name="padding_Right_10dp">10dp</dimen>
+    <dimen name="padding_Right_20dp">20dp</dimen>
+
+    <dimen name="padding_Top_10dp">10dp</dimen>
+
+    <dimen name="padding_Bottom_10dp">10dp</dimen>
+
+    <dimen name="min_Height">0dp</dimen>
+    <dimen name="min_Width">0dp</dimen>
+    //
+
 </resources>

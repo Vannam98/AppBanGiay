@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/background_inside">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_taoTKNV"
+            android:id="@+id/txt_taoTKNV"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/txt_color">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal"
+        android:background="@color/background_inside">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher_round"
+                android:layout_marginTop="@dimen/layout_margin_Top_20dp"
+                android:layout_marginLeft="@dimen/layout_margin_Left_20dp">
+
+            </ImageView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_chinhSua"
+                android:id="@+id/btn_chinhSua"
+                android:layout_marginTop="@dimen/layout_margin_Top_20dp"
+                android:layout_marginLeft="@dimen/layout_margin_Left_20dp"
+                android:background="@drawable/vienbutton">
+
+            </Button>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_tenNV"
+                android:id="@+id/txt_tenNV">
+
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vien"
+                android:hint="@string/edt_tenNV"
+                android:id="@+id/edt_tenNV"
+                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
+
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_ngaySinh"
+                android:id="@+id/txt_ngaySinh"
+                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
+            </TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vien"
+                android:hint="@string/edt_ngaySinh"
+                android:id="@+id/edt_ngaySinh"
+                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
+
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_soDTNV"
+                android:id="@+id/txt_SDTNV"
+                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vien"
+                android:hint="@string/edt_soDT"
+                android:id="@+id/edt_soDT"
+                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
+
+            </EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_email"
+                android:id="@+id/txt_email"
+                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vien"
+                android:hint="@string/edt_email"
+                android:id="@+id/edt_email"
+                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
+
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_diaChiNV"
+                android:id="@+id/txt_diaChiNV"
+                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vien"
+                android:hint="@string/edt_diachi"
+                android:id="@+id/edt_diaChi"
+                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
+
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_passWord"
+                android:id="@+id/txt_passWord"
+                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vien"
+                android:hint="@string/edt_password"
+                android:id="@+id/edt_password"
+                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
+
+            </EditText>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/background_inside">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_Tao"
+            android:text="@string/btn_Tao"
+            android:layout_marginRight="@dimen/layout_margin_Right_70dp"
+            android:background="@drawable/vienbutton"
+            >
+
+
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_Huy"
+            android:text="@string/btn_Huy"
+            android:background="@drawable/vienbutton"
+            >
+
+        </Button>
+
+    </LinearLayout>
+</LinearLayout>

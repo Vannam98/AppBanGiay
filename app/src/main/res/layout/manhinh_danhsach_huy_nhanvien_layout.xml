@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/background_inside">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_DSHuy"
+            android:id="@+id/txt_DSHuy"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/txt_color">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:background="@color/background_inside">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_timKiem"
+            android:id="@+id/txt_timKiem"
+            android:gravity="center_vertical"
+            android:textColor="@color/txt_color">
+
+        </TextView>
+        <SearchView
+            android:id="@+id/sv_Dsvanchuyen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/vien"
+            android:layout_margin="@dimen/layout_margin_10dp"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@color/background_inside"
+        >
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/diveder_color"
+            android:dividerHeight="@dimen/diveder_Height"
+            android:id="@+id/list_DSHuy">
+
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/background_inside">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_OK"
+            android:id="@+id/btn_OK"
+            android:background="@drawable/vienbutton"
+            android:layout_marginRight="@dimen/layout_margin_Right_70dp">
+
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_Thoat"
+            android:id="@+id/btn_Thoat"
+            android:background="@drawable/vienbutton"
+            >
+
+        </Button>
+    </LinearLayout>
+</LinearLayout>

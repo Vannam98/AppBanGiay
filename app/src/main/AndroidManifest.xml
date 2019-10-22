@@ -10,23 +10,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Manager.MangerShoe">
-
-        </activity>
-        <activity android:name=".Manager.UploadImage">
-        </activity>
+        <activity android:name=".Manager.MangerShoe"></activity>
+        <activity android:name=".Manager.UploadImage"></activity>
         <activity android:name=".Manager.DetailActivity" ></activity>
         <activity android:name=".Manager.MainActivity" ></activity>
-        <activity android:name=".User.NavMainActivity">
+        <activity android:name=".User.NavMainActivity"></activity>
+        <activity android:name=".User.RegisterActivity"></activity>
+        <activity android:name=".User.LoginActivity" ></activity>
+        <activity android:name=".User.MemberActivity"></activity>
+        <activity android:name=".Employee.DanhSachDonHangActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".User.RegisterActivity">
+        <activity android:name=".Employee.DanhSachXacNhanDonHangActivity"></activity>
+        <activity android:name=".Employee.DanhSachHuyDonHangActivity"></activity>
+        <activity android:name=".Manager.DanhSachTaoNhanVienActivity">
+
         </activity>
-        <activity android:name=".User.LoginActivity" ></activity>
-        <activity android:name=".User.MemberActivity"></activity>
+        <activity android:name=".Manager.DanhSachQuanLyNhanVienActivity"></activity>
     </application>
 </manifest>
