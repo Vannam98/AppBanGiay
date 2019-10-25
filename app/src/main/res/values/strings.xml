@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name">AppBanGiay</string>
     <string name="txt_register">Đăng Ký</string>
     <string name="txt_login">Đăng Nhập </string>
     <string name="txt_name"> Tên </string>
@@ -33,10 +34,44 @@
     <string name="txt_shoeprice">Giá Giày</string>
     <string name="btn_choose">Chọn</string>
     <string name="btn_upload">Tải lên</string>
+    //
+
+    //string của tài
+    <string name="txt_DSDH">Danh sách đơn hàng</string>
+    <string name="txt_DSDHXN">Danh sác xác nhận(NV)</string>
+    <string name="txt_DSHuy">Danh sách đã hủy(NV)</string>
+    <string name="txt_DSQLNV">Quản lý nhân viên</string>
+    <string name="txt_taoTKNV">Tạo tài khoản nhân viên</string>
+    <string name="txt_DSDXN_QL">Danh sách đã xác nhận(QL)</string>
+
+    <string name="txt_ID">ID:</string>
+    <string name="txt_MaSP">Mã Sản Phẩm:</string>
+    <string name="txt_TenSP">Tên Sản Phẩm:</string>
+    <string name="txt_SoLuong">Số lượng:</string>
+    <string name="txt_Size">Size:</string>
+    <string name="txt_TongTien">Tổng Tiền:</string>
+
+    <string name="txt_maDH">Mã đơn hàng:</string>
+    <string name="txt_tenKH">Tên khách hàng:</string>
+    <string name="txt_soDTKH">Số ĐT khách hàng:</string>
+    <string name="txt_diaChiKH">Địa chỉ khách hàng:</string>
+
+    <string name="txt_tinhTrang">Tình trạng:</string>
+    <string name="txt_liDoHuy">Lí do hủy:</string>
+
+    <string name="txt_maNV">Mã nhân viên:</string>
+    <string name="txt_tenNV">Tên nhân viên:</string>
+    <string name="txt_soDTNV">SĐT nhân viên:</string>
+    <string name="txt_diaChiNV">Địa chỉ nhân viên:</string>
+    <string name="txt_diaChi">Địa chỉ:</string>
+    <string name="txt_chucVu">Chức vụ:</string>
+    <string name="txt_ngaySinh">Ngày sinh</string>
+
+    <string name="txt_passWord">Password</string>
 
 
     //  Của LONG
-    <string name="app_name">App Name</string>
+
     <string name="name_page">Thanh toán</string>
     <string name="btn_dathan">Đặt hàng</string>
     <string name="btn_huy">Hủy</string>
