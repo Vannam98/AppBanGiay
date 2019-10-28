@@ -79,6 +79,7 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
         if(dhxn.isXacNhan()){
             viewHolder.lnBackgrounDHXN.setBackgroundColor(context.getResources().getColor(R.color.bg_item_dhxn));
             viewHolder.btn_XN.setVisibility(View.GONE); //aN nut xac nhan
+            viewHolder.btn_Huy.setVisibility(View.GONE);
         }
 //        if(dhxn.isHuy())
 //        {
@@ -104,13 +105,6 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
             }
         });
 
-        viewHolder.btn_Huy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                delete(dhxn.getId());
-                notifyDataSetChanged();
-            }
-        });
 
         return  convertView;
     }
@@ -137,6 +131,7 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
     {
         donHangXacNhan.setXacNhan(true);
         DatabaseReference data = FirebaseDatabase.getInstance().getReference("DonHangXacNhan").child(id);
+        data.setValue(donHangXacNhan);
     }
 
     public interface CallBackDHXN{

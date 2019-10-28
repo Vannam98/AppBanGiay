@@ -11,7 +11,6 @@ public class DonHangXacNhan {
     private String diaChi;
     private double tongTien;
     private boolean isXacNhan = false;
-    private boolean isHuy = false;
 
     public DonHangXacNhan()
     {
@@ -38,13 +37,6 @@ public class DonHangXacNhan {
         isXacNhan = xacNhan;
     }
 
-    public boolean isHuy() {
-        return isHuy;
-    }
-
-    public void setHuy(boolean huy) {
-        isHuy = huy;
-    }
 
     public String getId() {
         return id;

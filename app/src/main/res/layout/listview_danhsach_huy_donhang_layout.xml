@@ -225,21 +225,6 @@
                 android:text="@string/btn_XacNhan">
 
             </Button>
-
-            <Button
-                android:id="@+id/btn_Huy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/layout_margin_Right_10dp"
-                android:background="@drawable/vienbutton"
-                android:gravity="center"
-                android:minWidth="@dimen/min_Width"
-                android:minHeight="@dimen/min_Height"
-                android:paddingLeft="@dimen/padding_Left_20dp"
-                android:paddingRight="@dimen/padding_Right_20dp"
-                android:paddingTop="@dimen/padding_Top_10dp"
-                android:paddingBottom="@dimen/padding_Bottom_10dp"
-                android:text="@string/btn_Huy"></Button>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

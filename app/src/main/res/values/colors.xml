@@ -17,7 +17,7 @@
 
     //Màu của tài
     <color name="diveder_color">#f000</color>
-    <color name="bg_item_dhxn">#99000000</color>
+    <color name="bg_item_dhxn">#DFDFDF</color>
     <color name="bg_item_dhxn1">#2196f3</color>
 
 </resources>

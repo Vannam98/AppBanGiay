@@ -35,7 +35,7 @@ public class AdapterHuy extends ArrayAdapter<DonHangHuy> {
     public class ViewHolder
     {
         TextView txt_maSP, txt_tenSP, txt_soLuong, txt_size, txt_tinhTrangDonHang, txt_lidoHuyDonHang;
-        Button btn_XN, btn_huy;
+        Button btn_XN;
     }
 
     public View getView(final int position, View convertView, ViewGroup parent) {
@@ -53,7 +53,6 @@ public class AdapterHuy extends ArrayAdapter<DonHangHuy> {
             viewHolder.txt_tinhTrangDonHang = convertView.findViewById(R.id.txt_tinhTrangDonHang);
             viewHolder.txt_lidoHuyDonHang = convertView.findViewById(R.id.txt_liDoHuyDonHang);
             viewHolder.btn_XN = convertView.findViewById(R.id.btn_xacNhan);
-            viewHolder.btn_huy = convertView.findViewById(R.id.btn_Huy);
 
             convertView.setTag(viewHolder);
         }
@@ -71,13 +70,12 @@ public class AdapterHuy extends ArrayAdapter<DonHangHuy> {
         {
             viewHolder.txt_tinhTrangDonHang.setText("Đã Hủy");
             viewHolder.btn_XN.setVisibility(View.GONE);
-            viewHolder.btn_huy.setVisibility(View.VISIBLE); //hiện button hủy
+
         }
         else
         {
             viewHolder.txt_tinhTrangDonHang.setText("Chưa xác định");
             viewHolder.btn_XN.setVisibility(View.VISIBLE);// hiện button xác nhận
-            viewHolder.btn_huy.setVisibility(View.GONE);
         }
         viewHolder.txt_lidoHuyDonHang.setText(dhHuy.getLiDoHuy());
 
@@ -89,12 +87,6 @@ public class AdapterHuy extends ArrayAdapter<DonHangHuy> {
             }
         });
 
-        viewHolder.btn_huy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                capNhatTinhTrang(dhHuy.getId(),dhHuy,false);
-            }
-        });
 
         return convertView;
     }

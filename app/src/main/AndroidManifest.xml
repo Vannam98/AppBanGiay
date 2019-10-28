@@ -19,14 +19,16 @@
         <activity android:name=".User.LoginActivity" ></activity>
         <activity android:name=".User.MemberActivity"></activity>
         <activity android:name=".Employee.DanhSachDonHangActivity">
+
+        </activity>
+        <activity android:name=".Employee.DanhSachXacNhanDonHangActivity"></activity>
+        <activity android:name=".Employee.DanhSachHuyDonHangActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Employee.DanhSachXacNhanDonHangActivity"></activity>
-        <activity android:name=".Employee.DanhSachHuyDonHangActivity"></activity>
         <activity android:name=".Manager.DanhSachTaoNhanVienActivity">
 
         </activity>
