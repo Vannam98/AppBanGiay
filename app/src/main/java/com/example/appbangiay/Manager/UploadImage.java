@@ -66,10 +66,10 @@ public class UploadImage extends AppCompatActivity {
     public void uploadImage()
     {
         StorageReference storageReference = FirebaseStorage.getInstance()
-                .getReference().child("ShoeImage").child(uri.getLastPathSegment());
-            final ProgressDialog progressDialog = new ProgressDialog(this);
-            progressDialog.setMessage(" Uploading....");
-            progressDialog.show();
+            .getReference().child("ShoeImage").child(uri.getLastPathSegment());
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage(" Uploading....");
+        progressDialog.show();
 
         storageReference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override

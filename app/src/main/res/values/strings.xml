@@ -35,4 +35,62 @@
     <string name="btn_choose">Chọn</string>
     <string name="btn_upload">Tải lên</string>
 
+    // Hòa String
+    <string name="txt_ThongTinSanPham">THÔNG TIN SẢN PHẨM</string>
+    <string name="txt_TenSanPham">Tên sản phẩm:</string>
+    <string name="txt_size">Size:</string>
+    <string name="txt_soluong">Số lượng:</string>
+    <string name="txt_mau">Màu:</string>
+    <string name="txt_hang">Hãng:</string>
+    <string name="txt_giatien">Giá tiền:</string>
+    <string name="txt_chitiet">Thông tin chi tiết sản phẩm</string>
+    <string name="txt_comment">Nhận xét</string>
+    <string name="txt_rating">Đánh giá</string>
+    <string name="btn_mua">Mua</string>
+    <string name="btn_TroVe">Trở về</string>
+    <string name="txt_ThongTinKhachHang">THÔNG TIN KHÁCH HÀNG</string>
+    <string name="btn_ChinhSua">Chỉnh Sửa</string>
+    <string name="txt_HoTen">Họ Tên</string>
+    <string name="txt_NgaySinh">Ngày Sinh</string>
+    <string name="txt_Email">Email</string>
+    <string name="txt_SoDienThoai">Số Điện Thoại</string>
+    <string name="txt_TenTaiKhoan">Tên Tài Khoản</string>
+    <string name="txt_Password">Password</string>
+    <string name="btn_DoiMatKhau">Đổi Mật Khẩu</string>
+    <string name="btn_CapNhat">Cập nhật</string>
+    <string name="btn_DangXuat">Đăng Xuất</string>
+    <string name="txt_QuanLy">QUẢN LÝ</string>
+    <string name="txt_QuanLySanPham">QUẢN LÝ SẢN PHẨM</string>
+    <string name="txt_TimKiem">Tìm kiếm</string>
+    <string name="txt_MaSanPham">Mã sản phẩm</string>
+    <string name="btn_Tao">Tạo</string>
+    <string name="btn_TroLai">Trở Lại</string>
+    <string name="txt_TaoSanPham">TẠO SẢN PHẨM</string>
+    <string name="txt_ThemAnh">Thêm Ảnh</string>
+    <string name="btn_Luu">Lưu</string>
+    <string-array name="size">
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+    </string-array>
+    <string name="title_activity_manhinh_chinh_quanly">manhinh_chinh_quanly</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="btn_chonAnh">Chọn Ảnh</string>
+    <string name="btn_taiAnh">Tải Ảnh</string>
+
 </resources>
