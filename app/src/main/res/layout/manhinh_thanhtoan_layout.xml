@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="0.25"
         android:background="@color/color_backroud"
         android:gravity="center"
         android:orientation="horizontal">
@@ -30,7 +30,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="1.5"
         android:orientation="horizontal">
         //listview san pham
 
@@ -45,33 +45,38 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="3"
+            android:layout_weight="2"
             android:gravity="center"
+            android:background="@color/color_thongtin_khach_hang"
             android:orientation="vertical">
             //tenkhachhang
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
                 android:orientation="horizontal">
                 <TextView
                     android:id="@+id/txttenkhachhang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/txt_black"
+                    android:layout_margin="@dimen/padding_Left_10dp"
                     android:text="@string/txt_tenkhachhang_thanhtoan">
                 </TextView>
                 <EditText
                     android:id="@+id/edt_tenkhachhang_thanhtoan"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/vienedittext"
+                   android:layout_margin="@dimen/padding_Left_10dp">
                 </EditText>
             </LinearLayout>
 
@@ -79,70 +84,58 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
                 android:orientation="horizontal">
                 <TextView
                     android:id="@+id/txtsodienthoai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/txt_sodienthoai_thanhtoan"
-                    android:textColor="@color/txt_black">
+                    android:textColor="@color/txt_black"
+                    android:layout_margin="@dimen/padding_Left_10dp"
+                    >
                 </TextView>
+
                 <EditText
                     android:id="@+id/edt_sodienthoai_thanhtoan"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                </EditText>
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/vienedittext"
+                    android:layout_margin="@dimen/padding_Left_10dp"></EditText>
             </LinearLayout>
             //diachigiao
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
                 android:orientation="horizontal">
                 <TextView
                     android:id="@+id/txtdiachigiao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="@string/txt_diachigiao_thanhtoan"
-                    android:textColorHint="@color/txt_black">
+                    android:textColorHint="@color/txt_black"
+                    android:layout_margin="@dimen/padding_Left_10dp">
                 </TextView>
                 <EditText
                     android:id="@+id/edt_diachigiao_thanhtoan"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                </EditText>
-            </LinearLayout>
-            //phivanchuyen
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/txt_phivanchuyen"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/txt_black"
-
-                    android:text="@string/txt_phivanchuyen_thanhtoan">
-
-                </TextView>
-                <EditText
-                    android:id="@+id/edt_phivanchuyen_thanhtoan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:background="@drawable/vienedittext"
+                    android:layout_margin="@dimen/padding_Left_10dp">
 
                 </EditText>
-
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:background="@color/color_thongtin_khach_hang"
             android:orientation="vertical">
             //button chinh sua
 
@@ -161,28 +154,35 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/txt_tongtien"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:layout_marginTop="@dimen/layout_margin_thongtin"
                     android:text="@string/txt_tongtien_thanhtoan"
                     android:textColor="@color/txt_black"></TextView>
-
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
                 <TextView
                     android:id="@+id/txt_tongtien_thanhtoan2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/layout_margin_thongtin"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/layout_margin_thongtin"
+                    android:background="@drawable/vienedittext"
                     android:textColor="@color/txt_black"></TextView>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="0.5"
         android:gravity="center"
         android:background="@color/color_backroud"

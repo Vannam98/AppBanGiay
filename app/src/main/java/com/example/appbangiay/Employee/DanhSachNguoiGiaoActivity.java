@@ -41,7 +41,6 @@ public class DanhSachNguoiGiaoActivity extends AppCompatActivity {
     private ArrayList<DanhSachNguoiGiao> danhSachNguoiGiaos;
     TextView txt_hoten_dsnguoigiao_lsv2, txt_sodienthoai_dsnguoigiao_lsv2, txt_tinhtrang_dsnguoigiao_lsv2;
     DatabaseReference data;
-    ArrayList<sv> dssv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

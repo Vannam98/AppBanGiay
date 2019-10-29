@@ -19,6 +19,9 @@
     <color name="color_backroud">#d5eafb</color>
     <color name="txt_black">#000</color>
     <color name="color_item_xac_nhan">#99000000</color>
+    <color name="color_item_chua_xac_nhan">#fff</color>
+    <color name="color_thongtin_khach_hang">#F0FFFF</color>
+
     <!-- Hết Của long -->
 
     //Màu của tài

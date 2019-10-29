@@ -23,76 +23,133 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:gravity="fill_vertical"
-        android:layout_weight="3"
+        android:layout_weight="6"
         android:orientation="vertical"
         >
 
-        <TextView
-            android:id="@+id/madonhang_hoadon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/layout_margin"
-            android:text="@string/txt_madonhang_hoadon"
-            android:textColor="@color/txt_black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin"
+                android:text="@string/txt_madonhang_hoadon"
+                android:textColor="@color/txt_black" />
+            <TextView
+                android:id="@+id/madonhang_hoadon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin"
+                android:textColor="@color/txt_black" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tensanpham_hoadon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/layout_margin"
-            android:text="@string/txt_tensanpham_hoadon"
-            android:textColor="@color/txt_black" />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_margin="@dimen/layout_margin"
+               android:text="@string/txt_tensanpham_hoadon"
+               android:textColor="@color/txt_black" />
+           <TextView
+               android:id="@+id/tensanpham_hoadon"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="@dimen/layout_margin"
+               android:textColor="@color/txt_black" />
+       </LinearLayout>
 
-        <TextView
-            android:id="@+id/mau_hoadon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/layout_margin"
-            android:text="@string/txt_mau_hoadon"
-            android:textColor="@color/txt_black" />
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin"
+                android:text="@string/txt_size_hoadon"
+                android:textColor="@color/txt_black" />
+            <TextView
             android:id="@+id/size_hoadon"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/layout_margin"
-            android:text="@string/txt_size_hoadon"
             android:textColor="@color/txt_black" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tenkhachhang_hoadon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/layout_margin"
-            android:text="@string/txt_tenkhachhang_hoadon"
-            android:textColor="@color/txt_black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin"
+                android:text="@string/txt_tenkhachhang_hoadon"
+                android:textColor="@color/txt_black" />
+            <TextView
+                android:id="@+id/tenkhachhang_hoadon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin"
+                android:textColor="@color/txt_black" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/sdtkhachhang_hoadon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/layout_margin"
-            android:text="@string/txt_sodienthoaikhachhang_hoadon"
-            android:textColor="@color/txt_black" />
-        <TextView
-            android:id="@+id/diachi_hoadon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/layout_margin"
-            android:text="@string/txt_diachi_hoadon"
-            android:textColor="@color/txt_black" />
-        <TextView
-            android:id="@+id/tongtien_hoadon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/layout_margin"
-            android:text="@string/txt_tongtien_hoadon"
-            android:textColor="@color/txt_black" />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_margin="@dimen/layout_margin"
+               android:text="@string/txt_sodienthoaikhachhang_hoadon"
+               android:textColor="@color/txt_black" />
+           <TextView
+               android:id="@+id/sdtkhachhang_hoadon"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="@dimen/layout_margin"
+               android:textColor="@color/txt_black" />
+       </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin"
+                android:text="@string/txt_diachi_hoadon"
+                android:textColor="@color/txt_black" />
+
+            <TextView
+                android:id="@+id/diachi_hoadon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin"
+                android:textColor="@color/txt_black" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin"
+                android:text="@string/txt_tongtien_hoadon"
+                android:textColor="@color/txt_black" />
+            <TextView
+                android:id="@+id/tongtien_hoadon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin"
+                android:textColor="@color/txt_black" />
+        </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="horizontal"

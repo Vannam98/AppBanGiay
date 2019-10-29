@@ -13,34 +13,66 @@
 
 
         <LinearLayout
+            android:id="@+id/lnItemNguoiGiao"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="fill_vertical"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txt_hoten_dsnguoigiao_lsv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layout_margin"
-                android:text="@string/txt_hoten_danhsachnguoigiao"
-                android:textColor="@color/txt_black" />
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:id="@+id/txt_hoten_dsnguoigiao_lsv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="@dimen/layout_margin"
+                   android:text="@string/txt_hoten_danhsachnguoigiao"
+                   android:textColor="@color/txt_black" />
+               <TextView
+                   android:id="@+id/txt_hoten_dsnguoigiao_lsv2"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="@dimen/layout_margin"
+                   android:textColor="@color/txt_black" />
+           </LinearLayout>
 
-            <TextView
-                android:id="@+id/txt_sodienthoai_dsnguoigiao_lsv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layout_margin"
-                android:text="@string/txt_sodienthoai_danhsachnguoigiao"
-                android:textColor="@color/txt_black" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txt_sodienthoai_dsnguoigiao_lsv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_sodienthoai_danhsachnguoigiao"
+                    android:textColor="@color/txt_black" />
 
-            <TextView
-                android:id="@+id/txt_tinhtrang_dsnguoigiao_lsv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layout_margin"
-                android:text="@string/txt_tinhtrang_danhsachnguoigiao"
-                android:textColor="@color/txt_black" />
+                <TextView
+                    android:id="@+id/txt_sodienthoai_dsnguoigiao_lsv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:textColor="@color/txt_black" />
+            </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:id="@+id/txt_tinhtrang_dsnguoigiao_lsv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="@dimen/layout_margin"
+                   android:text="@string/txt_tinhtrang_danhsachnguoigiao"
+                   android:textColor="@color/txt_black" />
+               <TextView
+                   android:id="@+id/txt_tinhtrang_dsnguoigiao_lsv2"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="@dimen/layout_margin"
+                   android:textColor="@color/txt_black" />
+           </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

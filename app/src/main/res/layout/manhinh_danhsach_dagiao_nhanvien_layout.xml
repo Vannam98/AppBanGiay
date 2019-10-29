@@ -73,7 +73,7 @@
             android:layout_height="@dimen/button"
             android:layout_margin="@dimen/layout_margin"
             android:background="@drawable/vienbutton"
-            android:text="@string/btn_trolai_danhsachnguoigiao"
+            android:text="@string/btn_trolai_dsdonhangdagiao"
             android:textColor="@color/txt_black" />
 
         <Button

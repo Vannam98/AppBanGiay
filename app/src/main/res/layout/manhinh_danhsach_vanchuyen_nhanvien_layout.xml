@@ -66,12 +66,12 @@
         android:background="@color/color_backroud">
 
         <Button
-            android:id="@+id/btn_refresh_dsvanchuyen"
+            android:id="@+id/btn_xacnhan_dsvanchuyen"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button"
             android:layout_margin="@dimen/layout_margin"
             android:background="@drawable/vienbutton"
-            android:text="@string/btn_refresh_dsvanchuyen"
+            android:text="@string/btn_xacnhan_dsvanchuyen"
             android:textColor="@color/txt_black" />
         <Button
             android:id="@+id/btn_Thoat_dsvanchuyen"
