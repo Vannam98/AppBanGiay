@@ -19,14 +19,12 @@
     <string name="have_account"> Có tài khoản , đăng nhập ngay  </string>
     <string name="open">Nav </string>
     <string name="close">Nav </string>
-
     <string name="nav_thongtin">Thông Tin khách hàng</string>
     <string name="nav_tinhtrang">Tình trạn đơn hàng</string>
     <string name="nav_giaynam">Giầy Nam</string>
     <string name="nav_giaynu">Giầy Nữ</string>
     <string name="nav_giaykid">Giầy trẻ em</string>
     <string name="nav_logout">Đăng Xuất</string>
-
     <string name="txt_shoename">Tên Giày</string>
     <string name="txt_shoedescription">Hãng</string>
     <string name="txt_shoesize">Size</string>
@@ -130,7 +128,45 @@
     <string name="btn_huy_danhsachnguoigiao"> Hủy </string>
     <string name="btn_thoat_danhsachnguoigiao"> Thoát </string>
     <string name="btn_trolai_danhsachnguoigiao"> Trở lại </string>
+    //
 
+    //string của tài
+
+    <string name="txt_timKiem">Tìm kiếm</string>
+
+    <string name="btn_ThanhToan">Thanh Toán</string>
+    <string name="btn_Thoat">Thoát</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_TroVe">Trở về</string>
+    <string name="btn_XacNhan">Xác nhận</string>
+    <string name="btn_Huy">Hủy</string>
+    <string name="btn_chinhSua">Chỉnh sửa</string>
+    <string name="btn_Tao">Tạo</string>
+    <string name="btn_taoTK">Tạo tài khoản</string>
+
+    <string name="edt_tenNV">nhập tên nhân viên</string>
+    <string name="edt_soDT">nhập số điện thoại</string>
+    <string name="edt_email">nhập email</string>
+    <string name="edt_diachi">Nhập địa chỉ</string>
+    <string name="edt_password">nhập mật khẩu</string>
+    <string name="edt_ngaySinh">Nhâp ngày sinh</string>
+
+    <array name="spn_size">
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+    </array>
+
+    <string name="hint_lido">Nhập lí do hủy đơn hàng....</string>
+    //
 
 
     <string name="txt_inhoadon_hoadon"> In hóa đơn </string>
