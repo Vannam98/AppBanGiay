@@ -246,20 +246,5 @@
 
 
         </ImageView>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_chinhSua"
-            android:id="@+id/btn_chinhSua"
-            android:minWidth="@dimen/min_Width"
-            android:minHeight="@dimen/min_Height"
-            android:paddingLeft="@dimen/padding_Left_10dp"
-            android:paddingRight="@dimen/padding_Right_10dp"
-            android:paddingTop="@dimen/padding_Top_10dp"
-            android:paddingBottom="@dimen/padding_Bottom_10dp"
-            android:background="@drawable/vienbutton"
-            android:layout_marginTop="@dimen/layout_margin_Top_20dp"
-            android:layout_gravity="right">
-        </Button>
     </LinearLayout>
 </LinearLayout>
