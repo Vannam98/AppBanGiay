@@ -21,6 +21,7 @@ import com.example.appbangiay.R;
 import com.example.appbangiay.User.ThanhToanActivity;
 import com.example.appbangiay.data_models.DanhSachDagiao;
 import com.example.appbangiay.data_models.DanhSachNguoiGiao;
+import com.example.appbangiay.data_models.VanChuyenNhanVien;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -41,19 +42,21 @@ public class DanhSachNguoiGiaoActivity extends AppCompatActivity {
     private ArrayList<DanhSachNguoiGiao> danhSachNguoiGiaos;
     TextView txt_hoten_dsnguoigiao_lsv2, txt_sodienthoai_dsnguoigiao_lsv2, txt_tinhtrang_dsnguoigiao_lsv2;
     DatabaseReference data;
-
+    VanChuyenNhanVien vanchuyen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manhinh_danhsach_nguoigiao_nhanvien_layout);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         txt_hoten_dsnguoigiao_lsv2 = findViewById(R.id.txt_hoten_dsnguoigiao_lsv2);
         txt_sodienthoai_dsnguoigiao_lsv2 = findViewById(R.id.txt_sodienthoai_dsnguoigiao_lsv2);
         txt_tinhtrang_dsnguoigiao_lsv2 = findViewById(R.id.txt_tinhtrang_dsnguoigiao_lsv2);
         //DATABASE
         data = FirebaseDatabase.getInstance().getReference();
-
-
+        intent = getIntent();
+         vanchuyen = intent.getParcelableExtra("Donhang");
         AnhXa();
+
         DieuKhien();
         taoAdapters();
         databaseTT();
@@ -87,8 +90,9 @@ public class DanhSachNguoiGiaoActivity extends AppCompatActivity {
         btn_xacnhan_dsnguoigiao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(DanhSachNguoiGiaoActivity.this, DanhSachDaGiaoQuanLyActivity.class);
+                intent = new Intent(DanhSachNguoiGiaoActivity.this, InHoaDonActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                intent.putExtra("Donhang",vanchuyen);
                 startActivity(intent);
             }
         });

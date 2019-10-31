@@ -32,7 +32,7 @@ public class DanhSachDaGiaoQuanLyActivity extends AppCompatActivity {
     private Button btn_trolai_dsvanchuyenqly,btn_Huy_dsvanchuyenqly;
     private DanhSachDaGiaoQuanLyAdapter danhSachDaGiaoQuanLyAdapter;
     private ArrayList<DanhSachDaGiaoQuanLy> danhsachdagiaoquanlys;
-    private TextView txt_madonhang_dsdagiao2, txt_tensanpham_dsdagiao2, txt_soluong_dsdagiao2, txt_tenkhachhang_dsdagiao2, txt_sodienthoaikhachhang_dsdagiao2, txt_diachi_dsdagiao2, txt_tongtien_dsdagiao2, tinhtrang_dsdagiaoqly_lsv2;
+    private TextView txt_madonhang_dsdagiao2,txt_size_dsdagiao2, txt_tensanpham_dsdagiao2, txt_soluong_dsdagiao2, txt_tenkhachhang_dsdagiao2, txt_sodienthoaikhachhang_dsdagiao2, txt_diachi_dsdagiao2, txt_tongtien_dsdagiao2, tinhtrang_dsdagiaoqly_lsv2;
     DatabaseReference data;
 
     @Override
@@ -42,6 +42,7 @@ public class DanhSachDaGiaoQuanLyActivity extends AppCompatActivity {
         txt_madonhang_dsdagiao2 = findViewById(R.id.txt_madonhang_dsdagiao2);
         txt_tensanpham_dsdagiao2 = findViewById(R.id.txt_tensanpham_dsdagiao2);
         txt_soluong_dsdagiao2 = findViewById(R.id.txt_soluong_dsdagiao2);
+        txt_size_dsdagiao2 = findViewById(R.id.txt_size_dsdagiao2);
         txt_tenkhachhang_dsdagiao2 = findViewById(R.id.txt_tenkhachhang_dsdagiao2);
         txt_sodienthoaikhachhang_dsdagiao2 = findViewById(R.id.txt_sodienthoaikhachhang_dsdagiao2);
         txt_diachi_dsdagiao2 = findViewById(R.id.txt_diachi_dsdagiao2);
@@ -118,8 +119,8 @@ public class DanhSachDaGiaoQuanLyActivity extends AppCompatActivity {
         if (isSearch) {
             ArrayList<DanhSachDaGiaoQuanLy> lstDanhSachDaGiaoNew = new ArrayList<>();
             for (DanhSachDaGiaoQuanLy item : danhsachdagiaoquanlys) {
-                if (item.getMasp().equalsIgnoreCase(keyWord) || item.getTensp().equalsIgnoreCase(keyWord) ||
-                        item.getTenkhachhang().equalsIgnoreCase(keyWord)) {
+                if (item.getMaDonHang().equalsIgnoreCase(keyWord) || item.getTenSanPham().equalsIgnoreCase(keyWord) ||
+                        item.getTenKhachHang().equalsIgnoreCase(keyWord)) {
                     lstDanhSachDaGiaoNew.add(item);
                 }
             }

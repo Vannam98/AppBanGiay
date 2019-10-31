@@ -1,5 +1,7 @@
 package com.example.appbangiay.Adapter;
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.appbangiay.Employee.DanhSachNguoiGiaoActivity;
+import com.example.appbangiay.Employee.VanChuyenNhanVienActivity;
 import com.example.appbangiay.R;
 import com.example.appbangiay.data_models.HuyGiaoHang;
 import com.example.appbangiay.data_models.HuyVanChuyen;
@@ -111,6 +115,13 @@ public class VanChuyenNhanVienAdapter extends ArrayAdapter<VanChuyenNhanVien> {
         viewHolder.btn_xacnhan_dsvanchuyen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent intent = new Intent();
+                intent.setClass(context, DanhSachNguoiGiaoActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+
+                intent.putExtra("Donhang",vanchuyen);
+                context.startActivity(intent);
                 xacNhanDonHang(vanchuyen.getId(),vanchuyen);
             }
         });
@@ -157,6 +168,7 @@ public class VanChuyenNhanVienAdapter extends ArrayAdapter<VanChuyenNhanVien> {
 
         //Them du lieu vao don hang da giao
         String id = data.child("XacNhanVanchuyen").push().getKey();
+        value.setId(id);
         data.child("XacNhanVanchuyen").child(id).setValue(value);
     }
 }

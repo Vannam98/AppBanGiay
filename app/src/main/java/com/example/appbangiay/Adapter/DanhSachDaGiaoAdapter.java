@@ -46,7 +46,7 @@ public class DanhSachDaGiaoAdapter extends ArrayAdapter<DanhSachDagiao> {
 
     public class ViewHolder {
 
-        TextView masanpham_dsdagiao_lsv2, tensanpham_dsdagiao_lsv2, soluong_dsdagiao_lsv2, tenkhachhang_dsdagiao_lsv2, sodienthoaikhachhang_dsdagiao_lsv2, diachi_dsdagiao_lsv2, tongtien_dsdagiao_lsv2, tinhtrang_dsdagiao_lsv2;
+        TextView masanpham_dsdagiao_lsv2,size_dsdagiao_lsv2, tensanpham_dsdagiao_lsv2, soluong_dsdagiao_lsv2, tenkhachhang_dsdagiao_lsv2, sodienthoaikhachhang_dsdagiao_lsv2, diachi_dsdagiao_lsv2, tongtien_dsdagiao_lsv2, tinhtrang_dsdagiao_lsv2;
         Button btn_xacnhan_dsdagiao_lsv, btn_Huy_dsdagiao_lsv;
         SearchView sv_Dsdonhangdagiao;
         LinearLayout lnItem;
@@ -72,24 +72,24 @@ public class DanhSachDaGiaoAdapter extends ArrayAdapter<DanhSachDagiao> {
             viewHolder.btn_xacnhan_dsdagiao_lsv = convertView.findViewById(R.id.btn_xacnhan_dsdagiao_lsv);
             viewHolder.btn_Huy_dsdagiao_lsv = convertView.findViewById(R.id.btn_Huy_dsdagiao_lsv);
             viewHolder.sv_Dsdonhangdagiao = convertView.findViewById(R.id.sv_Dsdonhangdagiao);
+            viewHolder.size_dsdagiao_lsv2 = convertView.findViewById(R.id.size_dsdagiao_lsv2);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (DanhSachDaGiaoAdapter.ViewHolder) convertView.getTag();
         }
 
-
         final DanhSachDagiao dagiaoModel = data.get(position);
-        viewHolder.masanpham_dsdagiao_lsv2.setText(dagiaoModel.getMasp());
-        viewHolder.tensanpham_dsdagiao_lsv2.setText(dagiaoModel.getTensp());
-        viewHolder.soluong_dsdagiao_lsv2.setText(dagiaoModel.getSoluong());
-        viewHolder.tenkhachhang_dsdagiao_lsv2.setText(dagiaoModel.getTenkhachhang());
-        viewHolder.sodienthoaikhachhang_dsdagiao_lsv2.setText(dagiaoModel.getSdtkhachhang());
-        viewHolder.diachi_dsdagiao_lsv2.setText(dagiaoModel.getDiachi());
+        viewHolder.masanpham_dsdagiao_lsv2.setText(dagiaoModel.getMaDonHang());
+        viewHolder.tensanpham_dsdagiao_lsv2.setText(dagiaoModel.getTenSanPham());
+        viewHolder.soluong_dsdagiao_lsv2.setText(dagiaoModel.getSoLuong());
+        viewHolder.tenkhachhang_dsdagiao_lsv2.setText(dagiaoModel.getTenKhachHang());
+        viewHolder.sodienthoaikhachhang_dsdagiao_lsv2.setText(dagiaoModel.getSoDienThoai());
+        viewHolder.diachi_dsdagiao_lsv2.setText(dagiaoModel.getDiaChi());
         viewHolder.tongtien_dsdagiao_lsv2.setText(String.valueOf(dagiaoModel.getTongtien()));
-        viewHolder.tinhtrang_dsdagiao_lsv2.setText(dagiaoModel.getTinhtrang());
+        viewHolder.size_dsdagiao_lsv2.setText(dagiaoModel.getSize());
+        viewHolder.tinhtrang_dsdagiao_lsv2.setText(dagiaoModel.getTinhTrang());
 
-
-        if(dagiaoModel.getTinhtrang().equalsIgnoreCase("da giao")){
+        if(dagiaoModel.getTinhTrang().equalsIgnoreCase("da giao")){
             viewHolder.lnItem.setBackgroundColor(context.getResources().getColor(R.color.color_item_xac_nhan));
             viewHolder.btn_xacnhan_dsdagiao_lsv.setVisibility(View.GONE);
             viewHolder.btn_Huy_dsdagiao_lsv.setVisibility(View.GONE);
@@ -182,7 +182,7 @@ public class DanhSachDaGiaoAdapter extends ArrayAdapter<DanhSachDagiao> {
         DatabaseReference data = FirebaseDatabase.getInstance().getReference();
 
         //Cap nhat trang thai don hang
-        value.setTinhtrang("da giao");
+        value.setTinhTrang("da giao");
         data.child("dagiaonv").child(iddata).setValue(value);
 
         //Them du lieu vao don hang da giao

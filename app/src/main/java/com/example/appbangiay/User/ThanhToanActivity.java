@@ -16,6 +16,7 @@ import com.example.appbangiay.Adapter.ThanhToanAdapter;
 import com.example.appbangiay.Adapter.ThanhToanKhachHangAdapter;
 import com.example.appbangiay.Employee.DanhSachDaGiaoActivity;
 import com.example.appbangiay.Employee.DanhSachDonHangActivity;
+import com.example.appbangiay.Employee.VanChuyenNhanVienActivity;
 import com.example.appbangiay.Manager.DanhSachDaGiaoQuanLyActivity;
 import com.example.appbangiay.R;
 import com.example.appbangiay.data_models.DatHang;
@@ -116,7 +117,7 @@ public class ThanhToanActivity extends AppCompatActivity {
                 data.child("dathang").child(id).setValue(dathang).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        intent.setClass(ThanhToanActivity.this, DanhSachDaGiaoActivity.class);
+                        intent.setClass(ThanhToanActivity.this, VanChuyenNhanVienActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                         startActivity(intent);
                     }

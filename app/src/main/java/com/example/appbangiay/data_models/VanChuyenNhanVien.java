@@ -1,6 +1,9 @@
 package com.example.appbangiay.data_models;
 
-public class VanChuyenNhanVien {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class VanChuyenNhanVien implements Parcelable {
     private String id, maDonHang,tenSanPham,soLuong, size,tinhTrang,tenKhachHang,soDienThoai,diaChi;
     private double tongtien;
 
@@ -19,6 +22,31 @@ public class VanChuyenNhanVien {
         this.tongtien = tongtien;
         this.id = id;
     }
+
+    protected VanChuyenNhanVien(Parcel in) {
+        id = in.readString();
+        maDonHang = in.readString();
+        tenSanPham = in.readString();
+        soLuong = in.readString();
+        size = in.readString();
+        tinhTrang = in.readString();
+        tenKhachHang = in.readString();
+        soDienThoai = in.readString();
+        diaChi = in.readString();
+        tongtien = in.readDouble();
+    }
+
+    public static final Creator<VanChuyenNhanVien> CREATOR = new Creator<VanChuyenNhanVien>() {
+        @Override
+        public VanChuyenNhanVien createFromParcel(Parcel in) {
+            return new VanChuyenNhanVien(in);
+        }
+
+        @Override
+        public VanChuyenNhanVien[] newArray(int size) {
+            return new VanChuyenNhanVien[size];
+        }
+    };
 
     public String getMaDonHang() {
         return maDonHang;
@@ -98,5 +126,24 @@ public class VanChuyenNhanVien {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(maDonHang);
+        dest.writeString(tenSanPham);
+        dest.writeString(soLuong);
+        dest.writeString(size);
+        dest.writeString(tinhTrang);
+        dest.writeString(tenKhachHang);
+        dest.writeString(soDienThoai);
+        dest.writeString(diaChi);
+        dest.writeDouble(tongtien);
     }
 }

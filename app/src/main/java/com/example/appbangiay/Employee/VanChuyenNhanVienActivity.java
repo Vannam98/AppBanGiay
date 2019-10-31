@@ -1,4 +1,5 @@
 package com.example.appbangiay.Employee;
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,8 +11,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-
 import com.example.appbangiay.Adapter.DanhSachDaGiaoAdapter;
 import com.example.appbangiay.Adapter.VanChuyenNhanVienAdapter;
 import com.example.appbangiay.Manager.DanhSachDaGiaoQuanLyActivity;
@@ -34,13 +33,13 @@ public class VanChuyenNhanVienActivity extends AppCompatActivity{
     private VanChuyenNhanVienAdapter vanChuyenNhanVienAdapter;
     private ArrayList<VanChuyenNhanVien> vanChuyenNhanViens;
     TextView txt_madonhang_vanchuyennv2, txt_tensanpham_vanchuyennv2, txt_soluong_vanchuyennv2,txt_size_vanchuyennv2,txt_tinhtrang_vanchuyennv2,txt_tenkhachhang_vanchuyennv2,txt_sodienthoai_vanchuyennv2,txt_diachikhachhang_vanchuyennv2,txt_tongtien_vanchuyen;
-    Button btn_xacnhan_dsvanchuyen, btn_Thoat_dsvanchuyen;
     DatabaseReference data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manhinh_danhsach_vanchuyen_nhanvien_layout);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         txt_madonhang_vanchuyennv2 = findViewById(R.id.txt_madonhang_vanchuyennv2);
         txt_tensanpham_vanchuyennv2 = findViewById(R.id.txt_tensanpham_vanchuyennv2);
         sv_Dsvanchuyen = findViewById(R.id.sv_Dsvanchuyen);
@@ -72,28 +71,10 @@ public class VanChuyenNhanVienActivity extends AppCompatActivity{
 
     private void AnhXa() {
 
-        btn_Thoat_dsvanchuyen = (Button) findViewById(R.id.btn_Thoat_dsvanchuyen);
-        btn_xacnhan_dsvanchuyen = (Button) findViewById(R.id.btn_xacnhan_dsvanchuyen);
         lv_Dsvanchuyen = findViewById(R.id.lv_Dsvanchuyen);
 
     }
     private void DieuKhien() {
-        btn_Thoat_dsvanchuyen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-
-            }
-        });
-        btn_xacnhan_dsvanchuyen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(VanChuyenNhanVienActivity.this, DanhSachNguoiGiaoActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(intent);
-            }
-        });
-
         // perform set on query text listener event
         sv_Dsvanchuyen.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

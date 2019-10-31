@@ -12,6 +12,7 @@ import com.example.appbangiay.R;
 import com.example.appbangiay.User.ThanhToanActivity;
 import com.example.appbangiay.data_models.DanhSachChonNguoiGiao;
 import com.example.appbangiay.data_models.InHoaDon;
+import com.example.appbangiay.data_models.VanChuyenNhanVien;
 import com.example.appbangiay.data_models.XacNhanVanChuyen;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,10 +28,7 @@ public class InHoaDonActivity extends AppCompatActivity {
     private Button btn_giao_hoadon;
     private Button btn_thoat_hoadon;
     private Button btn_huy_hoadon;
-    private ArrayList<InHoaDon> inHoaDons;
-    private ArrayList<DanhSachChonNguoiGiao> danhSachChonNguoiGiaos;
-    private ArrayList<XacNhanVanChuyen> xacNhanVanChuyens;
-    XacNhanVanChuyen xacNhanVanChuyen;
+    VanChuyenNhanVien vanchuyen;
     TextView madonhang_hoadon, tensanpham_hoadon, size_hoadon, tenkhachhang_hoadon, sdtkhachhang_hoadon, diachi_hoadon, tongtien_hoadon, nguoigiao_hoadon, sdtNguoiGiao_hoadon;
     DatabaseReference data;
 
@@ -54,13 +52,27 @@ public class InHoaDonActivity extends AppCompatActivity {
 
 //        databaseTT();
         DieuKhien();
-        loadData();
+//        String id = "";
+//        loadData(id);
+        getDataFromIntent();
+    }
+
+
+
+    private void getDataFromIntent(){
+        intent = getIntent();
+         vanchuyen = intent.getParcelableExtra("Donhang");
+        madonhang_hoadon.setText(vanchuyen.getMaDonHang());
+        tensanpham_hoadon.setText(vanchuyen.getTenKhachHang());
+        size_hoadon.setText(vanchuyen.getSize());
+        tenkhachhang_hoadon.setText(vanchuyen.getTenKhachHang());
+        sdtkhachhang_hoadon.setText(vanchuyen.getSoDienThoai());
+        diachi_hoadon.setText(vanchuyen.getDiaChi());
+        tongtien_hoadon.setText(String.valueOf(vanchuyen.getTongtien()));
+
     }
 
     private void AnhXa() {
-        danhSachChonNguoiGiaos = new ArrayList<>();
-        xacNhanVanChuyens = new ArrayList<>();
-
         btn_huy_hoadon = (Button) findViewById(R.id.btn_huy_hoadon);
         btn_thoat_hoadon = (Button) findViewById(R.id.btn_thoat_hoadon);
         btn_giao_hoadon = findViewById(R.id.btn_giao_hoadon);
@@ -86,33 +98,40 @@ public class InHoaDonActivity extends AppCompatActivity {
         btn_giao_hoadon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(InHoaDonActivity.this, ThanhToanActivity.class);
-                Toast.makeText(InHoaDonActivity.this, "Đã Giao", Toast.LENGTH_SHORT).show();
+                intent = new Intent(InHoaDonActivity.this, DanhSachDaGiaoActivity.class);
+                Toast.makeText(InHoaDonActivity.this, "Xac Nhan Giao", Toast.LENGTH_SHORT).show();
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(intent);
+                xacNhanDonHang(vanchuyen);
             }
         });
+    }
+    public void xacNhanDonHang(VanChuyenNhanVien value) {
+        DatabaseReference data = FirebaseDatabase.getInstance().getReference();
+        //Them du lieu vao don hang da giao
+        String id = data.child("dagiaonv").push().getKey();
+        data.child("dagiaonv").child(id).setValue(value);
     }
     //laasy du lieu firebase
-    private void loadData()
-    {
-        data.child("XacNhanVanchuyen").child("-LsKPg1Inej-bYDodMkt").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                XacNhanVanChuyen xacnhan = dataSnapshot.getValue(XacNhanVanChuyen.class);
-                madonhang_hoadon.setText(xacnhan.getMaDonHang());
-                tensanpham_hoadon.setText(xacnhan.getTenKhachHang());
-                size_hoadon.setText(xacnhan.getSize());
-                tenkhachhang_hoadon.setText(xacnhan.getTenKhachHang());
-                sdtkhachhang_hoadon.setText(xacnhan.getSoDienThoai());
-                diachi_hoadon.setText(xacnhan.getDiaChi());
-                tongtien_hoadon.setText(String.valueOf(xacnhan.getTongtien()));
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-    }
+//    private void loadData(String id)
+//    {
+//        data.child("XacNhanVanchuyen").child(id).addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                XacNhanVanChuyen xacnhan = dataSnapshot.getValue(XacNhanVanChuyen.class);
+//                madonhang_hoadon.setText(xacnhan.getMaDonHang());
+//                tensanpham_hoadon.setText(xacnhan.getTenKhachHang());
+//                size_hoadon.setText(xacnhan.getSize());
+//                tenkhachhang_hoadon.setText(xacnhan.getTenKhachHang());
+//                sdtkhachhang_hoadon.setText(xacnhan.getSoDienThoai());
+//                diachi_hoadon.setText(xacnhan.getDiaChi());
+//                tongtien_hoadon.setText(String.valueOf(xacnhan.getTongtien()));
+//            }
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//            }
+//        });
+//    }
 
 }

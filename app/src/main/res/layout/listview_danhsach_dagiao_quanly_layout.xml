@@ -73,6 +73,24 @@
                     android:layout_margin="@dimen/layout_margin"
                     android:textColor="@color/txt_black" />
             </LinearLayout>
+            //size
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txt_size_dsdagiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:text="@string/txt_size_dsdonhangdagiaoqly"
+                    android:textColor="@color/txt_black" />
+                <TextView
+                    android:id="@+id/txt_size_dsdagiao2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin"
+                    android:textColor="@color/txt_black" />
+            </LinearLayout>
             //tenkhachhang
 
             <LinearLayout

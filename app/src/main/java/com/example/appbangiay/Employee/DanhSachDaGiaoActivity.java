@@ -36,7 +36,7 @@ public class DanhSachDaGiaoActivity extends AppCompatActivity {
     private DanhSachDaGiaoAdapter thanhToanAdapter;
 
     private ArrayList<DanhSachDagiao> danhSachDagiaos;
-    private TextView key1, masanpham_dsdagiao_lsv2, tensanpham_dsdagiao_lsv2, soluong_dsdagiao_lsv2, tenkhachhang_dsdagiao_lsv2, sodienthoaikhachhang_dsdagiao_lsv2, diachi_dsdagiao_lsv2, tongtien_dsdagiao_lsv2, tinhtrang_dsdagiao_lsv2;
+    private TextView key1, masanpham_dsdagiao_lsv2, size_dsdagiao_lsv2,tensanpham_dsdagiao_lsv2, soluong_dsdagiao_lsv2, tenkhachhang_dsdagiao_lsv2, sodienthoaikhachhang_dsdagiao_lsv2, diachi_dsdagiao_lsv2, tongtien_dsdagiao_lsv2, tinhtrang_dsdagiao_lsv2;
     DatabaseReference data;
 
     @Override
@@ -47,6 +47,7 @@ public class DanhSachDaGiaoActivity extends AppCompatActivity {
         tensanpham_dsdagiao_lsv2 = findViewById(R.id.tensanpham_dsdagiao_lsv2);
         soluong_dsdagiao_lsv2 = findViewById(R.id.soluong_dsdagiao_lsv2);
         tenkhachhang_dsdagiao_lsv2 = findViewById(R.id.tenkhachhang_dsdagiao_lsv2);
+        size_dsdagiao_lsv2 = findViewById(R.id.size_dsdagiao_lsv2);
         sodienthoaikhachhang_dsdagiao_lsv2 = findViewById(R.id.sodienthoaikhachhang_dsdagiao_lsv2);
         diachi_dsdagiao_lsv2 = findViewById(R.id.diachi_dsdagiao_lsv2);
         tongtien_dsdagiao_lsv2 = findViewById(R.id.tongtien_dsdagiao_lsv2);
@@ -58,7 +59,7 @@ public class DanhSachDaGiaoActivity extends AppCompatActivity {
         AnhXa();
         DieuKhien();
         taoAdapters();
-       // databaseTT();
+        //databaseTT();
         loadData();
 
 
@@ -119,8 +120,8 @@ public class DanhSachDaGiaoActivity extends AppCompatActivity {
         if (isSearch) {
             ArrayList<DanhSachDagiao> lstDanhSachDaGiaoNew = new ArrayList<>();
             for (DanhSachDagiao item : danhSachDagiaos) {
-                if (item.getMasp().equalsIgnoreCase(keyWord) || item.getTenkhachhang().equalsIgnoreCase(keyWord) ||
-                        item.getTensp().equalsIgnoreCase(keyWord)) {
+                if (item.getMaDonHang().equalsIgnoreCase(keyWord) || item.getTenKhachHang().equalsIgnoreCase(keyWord) ||
+                        item.getTenSanPham().equalsIgnoreCase(keyWord)) {
                     lstDanhSachDaGiaoNew.add(item);
                 }
             }
@@ -135,7 +136,7 @@ public class DanhSachDaGiaoActivity extends AppCompatActivity {
     //them vao firebase
     private void databaseTT() {
         String id = data.child("dagiaonv").push().getKey();
-        DanhSachDagiao dagiao = new DanhSachDagiao(id,"05", "bistis", "10", "Quanh", "0961446997", "sai gon","danggiao", 9000000);
+        DanhSachDagiao dagiao = new DanhSachDagiao(id,"05", "bistis","5", "40", "giao", "tai", "0961446997","sai gon", 9000000);
         data.child("dagiaonv").child(id).setValue(dagiao);
     }
     //lay tu farebase

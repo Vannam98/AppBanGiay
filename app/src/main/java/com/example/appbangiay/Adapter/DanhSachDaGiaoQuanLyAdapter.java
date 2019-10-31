@@ -41,7 +41,7 @@ public class DanhSachDaGiaoQuanLyAdapter extends ArrayAdapter<DanhSachDaGiaoQuan
     }
 
     public class ViewHolder {
-        TextView txt_madonhang_dsdagiao2, txt_tensanpham_dsdagiao2, txt_soluong_dsdagiao2, txt_tenkhachhang_dsdagiao2, txt_sodienthoaikhachhang_dsdagiao2, txt_diachi_dsdagiao2, txt_tongtien_dsdagiao2, tinhtrang_dsdagiaoqly_lsv2;
+        TextView txt_madonhang_dsdagiao2,txt_size_dsdagiao2, txt_tensanpham_dsdagiao2, txt_soluong_dsdagiao2, txt_tenkhachhang_dsdagiao2, txt_sodienthoaikhachhang_dsdagiao2, txt_diachi_dsdagiao2, txt_tongtien_dsdagiao2, tinhtrang_dsdagiaoqly_lsv2;
     }
 
 
@@ -57,6 +57,7 @@ public class DanhSachDaGiaoQuanLyAdapter extends ArrayAdapter<DanhSachDaGiaoQuan
             viewHolder.txt_soluong_dsdagiao2 = convertView.findViewById(R.id.txt_soluong_dsdagiao2);
             viewHolder.txt_tenkhachhang_dsdagiao2 = convertView.findViewById(R.id.txt_tenkhachhang_dsdagiao2);
             viewHolder.txt_sodienthoaikhachhang_dsdagiao2 = convertView.findViewById(R.id.txt_sodienthoaikhachhang_dsdagiao2);
+            viewHolder.txt_size_dsdagiao2 = convertView.findViewById(R.id.txt_size_dsdagiao2);
             viewHolder.txt_diachi_dsdagiao2 = convertView.findViewById(R.id.txt_diachi_dsdagiao2);
             viewHolder.txt_tongtien_dsdagiao2 = convertView.findViewById(R.id.txt_tongtien_dsdagiao2);
             viewHolder.tinhtrang_dsdagiaoqly_lsv2 = convertView.findViewById(R.id.tinhtrang_dsdagiaoqly_lsv2);
@@ -67,14 +68,15 @@ public class DanhSachDaGiaoQuanLyAdapter extends ArrayAdapter<DanhSachDaGiaoQuan
 
 
         final DanhSachDaGiaoQuanLy dagiaoqlyModel = data.get(position);
-        viewHolder.txt_madonhang_dsdagiao2.setText(dagiaoqlyModel.getMasp());
-        viewHolder.txt_tensanpham_dsdagiao2.setText(dagiaoqlyModel.getTensp());
-        viewHolder.txt_soluong_dsdagiao2.setText(dagiaoqlyModel.getSoluong());
-        viewHolder.txt_tenkhachhang_dsdagiao2.setText(dagiaoqlyModel.getTenkhachhang());
-        viewHolder.txt_sodienthoaikhachhang_dsdagiao2.setText(dagiaoqlyModel.getSdtkhachhang());
-        viewHolder.txt_diachi_dsdagiao2.setText(dagiaoqlyModel.getDiachi());
+        viewHolder.txt_madonhang_dsdagiao2.setText(dagiaoqlyModel.getMaDonHang());
+        viewHolder.txt_tensanpham_dsdagiao2.setText(dagiaoqlyModel.getTenSanPham());
+        viewHolder.txt_soluong_dsdagiao2.setText(dagiaoqlyModel.getSoLuong());
+        viewHolder.txt_tenkhachhang_dsdagiao2.setText(dagiaoqlyModel.getTenKhachHang());
+        viewHolder.txt_sodienthoaikhachhang_dsdagiao2.setText(dagiaoqlyModel.getSoDienThoai());
+        viewHolder.txt_diachi_dsdagiao2.setText(dagiaoqlyModel.getDiaChi());
+        viewHolder.txt_size_dsdagiao2.setText(dagiaoqlyModel.getSize());
         viewHolder.txt_tongtien_dsdagiao2.setText(String.valueOf(dagiaoqlyModel.getTongtien()));
-        viewHolder.tinhtrang_dsdagiaoqly_lsv2.setText(dagiaoqlyModel.getTinhtrang());
+        viewHolder.tinhtrang_dsdagiaoqly_lsv2.setText(dagiaoqlyModel.getTinhTrang());
 
 
 

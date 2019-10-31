@@ -1,21 +1,22 @@
 package com.example.appbangiay.data_models;
 
 public class DanhSachDaGiaoQuanLy {
-    private String id, masp,tensp,soluong,tenkhachhang,sdtkhachhang,diachi, tinhtrang;
+    private String id, maDonHang,tenSanPham,soLuong, size,tinhTrang,tenKhachHang,soDienThoai,diaChi;
     private double tongtien;
 
     public DanhSachDaGiaoQuanLy() {
     }
 
-    public DanhSachDaGiaoQuanLy(String id, String masp, String tensp, String soluong, String tenkhachhang, String sdtkhachhang, String diachi, String tinhtrang, double tongtien) {
+    public DanhSachDaGiaoQuanLy(String id, String maDonHang, String tenSanPham, String soLuong, String size, String tinhTrang, String tenKhachHang, String soDienThoai, String diaChi, double tongtien) {
         this.id = id;
-        this.masp = masp;
-        this.tensp = tensp;
-        this.soluong = soluong;
-        this.tenkhachhang = tenkhachhang;
-        this.sdtkhachhang = sdtkhachhang;
-        this.diachi = diachi;
-        this.tinhtrang = tinhtrang;
+        this.maDonHang = maDonHang;
+        this.tenSanPham = tenSanPham;
+        this.soLuong = soLuong;
+        this.size = size;
+        this.tinhTrang = tinhTrang;
+        this.tenKhachHang = tenKhachHang;
+        this.soDienThoai = soDienThoai;
+        this.diaChi = diaChi;
         this.tongtien = tongtien;
     }
 
@@ -27,60 +28,68 @@ public class DanhSachDaGiaoQuanLy {
         this.id = id;
     }
 
-    public String getMasp() {
-        return masp;
+    public String getMaDonHang() {
+        return maDonHang;
     }
 
-    public void setMasp(String masp) {
-        this.masp = masp;
+    public void setMaDonHang(String maDonHang) {
+        this.maDonHang = maDonHang;
     }
 
-    public String getTensp() {
-        return tensp;
+    public String getTenSanPham() {
+        return tenSanPham;
     }
 
-    public void setTensp(String tensp) {
-        this.tensp = tensp;
+    public void setTenSanPham(String tenSanPham) {
+        this.tenSanPham = tenSanPham;
     }
 
-    public String getSoluong() {
-        return soluong;
+    public String getSoLuong() {
+        return soLuong;
     }
 
-    public void setSoluong(String soluong) {
-        this.soluong = soluong;
+    public void setSoLuong(String soLuong) {
+        this.soLuong = soLuong;
     }
 
-    public String getTenkhachhang() {
-        return tenkhachhang;
+    public String getSize() {
+        return size;
     }
 
-    public void setTenkhachhang(String tenkhachhang) {
-        this.tenkhachhang = tenkhachhang;
+    public void setSize(String size) {
+        this.size = size;
     }
 
-    public String getSdtkhachhang() {
-        return sdtkhachhang;
+    public String getTinhTrang() {
+        return tinhTrang;
     }
 
-    public void setSdtkhachhang(String sdtkhachhang) {
-        this.sdtkhachhang = sdtkhachhang;
+    public void setTinhTrang(String tinhTrang) {
+        this.tinhTrang = tinhTrang;
     }
 
-    public String getDiachi() {
-        return diachi;
+    public String getTenKhachHang() {
+        return tenKhachHang;
     }
 
-    public void setDiachi(String diachi) {
-        this.diachi = diachi;
+    public void setTenKhachHang(String tenKhachHang) {
+        this.tenKhachHang = tenKhachHang;
     }
 
-    public String getTinhtrang() {
-        return tinhtrang;
+    public String getSoDienThoai() {
+        return soDienThoai;
     }
 
-    public void setTinhtrang(String tinhtrang) {
-        this.tinhtrang = tinhtrang;
+    public void setSoDienThoai(String soDienThoai) {
+        this.soDienThoai = soDienThoai;
+    }
+
+    public String getDiaChi() {
+        return diaChi;
+    }
+
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
     }
 
     public double getTongtien() {
