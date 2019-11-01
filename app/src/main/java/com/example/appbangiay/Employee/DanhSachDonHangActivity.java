@@ -15,7 +15,6 @@ import android.widget.Toast;
 import com.example.appbangiay.Adapter.AdapterDonHang;
 
 import com.example.appbangiay.R;
-import com.example.appbangiay.User.MemberActivity;
 import com.example.appbangiay.data_models.DonHang;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
