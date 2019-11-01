@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_inside"
+    tools:context=".ManHinhTinhTrangDonHangActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txt_Tinhtrangdonhang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_Size"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_Tinhtrangdonhang">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height"
+        android:layout_weight="6">
+
+        <ListView
+            android:id="@+id/lst_DanhSach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height"
+        android:orientation="vertical"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_Thoat"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_heightTinhTrang"
+                android:textColor="@color/txt_Color"
+                android:background="@drawable/vienbutton"
+                android:text="@string/btn_Thoat"></Button>
+
+            <Button
+                android:id="@+id/btn_Trove"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_heightTinhTrang"
+                android:layout_marginLeft="80dp"
+                android:background="@drawable/vienbutton"
+                android:textColor="@color/txt_Color"
+                android:text="@string/btn_Trove"></Button>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/txt_Diachicuahang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_marginTopDiaChi"
+                android:layout_marginLeft="@dimen/txt_marginLeftDiaChi"
+                android:textColor="@color/txt_Color"
+                android:text="@string/txt_Diachicuahang">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

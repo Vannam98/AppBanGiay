@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/background_inside"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_id"
+            android:textColor="@color/txt_Color"
+            android:visibility="gone"></TextView>
+
+        <TextView
+            android:id="@+id/txt_Madonhang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_Madonhang">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_Tensanpham"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_Tensanpham">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_Soluong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_Soluong">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_Size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_Size">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_Tenkhachhang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_Tenkhachhang">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_SodienthoaiKH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_SodienthoaiKH">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_DiachiKH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_DiachiKH">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_Tongtien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_Tongtien">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_Tinhtrang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_Tinhtrang">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_Lydohuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_Lydohuy">
+        </TextView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.appbangiay">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,14 +12,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Manager.MangerShoe"></activity>
-        <activity android:name=".Manager.UploadImage"></activity>
-        <activity android:name=".Manager.DetailActivity" ></activity>
-        <activity android:name=".Manager.MainActivity" ></activity>
-        <activity android:name=".User.NavMainActivity"></activity>
-        <activity android:name=".User.RegisterActivity"></activity>
-        <activity android:name=".User.LoginActivity" ></activity>
-        <activity android:name=".User.MemberActivity"></activity>
+        <activity android:name=".ManHinhDonHangVanChuyenQuanLyActivity"></activity>
+        <activity android:name=".ManHinhDonHangXacNhanQuanLyActivity" />
+        <activity android:name=".ManHinhDonHangHuyQuanLyActivity" />
+        <activity android:name=".ManHinhDonHangHoanThanhNhanVienActivity" />
+        <activity android:name=".ManHinhTinhTrangDonHangActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Manager.MangerShoe" />
+        <activity android:name=".Manager.UploadImage" />
+        <activity android:name=".Manager.DetailActivity" />
+        <activity android:name=".Manager.MainActivity" />
+        <activity android:name=".User.NavMainActivity" />
+        <activity android:name=".User.RegisterActivity" />
+        <activity android:name=".User.LoginActivity" />
+        <activity android:name=".User.MemberActivity" />
         <activity android:name=".Employee.DanhSachDonHangActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,10 +38,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Employee.DanhSachXacNhanDonHangActivity"></activity>
-        <activity android:name=".Employee.DanhSachHuyDonHangActivity"></activity>
-        <activity android:name=".Manager.DanhSachTaoNhanVienActivity">
-        </activity>
-        <activity android:name=".Manager.DanhSachQuanLyNhanVienActivity"></activity>
+        <activity android:name=".Employee.DanhSachXacNhanDonHangActivity" />
+        <activity android:name=".Employee.DanhSachHuyDonHangActivity" />
+        <activity android:name=".Manager.DanhSachTaoNhanVienActivity" />
+        <activity android:name=".Manager.DanhSachQuanLyNhanVienActivity" />
     </application>
+
 </manifest>

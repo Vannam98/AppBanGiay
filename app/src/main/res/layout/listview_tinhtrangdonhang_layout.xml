@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/background_inside"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_id"
+            android:textColor="@color/txt_Color"
+            android:visibility="gone"></TextView>
+
+        <TextView
+            android:id="@+id/txt_Madonhang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_Madonhang">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_Tendonhang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_Tendonhang">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_Thongtindonhang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_Thongtindonhang">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_Tinhtrangvanchuyen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_Tinhtrangvanchuyen"
+            android:textColor="@color/txt_Color"></TextView>
+
+        <TextView
+            android:id="@+id/txt_Tongtien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_Tongtien">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_Ngay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_Color"
+            android:text="@string/txt_Ngay">
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

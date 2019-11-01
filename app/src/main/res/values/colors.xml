@@ -20,4 +20,8 @@
     <color name="bg_item_dhxn">#99000000</color>
     <color name="bg_item_dhxn1">#2196f3</color>
 
+    //Mau cua Quanh
+    <color name="color_item_xac_nhan">#90A4AE</color>
+    <color name="color_item_chua_xac_nhan">#fff</color>
+
 </resources>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="txt_Size">20dp</dimen>
-    <dimen name="btn_marginLeftTroVe">80dp</dimen>
     <dimen name="txt_marginTopDiaChi">10dp</dimen>
     <dimen name="txt_marginLeftDiaChi">10dp</dimen>
+    <dimen name="btn_heightTinhTrang">40dp</dimen>
+    <dimen name="btn_lvHeightHoanThanh">30dp</dimen>
     <dimen name="height">0dp</dimen>
     <dimen name="padding_10dp">10dp</dimen>
     <dimen name="padding_20dp">20dp</dimen>
