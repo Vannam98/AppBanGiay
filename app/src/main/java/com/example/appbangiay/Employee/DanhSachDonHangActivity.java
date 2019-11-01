@@ -48,7 +48,7 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
         DieuKhien();
         //intent = new Intent(this, DanhSachXacNhanDonHangActivity.class);
         taoAdapters();
-       // create();
+        create();
         loadData();
     }
 
@@ -88,9 +88,9 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
         String id1 = mData.push().getKey();
         String id2 = mData.push().getKey();
         String id3 = mData.push().getKey();
-        DonHang dh1 = new DonHang(id1, "N01", "Nike", "2", "40", 500000);
-        DonHang dh2 = new DonHang(id2, "J42", "Jordan", "1", "37", 1250000);
-        DonHang dh3 = new DonHang(id3, "A27", "Adidas", "1", "43", 970000);
+        DonHang dh1 = new DonHang(id1, "N59", "Nike", "1", "43", 750000);
+        DonHang dh2 = new DonHang(id2, "B31", "Bitis", "3", "40", 2300000);
+        DonHang dh3 = new DonHang(id3, "A87", "Adidas", "4", "37", 4500000);
 
         mData.child("DonHang").child(id1).setValue(dh1);
         mData.child("DonHang").child(id2).setValue(dh2);
@@ -132,6 +132,10 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
                 {
                     letSearch("", false);
                 }
+                else
+                {
+                    letSearch(newText, true);
+                }
                 return false;
             }
         });
@@ -145,7 +149,7 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
             ArrayList<DonHang> arrDonHang = new ArrayList<>();
             for(DonHang item : donHangs)
             {
-                if(item.getMasp().equalsIgnoreCase(keyWord) || item.getTensp().equalsIgnoreCase(keyWord))
+                if(item.getMaSanPham().contains(keyWord) || item.getTenSanPham().contains(keyWord))
                 {
                     arrDonHang.add(item);
                 }

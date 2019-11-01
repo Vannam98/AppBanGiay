@@ -30,7 +30,7 @@ public class AdapterDonHang extends ArrayAdapter<DonHang>
 
     public class ViewHolder
     {
-        TextView txt_maSP, txt_tenSP, txt_soLuong, txt_size, txt_tongTien, txt_id;
+        TextView txt_maSP, txt_tenSP, txt_soLuong, txt_size, txt_gia, txt_id;
         CheckBox chk_XN;
     }
     @NonNull
@@ -42,12 +42,12 @@ public class AdapterDonHang extends ArrayAdapter<DonHang>
         {
             convertView = LayoutInflater.from(context).inflate(layoutID,parent,false);
             viewHolder = new ViewHolder();
-            viewHolder.txt_id = convertView.findViewById(R.id.txt_id);
+            //viewHolder.txt_id = convertView.findViewById(R.id.txt_id);
             viewHolder.txt_maSP = convertView.findViewById(R.id.txt_MSP);
             viewHolder.txt_tenSP = convertView.findViewById(R.id.txt_TSP);
             viewHolder.txt_soLuong = convertView.findViewById(R.id.txt_SL);
             viewHolder.txt_size = convertView.findViewById(R.id.txt_S);
-            viewHolder.txt_tongTien = convertView.findViewById(R.id.txt_TT);
+            viewHolder.txt_gia = convertView.findViewById(R.id.txt_TT);
             viewHolder.chk_XN = convertView.findViewById(R.id.chk_xacnhan);
 
             convertView.setTag(viewHolder);
@@ -57,13 +57,13 @@ public class AdapterDonHang extends ArrayAdapter<DonHang>
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        DonHang dh = donHang.get(position);
-        viewHolder.txt_id.setText(dh.getId());
-        viewHolder.txt_maSP.setText(dh.getMasp());
-        viewHolder.txt_tenSP.setText(dh.getTensp());
-        viewHolder.txt_soLuong.setText(dh.getSoluong());
+        final DonHang dh = donHang.get(position);
+        //viewHolder.txt_id.setText(dh.getId());
+        viewHolder.txt_maSP.setText(dh.getMaSanPham());
+        viewHolder.txt_tenSP.setText(dh.getTenSanPham());
+        viewHolder.txt_soLuong.setText(dh.getSoLuong());
         viewHolder.txt_size.setText(dh.getSize());
-        viewHolder.txt_tongTien.setText(String.valueOf(dh.getTongTien()));
+        viewHolder.txt_gia.setText(String.valueOf(dh.getGia()));
 
         return convertView;
 

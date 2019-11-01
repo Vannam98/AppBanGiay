@@ -42,7 +42,7 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
 
     public class ViewHolder
     {
-        TextView txt_ID, txt_maDH, txt_tenSP, txt_soLuong, txt_size, txt_tenKH, txt_soDT, txt_diaChi, txt_tongTien;
+        TextView txt_ID, txt_maDH, txt_tenSP, txt_soLuong, txt_size, txt_tenKH, txt_soDT, txt_diaChi, txt_tongTien, txt_tinhTrang;
         Button btn_XN, btn_Huy;
         LinearLayout lnBackgrounDHXN;
     }
@@ -64,6 +64,7 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
             viewHolder.txt_soDT = convertView.findViewById(R.id.txt_SDTKH);
             viewHolder.txt_diaChi = convertView.findViewById(R.id.txt_DCKH);
             viewHolder.txt_tongTien = convertView.findViewById(R.id.txt_TT);
+            viewHolder.txt_tinhTrang = convertView.findViewById(R.id.txt_tinhTrangDonHang);
             viewHolder.btn_XN = convertView.findViewById(R.id.btn_XN);
             viewHolder.btn_Huy = convertView.findViewById(R.id.btn_huy);
 
@@ -78,14 +79,10 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
 
         if(dhxn.isXacNhan()){
             viewHolder.lnBackgrounDHXN.setBackgroundColor(context.getResources().getColor(R.color.bg_item_dhxn));
+            viewHolder.txt_tinhTrang.setText("Xác nhận");
             viewHolder.btn_XN.setVisibility(View.GONE); //aN nut xac nhan
             viewHolder.btn_Huy.setVisibility(View.GONE);
         }
-//        if(dhxn.isHuy())
-//        {
-//            viewHolder.lnBackgrounDHXN.setBackgroundColor(context.getResources().getColor(R.color.bg_item_dhxn1));
-//            viewHolder.btn_Huy.setVisibility(View.GONE);
-//        }
 
         viewHolder.txt_ID.setText(dhxn.getId());
         viewHolder.txt_maDH.setText(dhxn.getMaDonHang());
@@ -96,15 +93,28 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
         viewHolder.txt_soDT.setText(dhxn.getSoDT());
         viewHolder.txt_diaChi.setText(dhxn.getDiaChi());
         viewHolder.txt_tongTien.setText(String.valueOf(dhxn.getTongTien()));
+        if(dhxn.isTinhTrang())
+        {
+
+            viewHolder.txt_tinhTrang.setText("Chưa xác định");
+            viewHolder.btn_XN.setVisibility(View.VISIBLE);// hiện button xác nhận
+            viewHolder.btn_XN.setVisibility(View.VISIBLE);
+        }
 
         viewHolder.btn_XN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 capNhatTinhTrang(dhxn.getId(),dhxn);
-               notifyDataSetChanged();
+                notifyDataSetChanged();
             }
         });
 
+        viewHolder.btn_Huy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                delete(dhxn.getId());
+            }
+        });
 
         return  convertView;
     }

@@ -127,6 +127,7 @@ public class DanhSachTaoNhanVienActivity extends AppCompatActivity {
                 while (!uriTask.isComplete());
                 Uri urlImage  = uriTask.getResult();
                 imageUrl = urlImage.toString() ;
+                uploadnv();
                 progressDialog.dismiss();
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -141,7 +142,7 @@ public class DanhSachTaoNhanVienActivity extends AppCompatActivity {
 
     public void btn_TAO(View view) {
         upImage();
-        uploadnv();
+        //uploadnv();
         Intent intent = new Intent(DanhSachTaoNhanVienActivity.this,DanhSachQuanLyNhanVienActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
