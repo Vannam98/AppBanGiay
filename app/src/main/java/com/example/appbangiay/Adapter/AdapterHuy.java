@@ -74,7 +74,7 @@ public class AdapterHuy extends ArrayAdapter<DonHangHuy> {
         }
         else
         {
-            viewHolder.txt_tinhTrangDonHang.setText("Chưa xác định");
+            //viewHolder.txt_tinhTrangDonHang.setText("Chưa xác định");
             viewHolder.btn_XN.setVisibility(View.VISIBLE);// hiện button xác nhận
         }
         viewHolder.txt_lidoHuyDonHang.setText(dhHuy.getLiDoHuy());

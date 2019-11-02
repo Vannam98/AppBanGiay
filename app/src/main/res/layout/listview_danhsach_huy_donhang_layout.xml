@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="5"
+        android:layout_weight="4"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -147,9 +147,9 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center_vertical">
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -157,20 +157,20 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/txt_tinhTrang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_tinhTrang"
-                android:textColor="@color/txt_color"
-                android:id="@+id/txt_tinhTrang">
+                android:textColor="@color/txt_color">
 
             </TextView>
 
             <TextView
+                android:id="@+id/txt_tinhTrangDonHang"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@color/txt_color"
                 android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
-                android:id="@+id/txt_tinhTrangDonHang">
+                android:textColor="@color/txt_huy">
 
             </TextView>
 
@@ -183,20 +183,20 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/txt_liDoHuy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_liDoHuy"
-                android:textColor="@color/txt_color"
-                android:id="@+id/txt_liDoHuy">
+                android:textColor="@color/txt_color">
 
             </TextView>
 
             <TextView
+                android:id="@+id/txt_liDoHuyDonHang"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
-                android:textColor="@color/txt_color"
-                android:id="@+id/txt_liDoHuyDonHang">
+                android:textColor="@color/txt_color">
 
             </TextView>
         </LinearLayout>
@@ -218,8 +218,8 @@
                 android:minWidth="@dimen/min_Width"
                 android:minHeight="@dimen/min_Height"
                 android:paddingLeft="@dimen/padding_Left_10dp"
-                android:paddingRight="@dimen/padding_Right_10dp"
                 android:paddingTop="@dimen/padding_Top_10dp"
+                android:paddingRight="@dimen/padding_Right_10dp"
                 android:paddingBottom="@dimen/padding_Bottom_10dp"
                 android:text="@string/btn_XacNhan">
 

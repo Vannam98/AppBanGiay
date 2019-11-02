@@ -15,7 +15,6 @@ import android.widget.Toast;
 import com.example.appbangiay.Adapter.AdapterDonHang;
 
 import com.example.appbangiay.R;
-import com.example.appbangiay.User.MemberActivity;
 import com.example.appbangiay.data_models.DonHang;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,6 +33,7 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
     private Button btn_thanhToan;
     private Button btn_Thoat;
     private TextView txt_maSP, txt_tenSP, txt_soLuong, txt_size, txt_tongTien;
+    private DonHang donHang;
 
     DatabaseReference mData = FirebaseDatabase.getInstance().getReference();
 
@@ -48,7 +48,7 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
         DieuKhien();
         //intent = new Intent(this, DanhSachXacNhanDonHangActivity.class);
         taoAdapters();
-        create();
+        //create();
         loadData();
     }
 
@@ -70,8 +70,10 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
         btn_thanhToan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                double tongTien =  tinh();
                 intent = new Intent(DanhSachDonHangActivity.this, DanhSachXacNhanDonHangActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                intent.putExtra("tongTien", tongTien);
                 startActivity(intent);
             }
         });
@@ -162,6 +164,16 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
             taoAdapters();
             loadData();
         }
+    }
+
+    public double tinh()
+    {
+        double temp = 0;
+        for(DonHang dh : donHangs)
+        {
+            temp += dh.getGia();
+        }
+        return temp;
     }
 }
 

@@ -37,7 +37,7 @@
     //string của tài
     <string name="txt_DSDH">Danh sách đơn hàng</string>
     <string name="txt_DSDHXN">Danh sác xác nhận(NV)</string>
-    <string name="txt_DSHuy">Danh sách đã hủy(NV)</string>
+    <string name="txt_DSHuy">Danh sách hủy(NV)</string>
     <string name="txt_DSQLNV">Quản lý nhân viên</string>
     <string name="txt_taoTKNV">Tạo tài khoản nhân viên</string>
     <string name="txt_DSDXN_QL">Danh sách đã xác nhận(QL)</string>

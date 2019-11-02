@@ -42,7 +42,7 @@ public class DanhSachXacNhanDonHangActivity extends AppCompatActivity {
         run();
         intent = new Intent(this, DanhSachHuyDonHangActivity.class);
         taoAdapter();
-        create();
+        //create();
         loadData();
 
     }
@@ -90,12 +90,16 @@ public class DanhSachXacNhanDonHangActivity extends AppCompatActivity {
     {
         String id1 = mData.push().getKey();
         String id2 = mData.push().getKey();
+        String id3 = mData.push().getKey();
+        String id4 = mData.push().getKey();
         DonHangXacNhan dh1 = new DonHangXacNhan(id1,"N52","Nike", "2","42","Nam","036961472","Quan9",500000);
         DonHangXacNhan dh2 = new DonHangXacNhan(id2,"J19","JorDan", "1","35","Long","036961472","Quan12",920000);
-//        DonHangXacNhan dh3 = new DonHangXacNhan("A638","Adidas","3", "35","Hoa","032651782","Quan1",1200000);
-//        DonHangXacNhan dh4 = new DonHangXacNhan("J716","Jordan","1", "42","Thủy","0164178329","Quan7",2000000);
+        DonHangXacNhan dh3 = new DonHangXacNhan(id3,"A638","Adidas","3", "35","Hoa","032651782","Quan1",1200000);
+        DonHangXacNhan dh4 = new DonHangXacNhan(id4,"J716","Jordan","1", "42","Thủy","0164178329","Quan7",2000000);
         mData.child("DonHangXacNhan").child(id1).setValue(dh1);
         mData.child("DonHangXacNhan").child(id2).setValue(dh2);
+        mData.child("DonHangXacNhan").child(id3).setValue(dh3);
+        mData.child("DonHangXacNhan").child(id4).setValue(dh4);
 
     }
 

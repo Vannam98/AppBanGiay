@@ -45,6 +45,8 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
         TextView txt_ID, txt_maDH, txt_tenSP, txt_soLuong, txt_size, txt_tenKH, txt_soDT, txt_diaChi, txt_tongTien, txt_tinhTrang;
         Button btn_XN, btn_Huy;
         LinearLayout lnBackgrounDHXN;
+        LinearLayout lnBackgrounDHXN2;
+
     }
 
     public View getView(final int position, View convertView, ViewGroup parent) {
@@ -56,6 +58,7 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
 
             viewHolder.txt_ID = convertView.findViewById(R.id.txt_id);
             viewHolder.lnBackgrounDHXN = convertView.findViewById(R.id.lnBackgrounDHXN);
+            viewHolder.lnBackgrounDHXN2 = convertView.findViewById(R.id.lnBackgrounDHXN2);
             viewHolder.txt_maDH = convertView.findViewById(R.id.txt_MDH);
             viewHolder.txt_tenSP = convertView.findViewById(R.id.txt_TSP);
             viewHolder.txt_soLuong = convertView.findViewById(R.id.txt_SL);
@@ -79,6 +82,7 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
 
         if(dhxn.isXacNhan()){
             viewHolder.lnBackgrounDHXN.setBackgroundColor(context.getResources().getColor(R.color.bg_item_dhxn));
+            viewHolder.lnBackgrounDHXN2.setBackgroundColor(context.getResources().getColor(R.color.bg_item_dhxn));
             viewHolder.txt_tinhTrang.setText("Xác nhận");
             viewHolder.btn_XN.setVisibility(View.GONE); //aN nut xac nhan
             viewHolder.btn_Huy.setVisibility(View.GONE);

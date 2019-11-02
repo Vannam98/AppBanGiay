@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 
 import com.example.appbangiay.R;
 import com.example.appbangiay.data_models.DonHang;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -65,8 +67,21 @@ public class AdapterDonHang extends ArrayAdapter<DonHang>
         viewHolder.txt_size.setText(dh.getSize());
         viewHolder.txt_gia.setText(String.valueOf(dh.getGia()));
 
-        return convertView;
+        viewHolder.chk_XN.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                if(viewHolder.chk_XN.isChecked())
+                {
+                    xacNhanDonHang(dh.getId(), dh);
+                }
+                else
+                {
+                    delete(dh.getId());
+                }
+            }
+        });
+        return convertView;
 
     }
 
@@ -84,5 +99,18 @@ public class AdapterDonHang extends ArrayAdapter<DonHang>
     }
 
 
+
+    public void xacNhanDonHang(String id, DonHang donHang)
+    {
+        DatabaseReference data = FirebaseDatabase.getInstance().getReference();
+        //String id = data.child("DonHangDatMua").push().getKey();
+        data.child("DonHangDatMua").child(id).setValue(donHang);
+    }
+
+    public void delete(String id)
+    {
+        DatabaseReference data = FirebaseDatabase.getInstance().getReference("DonHangDatMua").child(id);
+        data.removeValue();
+    }
 
 }
