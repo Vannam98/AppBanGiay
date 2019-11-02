@@ -110,6 +110,10 @@ public class DanhSachDaGiaoQuanLyActivity extends AppCompatActivity {
                 if (newText.isEmpty() || "".trim().equals(newText)) {
                     letSearch("", false);
                 }
+                else
+                {
+                    letSearch(newText, true);
+                }
                 return false;
             }
         });
@@ -133,7 +137,7 @@ public class DanhSachDaGiaoQuanLyActivity extends AppCompatActivity {
     }
     //    lay tu farebase
     private void loadData() {
-        data.child("donhangdagiaoquanly").addValueEventListener(new ValueEventListener() {
+        data.child("DonHangDaGiaoQuanLy").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 DanhSachDaGiaoQuanLy dagiaoqly;

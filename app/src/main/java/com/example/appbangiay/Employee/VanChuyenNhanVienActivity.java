@@ -115,13 +115,13 @@ public class VanChuyenNhanVienActivity extends AppCompatActivity{
 
     //them vao firebase
     private void databaseTT() {
-        String id = data.child("Vanchuyennhanvien").push().getKey();
+        String id = data.child("VanChuyenNhanVien").push().getKey();
         VanChuyenNhanVien vanchuyen = new VanChuyenNhanVien(id,"01","bitis","5","40","chua xac nhan","long","0961446997","saigon",100000);
-        data.child("Vanchuyennhanvien").child(id).setValue(vanchuyen);
+        data.child("VanChuyenNhanVien").child(id).setValue(vanchuyen);
     }
     //lay tu farebase
     private void loadData() {
-        data.child("Vanchuyennhanvien").addValueEventListener(new ValueEventListener() {
+        data.child("VanChuyenNhanVien").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 vanChuyenNhanViens.clear();

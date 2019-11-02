@@ -14,10 +14,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import com.example.appbangiay.Adapter.DanhSachDaGiaoAdapter;
+import com.example.appbangiay.Adapter.VanChuyenNhanVienAdapter;
 import com.example.appbangiay.Manager.DanhSachDaGiaoQuanLyActivity;
 import com.example.appbangiay.R;
 import com.example.appbangiay.User.ThanhToanActivity;
 import com.example.appbangiay.data_models.DanhSachDagiao;
+import com.example.appbangiay.data_models.VanChuyenNhanVien;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -105,11 +107,14 @@ public class DanhSachDaGiaoActivity extends AppCompatActivity {
                 Toast.makeText(DanhSachDaGiaoActivity.this, "Enter", Toast.LENGTH_SHORT).show();
                 return false;
             }
-
             @Override
             public boolean onQueryTextChange(String newText) {
                 if (newText.isEmpty() || "".trim().equals(newText)) {
                     letSearch("", false);
+                }
+                else
+                {
+                    letSearch(newText, true);
                 }
                 return false;
             }
@@ -118,14 +123,14 @@ public class DanhSachDaGiaoActivity extends AppCompatActivity {
     //ham tim san pham
     private void letSearch(String keyWord, boolean isSearch) {
         if (isSearch) {
-            ArrayList<DanhSachDagiao> lstDanhSachDaGiaoNew = new ArrayList<>();
+            ArrayList<DanhSachDagiao> lstDanhSachdagiaoNew = new ArrayList<>();
             for (DanhSachDagiao item : danhSachDagiaos) {
-                if (item.getMaDonHang().equalsIgnoreCase(keyWord) || item.getTenKhachHang().equalsIgnoreCase(keyWord) ||
-                        item.getTenSanPham().equalsIgnoreCase(keyWord)) {
-                    lstDanhSachDaGiaoNew.add(item);
+                if (item.getMaDonHang().contains(keyWord) || item.getTenSanPham().contains(keyWord) ||
+                        item.getTenKhachHang().contains(keyWord)) {
+                    lstDanhSachdagiaoNew.add(item);
                 }
             }
-            thanhToanAdapter = new DanhSachDaGiaoAdapter(this, R.layout.listview_danhsach_dagiao_nhanvien_layout, lstDanhSachDaGiaoNew);
+            thanhToanAdapter = new DanhSachDaGiaoAdapter(this, R.layout.listview_danhsach_dagiao_nhanvien_layout, lstDanhSachdagiaoNew);
             lv_Dsdagiaonv.setAdapter(thanhToanAdapter);
         } else {
             taoAdapters();
@@ -135,13 +140,13 @@ public class DanhSachDaGiaoActivity extends AppCompatActivity {
 
     //them vao firebase
     private void databaseTT() {
-        String id = data.child("dagiaonv").push().getKey();
+        String id = data.child("DaGiaoNhanVien").push().getKey();
         DanhSachDagiao dagiao = new DanhSachDagiao(id,"05", "bistis","5", "40", "giao", "tai", "0961446997","sai gon", 9000000);
-        data.child("dagiaonv").child(id).setValue(dagiao);
+        data.child("DaGiaoNhanVien").child(id).setValue(dagiao);
     }
     //lay tu farebase
     private void loadData() {
-        data.child("dagiaonv").addValueEventListener(new ValueEventListener() {
+        data.child("DaGiaoNhanVien").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 danhSachDagiaos.clear();

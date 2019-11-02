@@ -54,7 +54,7 @@ public class DanhSachNguoiGiaoActivity extends AppCompatActivity {
         //DATABASE
         data = FirebaseDatabase.getInstance().getReference();
         intent = getIntent();
-         vanchuyen = intent.getParcelableExtra("Donhang");
+         vanchuyen = intent.getParcelableExtra("DonHang");
         AnhXa();
 
         DieuKhien();
@@ -92,7 +92,7 @@ public class DanhSachNguoiGiaoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 intent = new Intent(DanhSachNguoiGiaoActivity.this, InHoaDonActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                intent.putExtra("Donhang",vanchuyen);
+                intent.putExtra("DonHang",vanchuyen);
                 startActivity(intent);
             }
         });

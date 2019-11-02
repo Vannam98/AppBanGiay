@@ -1,17 +1,19 @@
 package com.example.appbangiay.data_models;
 
 public class ThanhToan {
-    private String id, name, hang, gia, size ,soluong;
+    private String id, tenSanPham, maSanPham, size ,soLuong;
+    private double gia;
 
     public ThanhToan() {
     }
 
-    public ThanhToan(String id, String name, String hang, String gia, String size, String soluong ) {
-        this.name = name;
-        this.hang = hang;
+    public ThanhToan(String id, String maSanPham, String tenSanPham , String soLuong , String size,double gia) {
+        this.tenSanPham = tenSanPham;
+        this.maSanPham = maSanPham;
         this.gia = gia;
         this.size = size;
-        this.soluong = soluong;
+        this.soLuong = soLuong;
+        this.gia = gia;
         this.id = id;
     }
 
@@ -23,28 +25,20 @@ public class ThanhToan {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTenSanPham() {
+        return tenSanPham;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTenSanPham(String tenSanPham) {
+        this.tenSanPham = tenSanPham;
     }
 
-    public String getHang() {
-        return hang;
+    public String getMaSanPham() {
+        return maSanPham;
     }
 
-    public void setHang(String hang) {
-        this.hang = hang;
-    }
-
-    public String getMau() {
-        return gia;
-    }
-
-    public void setMau(String mau) {
-        this.gia = mau;
+    public void setMaSanPham(String maSanPham) {
+        this.maSanPham = maSanPham;
     }
 
     public String getSize() {
@@ -55,11 +49,19 @@ public class ThanhToan {
         this.size = size;
     }
 
-    public String getSoluong() {
-        return soluong;
+    public String getSoLuong() {
+        return soLuong;
     }
 
-    public void setSoluong(String soluong) {
-        this.soluong = soluong;
+    public void setSoLuong(String soLuong) {
+        this.soLuong = soLuong;
+    }
+
+    public double getGia() {
+        return gia;
+    }
+
+    public void setGia(double gia) {
+        this.gia = gia;
     }
 }

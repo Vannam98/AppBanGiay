@@ -32,6 +32,7 @@ public class VanChuyenNhanVienAdapter extends ArrayAdapter<VanChuyenNhanVien> {
     private int layoutID;
     private ArrayList<VanChuyenNhanVien> data;
     private ArrayList<VanChuyenNhanVien> vanChuyenNhanViens;
+    private VanChuyenNhanVien vanChuyenNhanVien;
 
 
     public VanChuyenNhanVienAdapter(Activity context, int resource, ArrayList<VanChuyenNhanVien> objects) {
@@ -104,10 +105,9 @@ public class VanChuyenNhanVienAdapter extends ArrayAdapter<VanChuyenNhanVien> {
         viewHolder.btn_Huy_dsvanchuyen_lsv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                chuyendata(vanchuyen.getId());
-
 //                taoDialogHuyDonHang(huyGiaoHang_.getId(),huyGiaoHang_,true);
                 deletePay(vanchuyen.getId());
+                HuyVanChuyen(vanchuyen.getId(),vanchuyen);
 
             }
         });
@@ -120,7 +120,7 @@ public class VanChuyenNhanVienAdapter extends ArrayAdapter<VanChuyenNhanVien> {
                 intent.setClass(context, DanhSachNguoiGiaoActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 
-                intent.putExtra("Donhang",vanchuyen);
+                intent.putExtra("DonHang",vanchuyen);
                 context.startActivity(intent);
                 xacNhanDonHang(vanchuyen.getId(),vanchuyen);
             }
@@ -146,29 +146,45 @@ public class VanChuyenNhanVienAdapter extends ArrayAdapter<VanChuyenNhanVien> {
 
 
     public void deletePay(String idPay){
-        DatabaseReference data = FirebaseDatabase.getInstance().getReference("Vanchuyennhanvien");
+        DatabaseReference data = FirebaseDatabase.getInstance().getReference("VanChuyenNhanVien");
         data.child(idPay).removeValue();
     }
-    public void chuyendata(String iddata){
+//    public void chuyendata(String iddata){
+//        DatabaseReference data = FirebaseDatabase.getInstance().getReference();
+//        String id = data.child("donhanghuyVC").push().getKey();
+//        HuyVanChuyen huyvanchuyen = new HuyVanChuyen(id,vanChuyenNhanViens);
+//        data.child("donhanghuyVC").child(id).setValue(huyvanchuyen).addOnCompleteListener(new OnCompleteListener<Void>() {
+//            @Override
+//            public void onComplete(@NonNull Task<Void> task) {
+//            }
+//        });
+//    }
+
+    public void HuyVanChuyen(String iddata, VanChuyenNhanVien value) {
         DatabaseReference data = FirebaseDatabase.getInstance().getReference();
-        String id = data.child("donhanghuyVC").push().getKey();
-        HuyVanChuyen huyvanchuyen = new HuyVanChuyen(id,vanChuyenNhanViens);
-        data.child("donhanghuyVC").child(id).setValue(huyvanchuyen).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
+
+
+
+        //Them du lieu vao don hang da giao
+        String id = data.child("DonHangHuyVanChuyen").push().getKey();
+        value.setId(id);
+        value.setTinhTrang("huy");
+        data.child("DonHangHuyVanChuyen").child(id).setValue(value).addOnCompleteListener(new OnCompleteListener<Void>() {
+           @Override
             public void onComplete(@NonNull Task<Void> task) {
-            }
-        });
+           }
+       });
     }
     public void xacNhanDonHang(String iddata, VanChuyenNhanVien value) {
         DatabaseReference data = FirebaseDatabase.getInstance().getReference();
 
         //Cap nhat trang thai don hang
         value.setTinhTrang("Xac Nhan");
-        data.child("Vanchuyennhanvien").child(iddata).setValue(value);
+        data.child("VanChuyenNhanVien").child(iddata).setValue(value);
 
         //Them du lieu vao don hang da giao
-        String id = data.child("XacNhanVanchuyen").push().getKey();
-        value.setId(id);
-        data.child("XacNhanVanchuyen").child(id).setValue(value);
+//        String id = data.child("XacNhanVanchuyen").push().getKey();
+//        value.setId(id);
+        data.child("XacNhanVanchuyen").child(iddata).setValue(value);
     }
 }

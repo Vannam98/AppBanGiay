@@ -36,7 +36,7 @@ public class ThanhToanAdapter extends ArrayAdapter<ThanhToan> {
 
         Spinner spinner_thanhtoan;
         EditText edt_soluong_lsv;
-        TextView txt_tensanpham_lsv, txt_mausac_lsv, txt_hang_lsv,txt_size_lsv2;
+        TextView txt_tensanpham_lsv, txt_gia_lsv, txt_masp_lsv,txt_size_lsv2;
         Button button_tang_lsv, button_xuong_lsv, btn_xoa_lsv;
     }
 
@@ -53,17 +53,17 @@ public class ThanhToanAdapter extends ArrayAdapter<ThanhToan> {
             viewHolder.button_xuong_lsv = convertView.findViewById(R.id.button_xuong_lsv);
             viewHolder.btn_xoa_lsv = convertView.findViewById(R.id.btn_xoa_lsv);
             viewHolder.txt_tensanpham_lsv = convertView.findViewById(R.id.txt_tensanpham_lsv);
-            viewHolder.txt_mausac_lsv = convertView.findViewById(R.id.txt_mausac_lsv);
-            viewHolder.txt_hang_lsv = convertView.findViewById(R.id.txt_hang_lsv);
+            viewHolder.txt_gia_lsv = convertView.findViewById(R.id.txt_gia_lsv);
+            viewHolder.txt_masp_lsv = convertView.findViewById(R.id.txt_masp_lsv);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         final ThanhToan student = data.get(position);
-        viewHolder.txt_tensanpham_lsv.setText(student.getName());
-        viewHolder.txt_hang_lsv.setText(student.getHang());
-        viewHolder.txt_mausac_lsv.setText(student.getMau());
-        viewHolder.edt_soluong_lsv.setText(student.getSoluong());
+        viewHolder.txt_masp_lsv.setText(student.getMaSanPham());
+        viewHolder.txt_tensanpham_lsv.setText(student.getTenSanPham());
+        viewHolder.txt_gia_lsv.setText(String.valueOf(student.getGia()));
+        viewHolder.edt_soluong_lsv.setText(student.getSoLuong());
         viewHolder.txt_size_lsv2.setText(student.getSize());
 
 
@@ -72,19 +72,19 @@ public class ThanhToanAdapter extends ArrayAdapter<ThanhToan> {
             @Override
             public void onClick(View v) {
 
-                if (Integer.parseInt(student.getSoluong()) <= 0) {
-                    student.setSoluong("0");
+                if (Integer.parseInt(student.getSoLuong()) <= 0) {
+                    student.setSoLuong("0");
                 } else {
-                    student.setSoluong((Integer.parseInt(student.getSoluong()) - 1)+"");
+                    student.setSoLuong((Integer.parseInt(student.getSoLuong()) - 1)+"");
                 }
-                viewHolder.edt_soluong_lsv.setText(student.getSoluong());
+                viewHolder.edt_soluong_lsv.setText(student.getSoLuong());
             }
         });
         viewHolder.button_tang_lsv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                student.setSoluong((Integer.parseInt(student.getSoluong()) + 1)+"");
-                viewHolder.edt_soluong_lsv.setText(student.getSoluong());
+                student.setSoLuong((Integer.parseInt(student.getSoLuong()) + 1)+"");
+                viewHolder.edt_soluong_lsv.setText(student.getSoLuong());
 
             }
         });
@@ -94,6 +94,7 @@ public class ThanhToanAdapter extends ArrayAdapter<ThanhToan> {
             public void onClick(View v) {
 //                remove(student);
                 deletePay(student.getId());
+
             }
         });
 
@@ -117,7 +118,7 @@ public class ThanhToanAdapter extends ArrayAdapter<ThanhToan> {
 
 
     public void deletePay(String idPay){
-        DatabaseReference data = FirebaseDatabase.getInstance().getReference("thanhtoan");
+        DatabaseReference data = FirebaseDatabase.getInstance().getReference("DonHang");
         data.child(idPay).removeValue();
     }
 

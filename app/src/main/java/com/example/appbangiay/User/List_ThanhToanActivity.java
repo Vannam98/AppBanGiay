@@ -20,7 +20,7 @@ public class List_ThanhToanActivity extends AppCompatActivity {
     private Button btn_xuong;
     private Button btn_xoa_lsv;
     private EditText edt_soluong;
-    private  TextView txt_tensanpham_lsv,txt_mausac_lsv,txt_hang_lsv,txt_size_lsv2;
+    private  TextView txt_tensanpham_lsv, txt_gia_lsv, txt_masp_lsv,txt_size_lsv2;
     private Spinner spinner_thanhtoan;
     //    DatabaseReference ref;
     private int soLuong = 1;
@@ -33,8 +33,8 @@ public class List_ThanhToanActivity extends AppCompatActivity {
         btn_xuong = (Button) findViewById(R.id.button_xuong_lsv);
         edt_soluong = (EditText) findViewById(R.id.edt_soluong_lsv);
         txt_tensanpham_lsv = findViewById(R.id.txt_tensanpham_lsv);
-        txt_mausac_lsv = findViewById(R.id.txt_mausac_lsv);
-        txt_hang_lsv = findViewById(R.id.txt_hang_lsv);
+        txt_gia_lsv = findViewById(R.id.txt_gia_lsv);
+        txt_masp_lsv = findViewById(R.id.txt_masp_lsv);
         btn_xoa_lsv = (Button) findViewById(R.id.btn_xoa_lsv);
         txt_size_lsv2 = findViewById(R.id.txt_size_lsv2);
 //        String key = getIntent().getExtras().get("").toString();

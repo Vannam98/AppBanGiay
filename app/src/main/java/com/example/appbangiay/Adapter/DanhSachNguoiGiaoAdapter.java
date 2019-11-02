@@ -95,10 +95,12 @@ public class DanhSachNguoiGiaoAdapter extends ArrayAdapter<DanhSachNguoiGiao> {
         viewHolder.btn_Huy_dsnguoigiao_lsv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                chuyendata(nguoiGiao.getId());
+//                chuyendata(nguoiGiao.getId());
 
 //                taoDialogHuyDonHang(huyGiaoHang_.getId(),huyGiaoHang_,true);
+
                 deletePay(nguoiGiao.getId());
+                HuyNguoiGiao(nguoiGiao.getId(),nguoiGiao);
 
             }
         });
@@ -137,16 +139,29 @@ public class DanhSachNguoiGiaoAdapter extends ArrayAdapter<DanhSachNguoiGiao> {
         data.child(idPay).removeValue();
     }
 
-    public void chuyendata(String iddata){
-        DatabaseReference data = FirebaseDatabase.getInstance().getReference();
-        String id = data.child("huynguoigiao").push().getKey();
-        HuyNguoiGiao huygiao = new HuyNguoiGiao(id,danhSachNguoiGiaos);
-        data.child("huynguoigiao").child(id).setValue(huygiao).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-            }
-        });
-    }
+//    public void chuyendata(String iddata){
+//        DatabaseReference data = FirebaseDatabase.getInstance().getReference();
+//        String id = data.child("HuyNguoiGiao").push().getKey();
+//        HuyNguoiGiao huygiao = new HuyNguoiGiao(id,danhSachNguoiGiaos);
+//        data.child("HuyNguoiGiao").child(id).setValue(huygiao).addOnCompleteListener(new OnCompleteListener<Void>() {
+//            @Override
+//            public void onComplete(@NonNull Task<Void> task) {
+//            }
+//        });
+//    }
+public void HuyNguoiGiao(String iddata, DanhSachNguoiGiao value) {
+    DatabaseReference data = FirebaseDatabase.getInstance().getReference();
+
+    //Them du lieu vao don hang da giao
+    String id = data.child("DanhSachHuyNguoiGiao").push().getKey();
+    value.setId(id);
+    value.setTinhTrang("huy");
+    data.child("DanhSachHuyNguoiGiao").child(id).setValue(value).addOnCompleteListener(new OnCompleteListener<Void>() {
+        @Override
+        public void onComplete(@NonNull Task<Void> task) {
+        }
+    });
+}
     public void xacNhanDonHang(String iddata, DanhSachNguoiGiao value) {
         DatabaseReference data = FirebaseDatabase.getInstance().getReference();
 

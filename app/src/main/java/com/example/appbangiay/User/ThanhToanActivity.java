@@ -43,7 +43,7 @@ public class ThanhToanActivity extends AppCompatActivity {
     private ThanhToanKhachHangAdapter thanhToanKhachHangAdapter;
     private ArrayList<ThanhToan> thanhToan_s;
     private ArrayList<ThanhToanKhachHang> thanhToan2_models;
-    private TextView txt_tensanpham_lsv,txt_mausac_lsv,txt_hang_lsv,txt_tongtien_thanhtoan2,txt_size_lsv2;
+    private TextView txt_tensanpham_lsv, txt_gia_lsv, txt_masp_lsv,txt_size_lsv2,txt_tongtien_thanhtoan2;
     private EditText edt_soluong_lsv, edt_tenkhachhang_thanhtoan, edt_sodienthoai_thanhtoan, edt_diachigiao_thanhtoan, edt_phivanchuyen_thanhtoan;
     DatabaseReference data;
     ThanhToanKhachHang thongTinThanhToan;
@@ -53,8 +53,8 @@ public class ThanhToanActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manhinh_thanhtoan_layout);
         txt_tensanpham_lsv = findViewById(R.id.txt_tensanpham_lsv);
-        txt_mausac_lsv = findViewById(R.id.txt_mausac_lsv);
-        txt_hang_lsv = findViewById(R.id.txt_hang_lsv);
+        txt_gia_lsv = findViewById(R.id.txt_gia_lsv);
+        txt_masp_lsv = findViewById(R.id.txt_masp_lsv);
         txt_size_lsv2 = findViewById(R.id.txt_size_lsv2);
         edt_soluong_lsv = findViewById(R.id.edt_soluong_lsv);
         edt_tenkhachhang_thanhtoan = findViewById(R.id.edt_tenkhachhang_thanhtoan);
@@ -73,14 +73,22 @@ public class ThanhToanActivity extends AppCompatActivity {
         DieuKhien();
         intent = new Intent(this, DanhSachDonHangActivity.class);
         taoAdapters();
-        databaseTT();
+//        databaseTT();
         //databaseTT2();
+
         loadData();
         loadData2();
 
 
     }
 
+    @Override
+    protected void onResume() {
+        intent = getIntent();
+        double tongTien = intent.getDoubleExtra("tongTien",0);
+        txt_tongtien_thanhtoan2.setText(tongTien+"");
+        super.onResume();
+    }
 
     //    private void write(Object data, String thanhToanNo){
 //        DatabaseReference get = FirebaseDatabase.getInstance().getReference();
@@ -112,9 +120,9 @@ public class ThanhToanActivity extends AppCompatActivity {
         btn_dathang_thanhtoan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String id = data.child("dathang").push().getKey();
+                String id = data.child("DatHang").push().getKey();
                 DatHang dathang = new DatHang(id,thongTinThanhToan, thanhToan_s);
-                data.child("dathang").child(id).setValue(dathang).addOnCompleteListener(new OnCompleteListener<Void>() {
+                data.child("DatHang").child(id).setValue(dathang).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         intent.setClass(ThanhToanActivity.this, VanChuyenNhanVienActivity.class);
@@ -143,7 +151,7 @@ public class ThanhToanActivity extends AppCompatActivity {
     }
     //ham sua thoong tin
     private void editCustommer(String idCus, ThanhToanKhachHang thanhToan2_model){
-        data.child("thongtinthanhtoan").child(idCus).setValue(thanhToan2_model).addOnCompleteListener(new OnCompleteListener<Void>() {
+        data.child("ThongTinThanhToan").child(idCus).setValue(thanhToan2_model).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 Toast.makeText(ThanhToanActivity.this, "Đã thay đổi thông tin", Toast.LENGTH_SHORT).show();
@@ -157,14 +165,14 @@ public class ThanhToanActivity extends AppCompatActivity {
     }
 
     //them firebase
-    private void databaseTT(){
-        String id = data.child("thanhtoan").push().getKey();
-        ThanhToan thanhtoan = new ThanhToan(id,"huy","oppo","10000 VND","40","3");
-        data.child("thanhtoan").child(id).setValue(thanhtoan);
-    }
+//    private void databaseTT(){
+//        String id = data.child("thanhtoan").push().getKey();
+//        ThanhToan thanhtoan = new ThanhToan(id,"02","nike","5","40",10000);
+//        data.child("thanhtoan").child(id).setValue(thanhtoan);
+//    }
     //lay du lieu firebase
     private void loadData(){
-        data.child("thanhtoan").addValueEventListener(new ValueEventListener() {
+        data.child("DonHang").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 thanhToan_s.clear();

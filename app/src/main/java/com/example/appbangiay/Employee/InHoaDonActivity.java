@@ -7,21 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.annotation.NonNull;
 import com.example.appbangiay.R;
-import com.example.appbangiay.User.ThanhToanActivity;
-import com.example.appbangiay.data_models.DanhSachChonNguoiGiao;
-import com.example.appbangiay.data_models.InHoaDon;
 import com.example.appbangiay.data_models.VanChuyenNhanVien;
-import com.example.appbangiay.data_models.XacNhanVanChuyen;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
-
 public class InHoaDonActivity extends AppCompatActivity {
 
     public static Intent intent;
@@ -61,9 +50,9 @@ public class InHoaDonActivity extends AppCompatActivity {
 
     private void getDataFromIntent(){
         intent = getIntent();
-         vanchuyen = intent.getParcelableExtra("Donhang");
+         vanchuyen = intent.getParcelableExtra("DonHang");
         madonhang_hoadon.setText(vanchuyen.getMaDonHang());
-        tensanpham_hoadon.setText(vanchuyen.getTenKhachHang());
+        tensanpham_hoadon.setText(vanchuyen.getTenSanPham());
         size_hoadon.setText(vanchuyen.getSize());
         tenkhachhang_hoadon.setText(vanchuyen.getTenKhachHang());
         sdtkhachhang_hoadon.setText(vanchuyen.getSoDienThoai());
@@ -109,8 +98,8 @@ public class InHoaDonActivity extends AppCompatActivity {
     public void xacNhanDonHang(VanChuyenNhanVien value) {
         DatabaseReference data = FirebaseDatabase.getInstance().getReference();
         //Them du lieu vao don hang da giao
-        String id = data.child("dagiaonv").push().getKey();
-        data.child("dagiaonv").child(id).setValue(value);
+        String id = data.child("DaGiaoNhanVien").push().getKey();
+        data.child("DaGiaoNhanVien").child(value.getId()).setValue(value);
     }
     //laasy du lieu firebase
 //    private void loadData(String id)

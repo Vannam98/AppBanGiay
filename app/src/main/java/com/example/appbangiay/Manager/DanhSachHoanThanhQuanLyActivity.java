@@ -113,6 +113,10 @@ public class DanhSachHoanThanhQuanLyActivity extends AppCompatActivity {
                 if (newText.isEmpty() || "".trim().equals(newText)) {
                     letSearch("", false);
                 }
+                else
+                {
+                    letSearch(newText, true);
+                }
                 return false;
             }
         });
