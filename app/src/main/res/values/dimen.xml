@@ -29,6 +29,17 @@
     <dimen name="layout_margin_4dp">4dp</dimen>
     <dimen name="layout_margin_10dp">10dp</dimen>
     <dimen name="layout_margin_40dp">40dp</dimen>
+    <!-- Của long -->
+    <dimen name="layout_margin">20dp</dimen>
+    <dimen name="text_size1">20dp</dimen>
+    <dimen name="layout_margin_thongtin">10dp</dimen>
+    <dimen name="size_Button">0dp</dimen>
+    <dimen name="Size_10">10dp</dimen>
+    <dimen name="margin15dp">15dp</dimen>
+    <dimen name="button">40dp</dimen>
+    <dimen name="buttonlist">30dp</dimen>
+    <!-- Hết Của long -->
+
 
     //dimen của tài
     <dimen name="layout_margin_Bottom">24dp</dimen>

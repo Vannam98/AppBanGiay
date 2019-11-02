@@ -14,6 +14,15 @@
     <color name="btn_login_bg">#eceef1</color>
     <color name="chk_color">#59E20E</color>
     <color name="txt_color">#000000</color>
+    <!-- Của long -->
+    <color name="color_button">#2196f3</color>
+    <color name="color_backroud">#d5eafb</color>
+    <color name="txt_black">#000</color>
+    <color name="color_item_xac_nhan">#EFF2EE</color>
+    <color name="color_item_chua_xac_nhan">#fff</color>
+    <color name="color_thongtin_khach_hang">#F0FFFF</color>
+
+    <!-- Hết Của long -->
 
     //Màu của tài
     <color name="diveder_color">#f000</color>

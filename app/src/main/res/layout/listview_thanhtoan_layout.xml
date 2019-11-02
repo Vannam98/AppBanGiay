@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        //hang
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin_thongtin"
+                android:text="@string/txt_Msp_thanhtoan"
+                android:textColor="@color/txt_black">
+
+            </TextView>
+            <TextView
+                android:id="@+id/txt_masp_lsv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin_thongtin"
+                android:textColor="@color/txt_black">
+
+            </TextView>
+        </LinearLayout>
+        //tensanpham
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txt_tensanpham"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin_thongtin"
+                android:text="@string/txt_tensanpham_thanhtoan"
+                android:textColor="@color/txt_black">
+
+            </TextView>
+            <TextView
+                android:id="@+id/txt_tensanpham_lsv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin_thongtin"
+                android:textColor="@color/txt_black">
+
+            </TextView>
+
+        </LinearLayout>
+
+        //soluong
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/soluong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin_thongtin"
+                android:text="@string/txt_soluong_thanhtoan"
+                android:textColor="@color/txt_black">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edt_soluong_lsv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></EditText>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/button_tang_lsv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="@dimen/size_Button"
+                        android:minHeight="@dimen/size_Button"
+                        android:text="^"></Button>
+
+                    <Button
+                        android:id="@+id/button_xuong_lsv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="@dimen/size_Button"
+                        android:minHeight="@dimen/size_Button"
+                        android:text="v"
+                        android:textSize="@dimen/Size_10">
+
+                    </Button>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            //size
+
+            <TextView
+                android:id="@+id/txt_size_lsv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin_thongtin"
+                android:text="@string/txt_size_thanhtoan"
+                android:textColor="@color/txt_black"></TextView>
+            <TextView
+                android:id="@+id/txt_size_lsv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin_thongtin"
+                android:textColor="@color/txt_black"></TextView>
+        </LinearLayout>
+        //giá
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txt_Gia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin_thongtin"
+                android:text="@string/txt_gia_thanhtoan"
+                android:textColor="@color/txt_black"></TextView>
+            <TextView
+                android:id="@+id/txt_gia_lsv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin_thongtin"
+                android:textColor="@color/txt_black"></TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="2"
+        android:orientation="vertical">
+        //butonxoa
+
+        <Button
+            android:id="@+id/btn_xoa_lsv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/buttonlist"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/layout_margin"
+            android:background="@drawable/vienbutton"
+            android:text="@string/txt_Xoa_thanhtoan"
+            android:textColor="@color/txt_black" />
+    </LinearLayout>
+
+
+</LinearLayout>
