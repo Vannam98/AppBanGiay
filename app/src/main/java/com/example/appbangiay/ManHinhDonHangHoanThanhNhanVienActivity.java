@@ -125,8 +125,8 @@ public class ManHinhDonHangHoanThanhNhanVienActivity extends AppCompatActivity {
     //them vao firebase
     private void databaseTT() {
         String id = data.child("DonHangHoanThanhNhanVien").push().getKey();
-        DonHangHoanThanhNhanVien dagiao = new DonHangHoanThanhNhanVien(id,"sp004", "Panda", "1", "40", "Long", "0123456","Quận 7", "350000VND","Đang giao");
-        data.child("DonHangHoanThanhNhanVien").child(id).setValue(dagiao);
+//        DonHangHoanThanhNhanVien dagiao = new DonHangHoanThanhNhanVien(id,"sp006", "FiLa", "1", "40", "Long", "0123456","Quận 7", "350000VND","Đang giao");
+//        data.child("DonHangHoanThanhNhanVien").child(id).setValue(dagiao);
     }
     //lay tu farebase
     private void loadData() {
@@ -146,7 +146,7 @@ public class ManHinhDonHangHoanThanhNhanVienActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                
+
             }
         });
     }

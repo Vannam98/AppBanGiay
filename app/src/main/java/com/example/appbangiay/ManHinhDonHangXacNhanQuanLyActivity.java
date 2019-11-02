@@ -112,8 +112,8 @@ public class ManHinhDonHangXacNhanQuanLyActivity extends AppCompatActivity {
 
     public void tao(){
         String id = mData.push().getKey();
-        DonHangXacNhanQuanLy donHangXacNhan = new DonHangXacNhanQuanLy(id,"sp006","Box","1","41","Lan","0398678","Bến Tre","700.000VND","Đã giao");
-        mData.child("DonHangXacNhanQuanLy").child(id).setValue(donHangXacNhan);
+//        DonHangXacNhanQuanLy donHangXacNhan = new DonHangXacNhanQuanLy(id,"sp006","Box","1","41","Lan","0398678","Bến Tre","700.000VND","Đã giao");
+//        mData.child("DonHangXacNhanQuanLy").child(id).setValue(donHangXacNhan);
     }
 
     public void taoAdapter(){

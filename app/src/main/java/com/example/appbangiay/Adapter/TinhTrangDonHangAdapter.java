@@ -74,12 +74,12 @@ public class TinhTrangDonHangAdapter extends BaseAdapter {
             holder = (ViewHolder)rowview.getTag();
         }
 
-        holder.txt_Madonhang.setText("Mã đơn hàng:" + arraySanPham.get(position).maDH);
-        holder.txt_Tendonhang.setText("Tên đơn hàng:" + arraySanPham.get(position).tenDH);
-        holder.txt_Thongtindonhang.setText("Thông tin đơn hàng:" + arraySanPham.get(position).thongTinDH);
-        holder.txt_Tinhtrangvanchuyen.setText("Tình trạng vận chuyển:" + arraySanPham.get(position).tinhTrang);
-        holder.txt_Tongtien.setText("Tổng tiền:" + arraySanPham.get(position).tongTien);
-        holder.txt_Ngay.setText("Ngày:" + arraySanPham.get(position).ngay);
+        holder.txt_Madonhang.setText("Mã đơn hàng: " + arraySanPham.get(position).maDH);
+        holder.txt_Tendonhang.setText("Tên đơn hàng: " + arraySanPham.get(position).tenDH);
+        holder.txt_Thongtindonhang.setText("Thông tin đơn hàng: " + arraySanPham.get(position).thongTinDH);
+        holder.txt_Tinhtrangvanchuyen.setText("Tình trạng: " + arraySanPham.get(position).tinhTrang);
+        holder.txt_Tongtien.setText("Tổng tiền: " + arraySanPham.get(position).tongTien);
+        holder.txt_Ngay.setText("Ngày: " + arraySanPham.get(position).ngay);
 
 
 

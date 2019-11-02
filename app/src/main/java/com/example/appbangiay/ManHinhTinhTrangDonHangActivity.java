@@ -92,7 +92,7 @@ public class ManHinhTinhTrangDonHangActivity extends AppCompatActivity {
 
     public void tao(){
         String id = mData.push().getKey();
-        TinhTrangDonHang tinhTrangDonHang = new TinhTrangDonHang(id,"sp003","Alexander","Đã lưu","Đang giao","200.000VND","9/10/2020");
+        TinhTrangDonHang tinhTrangDonHang = new TinhTrangDonHang(id,"sp002","Adidas","Đã lưu","Đang giao","200.000VND","9/10/2020");
         mData.child("TinhTrangDonHang").child(id).setValue(tinhTrangDonHang);
     }
 
