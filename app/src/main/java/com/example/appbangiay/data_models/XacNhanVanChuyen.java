@@ -5,6 +5,7 @@ public class XacNhanVanChuyen {
     private double tongtien;
 
     public XacNhanVanChuyen() {
+
     }
 
     public XacNhanVanChuyen(String id,String maDonHang, String tenSanPham, String soLuong, String size, String tinhTrang, String tenKhachHang, String soDienThoai, String diaChi,double tongtien) {
