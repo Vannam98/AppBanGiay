@@ -10,21 +10,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Manager.MangerShoe"></activity>
-        <activity android:name=".Manager.UploadImage"></activity>
-        <activity android:name=".Manager.DetailActivity" ></activity>
-        <activity android:name=".Manager.MainActivity" ></activity>
-        <activity android:name=".User.NavMainActivity">
+        <activity android:name=".Employee.DanhSachDonHangActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".User.RegisterActivity"></activity>
-        <activity android:name=".User.LoginActivity" ></activity>
-        <activity android:name=".User.MemberActivity"></activity>
-        <activity android:name=".Employee.DanhSachDonHangActivity">
 
-        </activity>
-        <activity android:name=".Employee.DanhSachXacNhanDonHangActivity"></activity>
-        <activity android:name=".Employee.DanhSachHuyDonHangActivity"></activity>
+
         <activity android:name=".Manager.DanhSachTaoNhanVienActivity">
 
         </activity>
@@ -34,13 +29,10 @@
         <activity android:name=".User.ThanhToanActivity"
             android:windowSoftInputMode="adjustPan|stateHidden">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
+        <activity android:name=".Employee.DanhSachXacNhanDonHangActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
         <activity android:name=".Employee.DanhSachNguoiGiaoActivity"
             android:windowSoftInputMode="adjustPan|stateHidden">
 
@@ -59,5 +51,9 @@
 
 
         </activity>
+        <activity android:name=".Employee.DanhSachHuyDonHangActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+
     </application>
+
 </manifest>

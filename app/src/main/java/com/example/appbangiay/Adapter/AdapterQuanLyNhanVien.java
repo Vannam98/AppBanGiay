@@ -34,7 +34,6 @@ public class AdapterQuanLyNhanVien extends ArrayAdapter<QuanLyNhanVien>
     {
         TextView txt_maNV, txt_tenNV, txt_soDT, txt_diaChi, txt_email, txt_chucVu, txt_id, txt_ngaySinh;
         ImageView img_hinhAnh;
-        Button btn_chinhSua;
     }
     public View getView(final int position, View convertView, ViewGroup parent)
     {
@@ -52,7 +51,6 @@ public class AdapterQuanLyNhanVien extends ArrayAdapter<QuanLyNhanVien>
             viewHolder.txt_email = convertView.findViewById(R.id.txt_E);
             viewHolder.txt_chucVu = convertView.findViewById(R.id.txt_CV);
             viewHolder.img_hinhAnh = convertView.findViewById(R.id.img_hinhAnh);
-            viewHolder.btn_chinhSua = convertView.findViewById(R.id.btn_chinhSua);
 
             convertView.setTag(viewHolder);
         }
@@ -77,12 +75,7 @@ public class AdapterQuanLyNhanVien extends ArrayAdapter<QuanLyNhanVien>
                 .into(viewHolder.img_hinhAnh);
 
 
-        viewHolder.btn_chinhSua.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
         return convertView;
     }
 

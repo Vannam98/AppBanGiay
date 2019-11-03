@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.SearchView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,6 +28,7 @@ public class DanhSachHuyDonHangActivity extends AppCompatActivity {
     private ArrayList<DonHangHuy> donHangHuys;
     private Button btn_OK;
     private Button btn_Thoat;
+    private SearchView sv_DSH;
 
     DatabaseReference mData = FirebaseDatabase.getInstance().getReference();
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +63,7 @@ public class DanhSachHuyDonHangActivity extends AppCompatActivity {
         btn_OK = (Button) findViewById(R.id.btn_OK);
         btn_Thoat = (Button) findViewById(R.id.btn_Thoat);
         list_DSHuy = findViewById(R.id.list_DSHuy);
+        sv_DSH = (SearchView) findViewById(R.id.sv_DSH);
     }
 
     private void run()
@@ -121,6 +125,53 @@ public class DanhSachHuyDonHangActivity extends AppCompatActivity {
                 //TODO HERE
             }
         });
+
+        sv_DSH.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                letSearch(query, true);
+                Toast.makeText(DanhSachHuyDonHangActivity.this, "OK",Toast.LENGTH_SHORT).show();
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if(newText.isEmpty() || "".trim().equals(newText))
+                {
+                    letSearch("", false);
+                }
+                else
+                {
+                    letSearch(newText, true);
+                }
+                return false;
+            }
+        });
+    }
+
+    public void letSearch(String keyWord, boolean isSearch)
+    {
+        if(isSearch)
+        {
+            ArrayList<DonHangHuy> arrDonHangHuy = new ArrayList<>();
+            for(DonHangHuy item : donHangHuys)
+            {
+                if(item.getMaSanPham().contains(keyWord) ||
+                        item.getTenSanPham().contains(keyWord) ||
+                        item.getSoLuong().contains(keyWord) ||
+                        item.getSize().contains(keyWord))
+                {
+                    arrDonHangHuy.add(item);
+                }
+            }
+            donHangHuyAdapter = new AdapterHuy(this, R.layout.listview_danhsach_huy_donhang_layout, arrDonHangHuy);
+            list_DSHuy.setAdapter(donHangHuyAdapter);
+        }
+        else
+        {
+            taoAdapter();
+            loadData();
+        }
     }
 
 

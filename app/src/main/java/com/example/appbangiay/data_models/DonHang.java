@@ -1,19 +1,19 @@
 package com.example.appbangiay.data_models;
 
 public class DonHang {
-    private String masp,tensp,soluong, size, id;
-    private double tongTien;
+    private String maSanPham,tenSanPham,soLuong, size, id;
+    private double gia;
 
     public DonHang() {
 
     }
 
-    public DonHang(String id, String masp, String tensp, String soluong, String size, double tongTien) {
-        this.masp = masp;
-        this.tensp = tensp;
-        this.soluong = soluong;
+    public DonHang(String id, String maSanPham, String tenSanPham, String soLuong, String size, double gia) {
+        this.maSanPham = maSanPham;
+        this.tenSanPham = tenSanPham;
+        this.soLuong = soLuong;
         this.size = size;
-        this.tongTien = tongTien;
+        this.gia = gia;
         this.id = id;
     }
 
@@ -33,36 +33,35 @@ public class DonHang {
         this.size = size;
     }
 
-    public double getTongTien() {
-        return tongTien;
+    public double getGia() {
+        return gia;
     }
 
-    public void setTongTien(double tongTien) {
-        this.tongTien = tongTien;
+    public void setGia(double gia) {
+        this.gia = gia;
     }
 
-
-    public String getMasp() {
-        return masp;
+    public String getMaSanPham() {
+        return maSanPham;
     }
 
-    public void setMasp(String masp) {
-        this.masp = masp;
+    public void setMaSanPham(String maSanPham) {
+        this.maSanPham = maSanPham;
     }
 
-    public String getTensp() {
-        return tensp;
+    public String getTenSanPham() {
+        return tenSanPham;
     }
 
-    public void setTensp(String tensp) {
-        this.tensp = tensp;
+    public void setTenSanPham(String tenSanPham) {
+        this.tenSanPham = tenSanPham;
     }
 
-    public String getSoluong() {
-        return soluong;
+    public String getSoLuong() {
+        return soLuong;
     }
 
-    public void setSoluong(String soluong) {
-        this.soluong = soluong;
+    public void setSoLuong(String soLuong) {
+        this.soLuong = soLuong;
     }
 }

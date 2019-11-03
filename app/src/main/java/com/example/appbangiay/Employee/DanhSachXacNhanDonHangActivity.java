@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.SearchView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.appbangiay.Adapter.AdapterXacNhan;
@@ -23,6 +26,7 @@ import java.util.ArrayList;
 public class DanhSachXacNhanDonHangActivity extends AppCompatActivity {
     public static Intent intent;
     private ListView list_DSXN;
+    private SearchView sv_DSXN;
     private AdapterXacNhan donHangXacNhanAdapter;
     private ArrayList<DonHangXacNhan> donHangXacNhans;
     private Button btn_OK;
@@ -38,7 +42,7 @@ public class DanhSachXacNhanDonHangActivity extends AppCompatActivity {
         run();
         intent = new Intent(this, DanhSachHuyDonHangActivity.class);
         taoAdapter();
-        create();
+        //create();
         loadData();
 
     }
@@ -55,6 +59,7 @@ public class DanhSachXacNhanDonHangActivity extends AppCompatActivity {
         btn_TroVe = (Button) findViewById(R.id.btn_TroVe);
         btn_OK = (Button) findViewById(R.id.btn_OK);
         list_DSXN = findViewById(R.id.list_DSXN);
+        sv_DSXN = (SearchView) findViewById(R.id.sv_DSXN);
     }
 
     private void run()
@@ -85,12 +90,16 @@ public class DanhSachXacNhanDonHangActivity extends AppCompatActivity {
     {
         String id1 = mData.push().getKey();
         String id2 = mData.push().getKey();
+        String id3 = mData.push().getKey();
+        String id4 = mData.push().getKey();
         DonHangXacNhan dh1 = new DonHangXacNhan(id1,"N52","Nike", "2","42","Nam","036961472","Quan9",500000);
         DonHangXacNhan dh2 = new DonHangXacNhan(id2,"J19","JorDan", "1","35","Long","036961472","Quan12",920000);
-//        DonHangXacNhan dh3 = new DonHangXacNhan("A638","Adidas","3", "35","Hoa","032651782","Quan1",1200000);
-//        DonHangXacNhan dh4 = new DonHangXacNhan("J716","Jordan","1", "42","Thủy","0164178329","Quan7",2000000);
+        DonHangXacNhan dh3 = new DonHangXacNhan(id3,"A638","Adidas","3", "35","Hoa","032651782","Quan1",1200000);
+        DonHangXacNhan dh4 = new DonHangXacNhan(id4,"J716","Jordan","1", "42","Thủy","0164178329","Quan7",2000000);
         mData.child("DonHangXacNhan").child(id1).setValue(dh1);
         mData.child("DonHangXacNhan").child(id2).setValue(dh2);
+        mData.child("DonHangXacNhan").child(id3).setValue(dh3);
+        mData.child("DonHangXacNhan").child(id4).setValue(dh4);
 
     }
 
@@ -112,6 +121,56 @@ public class DanhSachXacNhanDonHangActivity extends AppCompatActivity {
                 //TODO HERE
             }
         });
+
+        sv_DSXN.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                letSearch(query, true);
+                Toast.makeText(DanhSachXacNhanDonHangActivity.this, "OK",Toast.LENGTH_SHORT).show();
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if(newText.isEmpty() || "".trim().equals(newText))
+                {
+                    letSearch("", false);
+                }
+                else
+                {
+                    letSearch(newText, true);
+                }
+                return false;
+            }
+        });
+    }
+
+    public void letSearch(String keyWord, boolean isSearch)
+    {
+        if(isSearch)
+        {
+            ArrayList<DonHangXacNhan> arrDonHangXacNhan = new ArrayList<>();
+            for(DonHangXacNhan item : donHangXacNhans)
+            {
+                if(item.getMaDonHang().contains(keyWord) ||
+                        item.getTenSanPham().contains(keyWord) ||
+                        item.getSoLuong().contains(keyWord) ||
+                        item.getSize().contains(keyWord) ||
+                        item.getTenKhachHang().contains(keyWord) ||
+                        item.getSoDT().contains(keyWord) ||
+                        item.getDiaChi().contains(keyWord))
+                {
+                    arrDonHangXacNhan.add(item);
+                }
+            }
+            donHangXacNhanAdapter = new AdapterXacNhan(this, R.layout.listview_danhsach_xacnhan_donhang_layout, arrDonHangXacNhan);
+            list_DSXN.setAdapter(donHangXacNhanAdapter);
+        }
+        else
+        {
+            taoAdapter();
+            loadData();
+        }
     }
 
 }

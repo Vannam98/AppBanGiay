@@ -15,7 +15,7 @@ import android.widget.Toast;
 import com.example.appbangiay.Adapter.AdapterDonHang;
 
 import com.example.appbangiay.R;
-import com.example.appbangiay.User.MemberActivity;
+import com.example.appbangiay.User.ThanhToanActivity;
 import com.example.appbangiay.data_models.DonHang;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,6 +34,7 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
     private Button btn_thanhToan;
     private Button btn_Thoat;
     private TextView txt_maSP, txt_tenSP, txt_soLuong, txt_size, txt_tongTien;
+    private DonHang donHang;
 
     DatabaseReference mData = FirebaseDatabase.getInstance().getReference();
 
@@ -48,7 +49,7 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
         DieuKhien();
         //intent = new Intent(this, DanhSachXacNhanDonHangActivity.class);
         taoAdapters();
-       // create();
+        //create();
         loadData();
     }
 
@@ -70,8 +71,10 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
         btn_thanhToan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(DanhSachDonHangActivity.this, DanhSachXacNhanDonHangActivity.class);
+                double tongTien =  tinh();
+                intent = new Intent(DanhSachDonHangActivity.this, ThanhToanActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                intent.putExtra("tongTien", tongTien);
                 startActivity(intent);
             }
         });
@@ -86,15 +89,15 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
 
     private void create() {
         String id1 = mData.push().getKey();
-        String id2 = mData.push().getKey();
-        String id3 = mData.push().getKey();
-        DonHang dh1 = new DonHang(id1, "N01", "Nike", "2", "40", 500000);
-        DonHang dh2 = new DonHang(id2, "J42", "Jordan", "1", "37", 1250000);
-        DonHang dh3 = new DonHang(id3, "A27", "Adidas", "1", "43", 970000);
+        //String id2 = mData.push().getKey();
+        //String id3 = mData.push().getKey();
+        DonHang dh1 = new DonHang(id1, "N59", "Nike", "1", "43", 750000);
+        //DonHang dh2 = new DonHang(id2, "B31", "Bitis", "3", "40", 2300000);
+        //DonHang dh3 = new DonHang(id3, "A87", "Adidas", "4", "37", 4500000);
 
         mData.child("DonHang").child(id1).setValue(dh1);
-        mData.child("DonHang").child(id2).setValue(dh2);
-        mData.child("DonHang").child(id3).setValue(dh3);
+        //mData.child("DonHang").child(id2).setValue(dh2);
+        //mData.child("DonHang").child(id3).setValue(dh3);
 
 
     }
@@ -132,6 +135,10 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
                 {
                     letSearch("", false);
                 }
+                else
+                {
+                    letSearch(newText, true);
+                }
                 return false;
             }
         });
@@ -145,7 +152,7 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
             ArrayList<DonHang> arrDonHang = new ArrayList<>();
             for(DonHang item : donHangs)
             {
-                if(item.getMasp().equalsIgnoreCase(keyWord) || item.getTensp().equalsIgnoreCase(keyWord))
+                if(item.getMaSanPham().contains(keyWord) || item.getTenSanPham().contains(keyWord))
                 {
                     arrDonHang.add(item);
                 }
@@ -158,6 +165,16 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
             taoAdapters();
             loadData();
         }
+    }
+
+    public double tinh()
+    {
+        double temp = 0;
+        for(DonHang dh : donHangs)
+        {
+            temp += dh.getGia();
+        }
+        return temp;
     }
 }
 

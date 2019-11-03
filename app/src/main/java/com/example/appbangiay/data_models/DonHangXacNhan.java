@@ -10,8 +10,8 @@ public class DonHangXacNhan {
     private String soDT;
     private String diaChi;
     private double tongTien;
+    private boolean tinhTrang = false;
     private boolean isXacNhan = false;
-    private boolean isHuy = false;
 
     public DonHangXacNhan()
     {
@@ -38,13 +38,6 @@ public class DonHangXacNhan {
         isXacNhan = xacNhan;
     }
 
-    public boolean isHuy() {
-        return isHuy;
-    }
-
-    public void setHuy(boolean huy) {
-        isHuy = huy;
-    }
 
     public String getId() {
         return id;
@@ -116,6 +109,14 @@ public class DonHangXacNhan {
 
     public void setTongTien(double tongTien) {
         this.tongTien = tongTien;
+    }
+
+    public boolean isTinhTrang() {
+        return tinhTrang;
+    }
+
+    public void setTinhTrang(boolean tinhTrang) {
+        this.tinhTrang = tinhTrang;
     }
 }
 

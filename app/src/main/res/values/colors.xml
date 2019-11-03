@@ -18,7 +18,7 @@
     <color name="color_button">#2196f3</color>
     <color name="color_backroud">#d5eafb</color>
     <color name="txt_black">#000</color>
-    <color name="color_item_xac_nhan">#99000000</color>
+    <color name="color_item_xac_nhan">#EFF2EE</color>
     <color name="color_item_chua_xac_nhan">#fff</color>
     <color name="color_thongtin_khach_hang">#F0FFFF</color>
 
@@ -26,7 +26,9 @@
 
     //Màu của tài
     <color name="diveder_color">#f000</color>
-    <color name="bg_item_dhxn">#99000000</color>
+    <color name="bg_item_dhxn">#EFF2EE</color>
     <color name="bg_item_dhxn1">#2196f3</color>
+    <color name="xac_nhan">#3BFE00</color>
+    <color name="txt_huy">#F8130B</color>
 
 </resources>

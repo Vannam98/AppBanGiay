@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
     >
 
     <LinearLayout
         android:id="@+id/lnBackgrounDHXN"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="3"
+        android:gravity="center"
         android:orientation="vertical"
-        android:gravity="bottom">
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -148,12 +151,6 @@
 
             </TextView>
 
-            <!--            <Spinner-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:entries="@array/spn_size">-->
-
-            <!--            </Spinner>-->
 
         </LinearLayout>
 
@@ -263,27 +260,52 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:orientation="vertical"
-        android:layout_gravity="top">
-
-
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/lnBackgrounDHXN2"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
 
-            android:gravity="right"
-            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_tinhTrang"
+                    android:textColor="@color/txt_color"
+                    android:id="@+id/txt_tinhTrang">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/xac_nhan"
+
+                    android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
+                    android:id="@+id/txt_tinhTrangDonHang">
+
+                </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_Top_20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/layout_margin_Right_10dp"
                 android:id="@+id/btn_XN"
                 android:background="@drawable/vienbutton"
+                android:layout_margin="@dimen/layout_margin_10dp"
                 android:text="@string/btn_XacNhan"
                 android:minWidth="@dimen/min_Width"
                 android:minHeight="@dimen/min_Height"
@@ -294,7 +316,6 @@
                 >
 
             </Button>
-
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -307,7 +328,7 @@
                 android:paddingTop="@dimen/padding_Top_10dp"
                 android:paddingBottom="@dimen/padding_Bottom_10dp"
                 android:text="@string/btn_Huy"></Button>
+
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
-</LinearLayout>

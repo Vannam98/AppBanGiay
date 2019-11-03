@@ -17,7 +17,7 @@ public class QuanLyNhanVien {
     }
 
 
-    public QuanLyNhanVien(String id, String maNhanVien, String tenNhanVien, String soDienThoai, String diaChi, String email, String chucVu, String image, String passWord, String ngaySinh) {
+    public QuanLyNhanVien(String id, String maNhanVien, String tenNhanVien, String ngaySinh, String soDienThoai, String diaChi, String email, String chucVu, String image, String passWord) {
         this.maNhanVien = maNhanVien;
         this.tenNhanVien = tenNhanVien;
         this.soDienThoai = soDienThoai;

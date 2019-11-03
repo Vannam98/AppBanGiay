@@ -47,6 +47,7 @@ public class ThanhToanActivity extends AppCompatActivity {
     private EditText edt_soluong_lsv, edt_tenkhachhang_thanhtoan, edt_sodienthoai_thanhtoan, edt_diachigiao_thanhtoan, edt_phivanchuyen_thanhtoan;
     DatabaseReference data;
     ThanhToanKhachHang thongTinThanhToan;
+    double tongTien;
     DatHang datHang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +86,7 @@ public class ThanhToanActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         intent = getIntent();
-        double tongTien = intent.getDoubleExtra("tongTien",0);
+        tongTien = intent.getDoubleExtra("tongTien",0);
         txt_tongtien_thanhtoan2.setText(tongTien+"");
         super.onResume();
     }
@@ -121,6 +122,7 @@ public class ThanhToanActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String id = data.child("DatHang").push().getKey();
+                thongTinThanhToan.setTongtien(tongTien);
                 DatHang dathang = new DatHang(id,thongTinThanhToan, thanhToan_s);
                 data.child("DatHang").child(id).setValue(dathang).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -172,7 +174,7 @@ public class ThanhToanActivity extends AppCompatActivity {
 //    }
     //lay du lieu firebase
     private void loadData(){
-        data.child("DonHang").addValueEventListener(new ValueEventListener() {
+        data.child("DonHangDatMua").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 thanhToan_s.clear();
@@ -194,7 +196,10 @@ public class ThanhToanActivity extends AppCompatActivity {
     //add leen firebase
     private void databaseTT2(){
         String id = data.child("thongtinthanhtoan").push().getKey();
-        ThanhToanKhachHang thongtinthanhtoan = new ThanhToanKhachHang(id,"long","0961446997","saigon","50000",100000);
+//        ThanhToanKhachHang thongtinthanhtoan = new ThanhToanKhachHang(id,"long","0961446997","saigon","50000",100000);
+        ThanhToanKhachHang thongtinthanhtoan = new ThanhToanKhachHang();
+        thongtinthanhtoan.setId(id);
+
         data.child("thongtinthanhtoan").child(id).setValue(thongtinthanhtoan);
     }
     //laasy du lieu firebase
@@ -208,7 +213,6 @@ public class ThanhToanActivity extends AppCompatActivity {
                 edt_tenkhachhang_thanhtoan.setText(thanhToan2.getTenkhachhang());
                 edt_sodienthoai_thanhtoan.setText(thanhToan2.getSodienthoai());
                 edt_diachigiao_thanhtoan.setText(thanhToan2.getDiachi());
-                txt_tongtien_thanhtoan2.setText(String.valueOf(thanhToan2.getTongtien()));
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
