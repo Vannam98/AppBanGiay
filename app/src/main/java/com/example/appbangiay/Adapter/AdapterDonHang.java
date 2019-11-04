@@ -32,7 +32,7 @@ public class AdapterDonHang extends ArrayAdapter<DonHang>
 
     public class ViewHolder
     {
-        TextView txt_maSP, txt_tenSP, txt_soLuong, txt_size, txt_gia, txt_id;
+        TextView txt_maSP, txt_tenSP, txt_soLuong, txt_size, txt_tongTien, txt_id, txt_tenKhachHang, txt_soDienThoai, txt_diaChi;
         CheckBox chk_XN;
     }
     @NonNull
@@ -49,7 +49,10 @@ public class AdapterDonHang extends ArrayAdapter<DonHang>
             viewHolder.txt_tenSP = convertView.findViewById(R.id.txt_TSP);
             viewHolder.txt_soLuong = convertView.findViewById(R.id.txt_SL);
             viewHolder.txt_size = convertView.findViewById(R.id.txt_S);
-            viewHolder.txt_gia = convertView.findViewById(R.id.txt_TT);
+            viewHolder.txt_tenKhachHang = convertView.findViewById(R.id.txt_TKH);
+            viewHolder.txt_soDienThoai = convertView.findViewById(R.id.txt_SDTKH);
+            viewHolder.txt_diaChi = convertView.findViewById(R.id.txt_DCKH);
+            viewHolder.txt_tongTien = convertView.findViewById(R.id.txt_TT);
             viewHolder.chk_XN = convertView.findViewById(R.id.chk_xacnhan);
 
             convertView.setTag(viewHolder);
@@ -61,12 +64,14 @@ public class AdapterDonHang extends ArrayAdapter<DonHang>
 
         final DonHang dh = donHang.get(position);
         //viewHolder.txt_id.setText(dh.getId());
-        viewHolder.txt_maSP.setText(dh.getMaSanPham());
+        viewHolder.txt_maSP.setText(dh.getMaDonHang());
         viewHolder.txt_tenSP.setText(dh.getTenSanPham());
         viewHolder.txt_soLuong.setText(dh.getSoLuong());
         viewHolder.txt_size.setText(dh.getSize());
-        viewHolder.txt_gia.setText(String.valueOf(dh.getGia()));
-
+        viewHolder.txt_tenKhachHang.setText(dh.getTenKhachHang());
+        viewHolder.txt_soDienThoai.setText(dh.getSoDienThoai());
+        viewHolder.txt_diaChi.setText(dh.getDiaChi());
+        viewHolder.txt_tongTien.setText(String.valueOf(dh.getTongTien()));
         viewHolder.chk_XN.setOnClickListener(new View.OnClickListener() {
 
             @Override

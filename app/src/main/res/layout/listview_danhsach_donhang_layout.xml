@@ -115,7 +115,6 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
                 android:gravity="center_vertical"
-
                 android:textColor="@color/txt_color">
 
             </TextView>
@@ -137,7 +136,7 @@
             </TextView>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/txt_color"
                 android:layout_marginTop="@dimen/layout_margin_Top_10dp"
@@ -147,13 +146,89 @@
             </TextView>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_tenKH"
+                android:textColor="@color/txt_color"
+                android:layout_marginTop="@dimen/layout_margin_Top_10dp"
+                android:id="@+id/txt_tenKH">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/txt_color"
+                android:layout_marginTop="@dimen/layout_margin_Top_10dp"
+                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
+                android:id="@+id/txt_TKH"
+                >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_soDTKH"
+                android:textColor="@color/txt_color"
+                android:layout_marginTop="@dimen/layout_margin_Top_10dp"
+                android:id="@+id/txt_soDTKH">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/txt_color"
+                android:layout_marginTop="@dimen/layout_margin_Top_10dp"
+                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
+                android:id="@+id/txt_SDTKH"
+                >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_diaChiKH"
+                android:textColor="@color/txt_color"
+                android:layout_marginTop="@dimen/layout_margin_Top_10dp"
+                android:id="@+id/txt_diaChiKH">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/txt_color"
+                android:layout_marginTop="@dimen/layout_margin_Top_10dp"
+                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
+                android:id="@+id/txt_DCKH"
+                >
+            </TextView>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_weight="3"
         android:orientation="vertical"
         android:gravity="center"
         >

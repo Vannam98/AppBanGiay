@@ -1,20 +1,50 @@
 package com.example.appbangiay.data_models;
 
 public class DonHang {
-    private String maSanPham,tenSanPham,soLuong, size, id;
-    private double gia;
+    private String id,maDonHang,tenSanPham,soLuong, size;
+    private String tenKhachHang;
+    private String soDienThoai;
+    private String diaChi;
+    private double tongTien;
 
     public DonHang() {
 
     }
 
-    public DonHang(String id, String maSanPham, String tenSanPham, String soLuong, String size, double gia) {
-        this.maSanPham = maSanPham;
+    public DonHang(String id, String maDonHang, String tenSanPham, String soLuong, String size, String tenKhachHang, String soDienThoai, String diaChi, double tongTien) {
+        this.id = id;
+        this.maDonHang = maDonHang;
         this.tenSanPham = tenSanPham;
         this.soLuong = soLuong;
         this.size = size;
-        this.gia = gia;
-        this.id = id;
+        this.tenKhachHang = tenKhachHang;
+        this.soDienThoai = soDienThoai;
+        this.diaChi = diaChi;
+        this.tongTien = tongTien;
+    }
+
+    public String getTenKhachHang() {
+        return tenKhachHang;
+    }
+
+    public void setTenKhachHang(String tenKhachHang) {
+        this.tenKhachHang = tenKhachHang;
+    }
+
+    public String getSoDienThoai() {
+        return soDienThoai;
+    }
+
+    public void setSoDienThoai(String soDienThoai) {
+        this.soDienThoai = soDienThoai;
+    }
+
+    public String getDiaChi() {
+        return diaChi;
+    }
+
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
     }
 
     public String getId() {
@@ -33,20 +63,20 @@ public class DonHang {
         this.size = size;
     }
 
-    public double getGia() {
-        return gia;
+    public double getTongTien() {
+        return tongTien;
     }
 
-    public void setGia(double gia) {
-        this.gia = gia;
+    public void setTongTien(double tongTien) {
+        this.tongTien = tongTien;
     }
 
-    public String getMaSanPham() {
-        return maSanPham;
+    public String getMaDonHang() {
+        return maDonHang;
     }
 
-    public void setMaSanPham(String maSanPham) {
-        this.maSanPham = maSanPham;
+    public void setMaDonHang(String maDonHang) {
+        this.maDonHang = maDonHang;
     }
 
     public String getTenSanPham() {

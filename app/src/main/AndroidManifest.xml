@@ -12,27 +12,23 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Employee.DanhSachDonHangActivity"
             android:windowSoftInputMode="adjustPan|stateHidden">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-        <activity android:name=".Manager.DanhSachTaoNhanVienActivity">
-
-        </activity>
+        <activity android:name=".Manager.DanhSachTaoNhanVienActivity"></activity>
 
         <activity android:name=".Manager.DanhSachQuanLyNhanVienActivity"
             android:windowSoftInputMode="adjustPan|stateHidden"></activity>
         <activity android:name=".User.ThanhToanActivity"
             android:windowSoftInputMode="adjustPan|stateHidden">
 
-
         </activity>
         <activity android:name=".Employee.DanhSachXacNhanDonHangActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+            android:windowSoftInputMode="adjustPan|stateHidden">
+
+        </activity>
         <activity android:name=".Employee.DanhSachNguoiGiaoActivity"
             android:windowSoftInputMode="adjustPan|stateHidden">
 
@@ -52,7 +48,9 @@
 
         </activity>
         <activity android:name=".Employee.DanhSachHuyDonHangActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+            android:windowSoftInputMode="adjustPan|stateHidden">
+
+        </activity>
 
     </application>
 

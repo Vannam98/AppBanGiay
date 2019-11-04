@@ -7,10 +7,10 @@ public class DonHangXacNhan {
     private String soLuong;
     private String size;
     private String tenKhachHang;
-    private String soDT;
+    private String soDienThoai;
     private String diaChi;
     private double tongTien;
-    private boolean tinhTrang = false;
+    private String tinhTrang;
     private boolean isXacNhan = false;
 
     public DonHangXacNhan()
@@ -18,26 +18,18 @@ public class DonHangXacNhan {
 
     }
 
-    public DonHangXacNhan(String id, String maDonHang, String tenSanPham, String soLuong, String size, String tenKhachHang, String soDT, String diaChi, double tongTien) {
+    public DonHangXacNhan(String id, String maDonHang, String tenSanPham, String soLuong, String size, String tenKhachHang, String soDienThoai, String diaChi, double tongTien, String tinhTrang) {
+        this.id = id;
         this.maDonHang = maDonHang;
         this.tenSanPham = tenSanPham;
         this.soLuong = soLuong;
         this.size = size;
         this.tenKhachHang = tenKhachHang;
-        this.soDT = soDT;
+        this.soDienThoai = soDienThoai;
         this.diaChi = diaChi;
         this.tongTien = tongTien;
-        this.id = id;
+        this.tinhTrang = tinhTrang;
     }
-
-    public boolean isXacNhan() {
-        return isXacNhan;
-    }
-
-    public void setXacNhan(boolean xacNhan) {
-        isXacNhan = xacNhan;
-    }
-
 
     public String getId() {
         return id;
@@ -53,6 +45,14 @@ public class DonHangXacNhan {
 
     public void setMaDonHang(String maDonHang) {
         this.maDonHang = maDonHang;
+    }
+
+    public String getDiaChi() {
+        return diaChi;
+    }
+
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
     }
 
     public String getTenSanPham() {
@@ -87,21 +87,14 @@ public class DonHangXacNhan {
         this.tenKhachHang = tenKhachHang;
     }
 
-    public String getSoDT() {
-        return soDT;
+    public String getSoDienThoai() {
+        return soDienThoai;
     }
 
-    public void setSoDT(String soDT) {
-        this.soDT = soDT;
+    public void setSoDienThoai(String soDienThoai) {
+        this.soDienThoai = soDienThoai;
     }
 
-    public String getDiaChi() {
-        return diaChi;
-    }
-
-    public void setDiaChi(String diaChi) {
-        this.diaChi = diaChi;
-    }
 
     public double getTongTien() {
         return tongTien;
@@ -111,12 +104,20 @@ public class DonHangXacNhan {
         this.tongTien = tongTien;
     }
 
-    public boolean isTinhTrang() {
+    public String getTinhTrang() {
         return tinhTrang;
     }
 
-    public void setTinhTrang(boolean tinhTrang) {
+    public void setTinhTrang(String tinhTrang) {
         this.tinhTrang = tinhTrang;
+    }
+
+    public boolean isXacNhan() {
+        return isXacNhan;
+    }
+
+    public void setXacNhan(boolean xacNhan) {
+        isXacNhan = xacNhan;
     }
 }
 

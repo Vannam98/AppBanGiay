@@ -49,7 +49,7 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
         DieuKhien();
         //intent = new Intent(this, DanhSachXacNhanDonHangActivity.class);
         taoAdapters();
-        //create();
+        create();
         loadData();
     }
 
@@ -72,7 +72,7 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 double tongTien =  tinh();
-                intent = new Intent(DanhSachDonHangActivity.this, ThanhToanActivity.class);
+                intent = new Intent(DanhSachDonHangActivity.this, DanhSachXacNhanDonHangActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 intent.putExtra("tongTien", tongTien);
                 startActivity(intent);
@@ -89,14 +89,15 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
 
     private void create() {
         String id1 = mData.push().getKey();
-        //String id2 = mData.push().getKey();
+        String id2 = mData.push().getKey();
         //String id3 = mData.push().getKey();
-        DonHang dh1 = new DonHang(id1, "N59", "Nike", "1", "43", 750000);
+        DonHang dh1 = new DonHang(id1, "N59", "Nike", "1", "43","Nam","0329687451","Quận 9", 700000);
+        DonHang dh2 = new DonHang(id2, "A12", "Adidas", "3", "37","Long","0196721428","Quận 2", 1500000);
         //DonHang dh2 = new DonHang(id2, "B31", "Bitis", "3", "40", 2300000);
         //DonHang dh3 = new DonHang(id3, "A87", "Adidas", "4", "37", 4500000);
 
         mData.child("DonHang").child(id1).setValue(dh1);
-        //mData.child("DonHang").child(id2).setValue(dh2);
+        mData.child("DonHang").child(id2).setValue(dh2);
         //mData.child("DonHang").child(id3).setValue(dh3);
 
 
@@ -152,7 +153,7 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
             ArrayList<DonHang> arrDonHang = new ArrayList<>();
             for(DonHang item : donHangs)
             {
-                if(item.getMaSanPham().contains(keyWord) || item.getTenSanPham().contains(keyWord))
+                if(item.getMaDonHang().contains(keyWord) || item.getTenSanPham().contains(keyWord))
                 {
                     arrDonHang.add(item);
                 }
@@ -172,7 +173,7 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
         double temp = 0;
         for(DonHang dh : donHangs)
         {
-            temp += dh.getGia();
+            temp += dh.getTongTien();
         }
         return temp;
     }

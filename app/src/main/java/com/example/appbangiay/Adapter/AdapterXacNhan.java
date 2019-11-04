@@ -42,7 +42,7 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
 
     public class ViewHolder
     {
-        TextView txt_ID, txt_maDH, txt_tenSP, txt_soLuong, txt_size, txt_tenKH, txt_soDT, txt_diaChi, txt_tongTien, txt_tinhTrang;
+        TextView txt_ID, txt_maSP, txt_tenSP, txt_soLuong, txt_size, txt_tenKH, txt_soDT, txt_diaChi, txt_tongTien, txt_tinhTrang;
         Button btn_XN, btn_Huy;
         LinearLayout lnBackgrounDHXN;
         LinearLayout lnBackgrounDHXN2;
@@ -59,7 +59,7 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
             viewHolder.txt_ID = convertView.findViewById(R.id.txt_id);
             viewHolder.lnBackgrounDHXN = convertView.findViewById(R.id.lnBackgrounDHXN);
             viewHolder.lnBackgrounDHXN2 = convertView.findViewById(R.id.lnBackgrounDHXN2);
-            viewHolder.txt_maDH = convertView.findViewById(R.id.txt_MDH);
+            viewHolder.txt_maSP = convertView.findViewById(R.id.txt_MSP);
             viewHolder.txt_tenSP = convertView.findViewById(R.id.txt_TSP);
             viewHolder.txt_soLuong = convertView.findViewById(R.id.txt_SL);
             viewHolder.txt_size = convertView.findViewById(R.id.txt_S);
@@ -83,32 +83,32 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
         if(dhxn.isXacNhan()){
             viewHolder.lnBackgrounDHXN.setBackgroundColor(context.getResources().getColor(R.color.bg_item_dhxn));
             viewHolder.lnBackgrounDHXN2.setBackgroundColor(context.getResources().getColor(R.color.bg_item_dhxn));
+            //deleteDonHang(dhxn.getId());
             viewHolder.txt_tinhTrang.setText("Xác nhận");
             viewHolder.btn_XN.setVisibility(View.GONE); //aN nut xac nhan
             viewHolder.btn_Huy.setVisibility(View.GONE);
+        }else {
+
+            viewHolder.btn_XN.setVisibility(View.VISIBLE); //aN nut xac nhan
+            viewHolder.btn_Huy.setVisibility(View.VISIBLE);
+
         }
 
+
         viewHolder.txt_ID.setText(dhxn.getId());
-        viewHolder.txt_maDH.setText(dhxn.getMaDonHang());
+        viewHolder.txt_maSP.setText(dhxn.getMaDonHang());
         viewHolder.txt_tenSP.setText(dhxn.getTenSanPham());
         viewHolder.txt_soLuong.setText(dhxn.getSoLuong());
         viewHolder.txt_size.setText(dhxn.getSize());
         viewHolder.txt_tenKH.setText(dhxn.getTenKhachHang());
-        viewHolder.txt_soDT.setText(dhxn.getSoDT());
+        viewHolder.txt_soDT.setText(dhxn.getSoDienThoai());
         viewHolder.txt_diaChi.setText(dhxn.getDiaChi());
         viewHolder.txt_tongTien.setText(String.valueOf(dhxn.getTongTien()));
-        if(dhxn.isTinhTrang())
-        {
-
-            viewHolder.txt_tinhTrang.setText("Chưa xác định");
-            viewHolder.btn_XN.setVisibility(View.VISIBLE);// hiện button xác nhận
-            viewHolder.btn_XN.setVisibility(View.VISIBLE);
-        }
-
+        viewHolder.txt_tinhTrang.setText(dhxn.getTinhTrang());
         viewHolder.btn_XN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                capNhatTinhTrang(dhxn.getId(),dhxn);
+                capNhatTinhTrang(dhxn.getId(),dhxn, "Xác nhận");
                 notifyDataSetChanged();
             }
         });
@@ -141,8 +141,15 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
         data.removeValue();
     }
 
-    public void capNhatTinhTrang(String id, DonHangXacNhan donHangXacNhan)
+    public void deleteDonHang(String id)
     {
+        DatabaseReference data = FirebaseDatabase.getInstance().getReference("DonHang").child(id);
+        data.removeValue();
+    }
+
+    public void capNhatTinhTrang(String id, DonHangXacNhan donHangXacNhan, String tinhTrang)
+    {
+        donHangXacNhan.setTinhTrang(tinhTrang);
         donHangXacNhan.setXacNhan(true);
         DatabaseReference data = FirebaseDatabase.getInstance().getReference("DonHangXacNhan").child(id);
         data.setValue(donHangXacNhan);

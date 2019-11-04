@@ -27,7 +27,7 @@ public class DanhSachHuyDonHangActivity extends AppCompatActivity {
     private AdapterHuy donHangHuyAdapter;
     private ArrayList<DonHangHuy> donHangHuys;
     private Button btn_OK;
-    private Button btn_Thoat;
+    private Button btn_TroVe;
     private SearchView sv_DSH;
 
     DatabaseReference mData = FirebaseDatabase.getInstance().getReference();
@@ -61,7 +61,7 @@ public class DanhSachHuyDonHangActivity extends AppCompatActivity {
     private void AnhXa()
     {
         btn_OK = (Button) findViewById(R.id.btn_OK);
-        btn_Thoat = (Button) findViewById(R.id.btn_Thoat);
+        btn_TroVe = (Button) findViewById(R.id.btn_TroVe);
         list_DSHuy = findViewById(R.id.list_DSHuy);
         sv_DSH = (SearchView) findViewById(R.id.sv_DSH);
     }
@@ -77,7 +77,7 @@ public class DanhSachHuyDonHangActivity extends AppCompatActivity {
             }
         });
 
-        btn_Thoat.setOnClickListener(new View.OnClickListener() {
+        btn_TroVe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DanhSachHuyDonHangActivity.this, DanhSachDonHangActivity.class);
@@ -89,25 +89,9 @@ public class DanhSachHuyDonHangActivity extends AppCompatActivity {
 
 
 
-    private void create()
-    {
-        String id1 = mData.push().getKey();
-        String id2 = mData.push().getKey();
-        String id3 = mData.push().getKey();
-        String id4 = mData.push().getKey();
-        DonHangHuy dh1 = new DonHangHuy(id1,"N21","Nike","1","35",false, "");
-        DonHangHuy dh2 = new DonHangHuy(id2,"J52","Jordan","2","40",false, "");
-        DonHangHuy dh3 = new DonHangHuy(id3,"B18","Bitis","1","47",false, "");
-        DonHangHuy dh4 = new DonHangHuy(id4,"A84","Adidas","3","39",false, "");
-
-        mData.child("DonHangHuy").child(id1).setValue(dh1);
-        mData.child("DonHangHuy").child(id2).setValue(dh2);
-        mData.child("DonHangHuy").child(id3).setValue(dh3);
-        mData.child("DonHangHuy").child(id4).setValue(dh4);
-    }
 
     private void loadData(){
-        mData.child("DonHangHuy").addValueEventListener(new ValueEventListener() {
+        mData.child("DonHangDatMua").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange( DataSnapshot dataSnapshot) {
                 donHangHuys.clear();
@@ -156,7 +140,7 @@ public class DanhSachHuyDonHangActivity extends AppCompatActivity {
             ArrayList<DonHangHuy> arrDonHangHuy = new ArrayList<>();
             for(DonHangHuy item : donHangHuys)
             {
-                if(item.getMaSanPham().contains(keyWord) ||
+                if(item.getMaDonHang().contains(keyWord) ||
                         item.getTenSanPham().contains(keyWord) ||
                         item.getSoLuong().contains(keyWord) ||
                         item.getSize().contains(keyWord))
