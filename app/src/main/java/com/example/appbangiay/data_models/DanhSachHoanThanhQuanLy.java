@@ -1,23 +1,23 @@
 package com.example.appbangiay.data_models;
 
 public class DanhSachHoanThanhQuanLy {
-    private  String id, maDonHang,tenSanPham,tenKhachHang,soDienThoaiKH,diaChiKhachHang,nguoiGiao,soDienThoaiNguoiGiao,tinhTrang;
-    private double tongTien;
+    private String id, maDonHang,tenSanPham,soLuong, size,tinhTrang,tenKhachHang,soDienThoai,diaChi;
+    private double tongtien;
 
     public DanhSachHoanThanhQuanLy() {
     }
 
-    public DanhSachHoanThanhQuanLy(String id, String maDonHang, String tenSanPham, String tenKhachHang, String soDienThoaiKH, String diaChiKhachHang, String nguoiGiao, String soDienThoaiNguoiGiao, String tinhTrang, double tongTien) {
+    public DanhSachHoanThanhQuanLy(String id, String maDonHang, String tenSanPham, String soLuong, String size, String tinhTrang, String tenKhachHang, String soDienThoai, String diaChi, double tongtien) {
         this.id = id;
         this.maDonHang = maDonHang;
         this.tenSanPham = tenSanPham;
-        this.tenKhachHang = tenKhachHang;
-        this.soDienThoaiKH = soDienThoaiKH;
-        this.diaChiKhachHang = diaChiKhachHang;
-        this.nguoiGiao = nguoiGiao;
-        this.soDienThoaiNguoiGiao = soDienThoaiNguoiGiao;
+        this.soLuong = soLuong;
+        this.size = size;
         this.tinhTrang = tinhTrang;
-        this.tongTien = tongTien;
+        this.tenKhachHang = tenKhachHang;
+        this.soDienThoai = soDienThoai;
+        this.diaChi = diaChi;
+        this.tongtien = tongtien;
     }
 
     public String getId() {
@@ -44,44 +44,20 @@ public class DanhSachHoanThanhQuanLy {
         this.tenSanPham = tenSanPham;
     }
 
-    public String getTenKhachHang() {
-        return tenKhachHang;
+    public String getSoLuong() {
+        return soLuong;
     }
 
-    public void setTenKhachHang(String tenKhachHang) {
-        this.tenKhachHang = tenKhachHang;
+    public void setSoLuong(String soLuong) {
+        this.soLuong = soLuong;
     }
 
-    public String getSoDienThoaiKH() {
-        return soDienThoaiKH;
+    public String getSize() {
+        return size;
     }
 
-    public void setSoDienThoaiKH(String soDienThoaiKH) {
-        this.soDienThoaiKH = soDienThoaiKH;
-    }
-
-    public String getDiaChiKhachHang() {
-        return diaChiKhachHang;
-    }
-
-    public void setDiaChiKhachHang(String diaChiKhachHang) {
-        this.diaChiKhachHang = diaChiKhachHang;
-    }
-
-    public String getNguoiGiao() {
-        return nguoiGiao;
-    }
-
-    public void setNguoiGiao(String nguoiGiao) {
-        this.nguoiGiao = nguoiGiao;
-    }
-
-    public String getSoDienThoaiNguoiGiao() {
-        return soDienThoaiNguoiGiao;
-    }
-
-    public void setSoDienThoaiNguoiGiao(String soDienThoaiNguoiGiao) {
-        this.soDienThoaiNguoiGiao = soDienThoaiNguoiGiao;
+    public void setSize(String size) {
+        this.size = size;
     }
 
     public String getTinhTrang() {
@@ -92,11 +68,35 @@ public class DanhSachHoanThanhQuanLy {
         this.tinhTrang = tinhTrang;
     }
 
-    public double getTongTien() {
-        return tongTien;
+    public String getTenKhachHang() {
+        return tenKhachHang;
     }
 
-    public void setTongTien(double tongTien) {
-        this.tongTien = tongTien;
+    public void setTenKhachHang(String tenKhachHang) {
+        this.tenKhachHang = tenKhachHang;
+    }
+
+    public String getSoDienThoai() {
+        return soDienThoai;
+    }
+
+    public void setSoDienThoai(String soDienThoai) {
+        this.soDienThoai = soDienThoai;
+    }
+
+    public String getDiaChi() {
+        return diaChi;
+    }
+
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
+    }
+
+    public double getTongtien() {
+        return tongtien;
+    }
+
+    public void setTongtien(double tongtien) {
+        this.tongtien = tongtien;
     }
 }

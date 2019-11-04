@@ -39,7 +39,7 @@ public class DanhSachHoanThanhQuanLyAdapter extends ArrayAdapter<DanhSachHoanTha
     }
 
     public class ViewHolder {
-        TextView txt_madonhang_dsdonhanghoanthanh1,txt_tensanpham_dsdonhanghoanthanh1,txt_tenkhachhang_dsdonhanghoanthanh1,txt_sodienthoaikhachhang_dsdonhanghoanthanh1,txt_diachikhachhang_dsdonhanghoanthanh1,txt_nguoigiao_dsdonhanghoanthanh1,txt_sodienthoainguoigiao_dsdonhanghoanthanh1,txt_tongtien_dsdonhanghoanthanh1,txt_tinhtrang_dsdonhanghoanthanh1  ;
+        TextView txt_madonhang_dsdonhanghoanthanh1,txt_tensanpham_dsdonhanghoanthanh1,txt_tenkhachhang_dsdonhanghoanthanh1,txt_sodienthoaikhachhang_dsdonhanghoanthanh1,txt_diachikhachhang_dsdonhanghoanthanh1,txt_size_dsdonhanghoanthanh,txt_soluong_dsdonhanghoanthanh,txt_tongtien_dsdonhanghoanthanh1,txt_tinhtrang_dsdonhanghoanthanh1  ;
     }
 
 
@@ -55,8 +55,8 @@ public class DanhSachHoanThanhQuanLyAdapter extends ArrayAdapter<DanhSachHoanTha
             viewHolder.txt_tenkhachhang_dsdonhanghoanthanh1 = convertView.findViewById(R.id.txt_tenkhachhang_dsdonhanghoanthanh1);
             viewHolder.txt_sodienthoaikhachhang_dsdonhanghoanthanh1 = convertView.findViewById(R.id.txt_sodienthoaikhachhang_dsdonhanghoanthanh1);
             viewHolder.txt_diachikhachhang_dsdonhanghoanthanh1 = convertView.findViewById(R.id.txt_diachikhachhang_dsdonhanghoanthanh1);
-            viewHolder.txt_nguoigiao_dsdonhanghoanthanh1 = convertView.findViewById(R.id.txt_nguoigiao_dsdonhanghoanthanh1);
-            viewHolder.txt_sodienthoainguoigiao_dsdonhanghoanthanh1 = convertView.findViewById(R.id.txt_sodienthoainguoigiao_dsdonhanghoanthanh1);
+            viewHolder.txt_size_dsdonhanghoanthanh = convertView.findViewById(R.id.txt_size_dsdonhanghoanthanh);
+            viewHolder.txt_soluong_dsdonhanghoanthanh = convertView.findViewById(R.id.txt_soluong_dsdonhanghoanthanh);
             viewHolder.txt_tongtien_dsdonhanghoanthanh1 = convertView.findViewById(R.id.txt_tongtien_dsdonhanghoanthanh1);
             viewHolder.txt_tinhtrang_dsdonhanghoanthanh1 = convertView.findViewById(R.id.txt_tinhtrang_dsdonhanghoanthanh1);
             convertView.setTag(viewHolder);
@@ -69,12 +69,11 @@ public class DanhSachHoanThanhQuanLyAdapter extends ArrayAdapter<DanhSachHoanTha
         viewHolder.txt_madonhang_dsdonhanghoanthanh1.setText(hoanThanhQuanLyModel.getMaDonHang());
         viewHolder.txt_tensanpham_dsdonhanghoanthanh1.setText(hoanThanhQuanLyModel.getTenSanPham());
         viewHolder.txt_tenkhachhang_dsdonhanghoanthanh1.setText(hoanThanhQuanLyModel.getTenKhachHang());
-        viewHolder.txt_sodienthoaikhachhang_dsdonhanghoanthanh1.setText(hoanThanhQuanLyModel.getSoDienThoaiKH());
-        viewHolder.txt_diachikhachhang_dsdonhanghoanthanh1.setText(hoanThanhQuanLyModel.getDiaChiKhachHang());
-        viewHolder.txt_nguoigiao_dsdonhanghoanthanh1.setText(hoanThanhQuanLyModel.getNguoiGiao());
-        viewHolder.txt_sodienthoainguoigiao_dsdonhanghoanthanh1.setText(hoanThanhQuanLyModel.getSoDienThoaiNguoiGiao());
-        viewHolder.txt_sodienthoainguoigiao_dsdonhanghoanthanh1.setText(hoanThanhQuanLyModel.getSoDienThoaiNguoiGiao());
-        viewHolder.txt_tongtien_dsdonhanghoanthanh1.setText(String.valueOf(hoanThanhQuanLyModel.getTongTien()));
+        viewHolder.txt_sodienthoaikhachhang_dsdonhanghoanthanh1.setText(hoanThanhQuanLyModel.getSoDienThoai());
+        viewHolder.txt_diachikhachhang_dsdonhanghoanthanh1.setText(hoanThanhQuanLyModel.getDiaChi());
+        viewHolder.txt_size_dsdonhanghoanthanh.setText(hoanThanhQuanLyModel.getSize());
+        viewHolder.txt_soluong_dsdonhanghoanthanh.setText(hoanThanhQuanLyModel.getSoLuong());
+        viewHolder.txt_tongtien_dsdonhanghoanthanh1.setText(String.valueOf(hoanThanhQuanLyModel.getTongtien()));
         viewHolder.txt_tinhtrang_dsdonhanghoanthanh1.setText(hoanThanhQuanLyModel.getTinhTrang());
 
         return convertView;

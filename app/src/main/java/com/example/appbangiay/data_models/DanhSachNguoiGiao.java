@@ -44,4 +44,6 @@ public class DanhSachNguoiGiao {
     public void setTinhTrang(String tinhTrang) {
         this.tinhTrang = tinhTrang;
     }
+
+
 }

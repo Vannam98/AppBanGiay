@@ -33,7 +33,6 @@ public class DanhSachDaGiaoAdapter extends ArrayAdapter<DanhSachDagiao> {
     private int layoutID;
     private ArrayList<DanhSachDagiao> data;
     private ArrayList<DanhSachDagiao> danhSachDagiao;
-    HuyGiaoHang huyGiaoHang_;
 
 
     /******************/
@@ -88,6 +87,7 @@ public class DanhSachDaGiaoAdapter extends ArrayAdapter<DanhSachDagiao> {
         viewHolder.tongtien_dsdagiao_lsv2.setText(String.valueOf(dagiaoModel.getTongtien()));
         viewHolder.size_dsdagiao_lsv2.setText(dagiaoModel.getSize());
         viewHolder.tinhtrang_dsdagiao_lsv2.setText(dagiaoModel.getTinhTrang());
+
         /******************/
         if(dagiaoModel.getTinhTrang().equalsIgnoreCase("da giao")){
             viewHolder.lnItem.setBackgroundColor(context.getResources().getColor(R.color.color_item_xac_nhan));
@@ -111,7 +111,7 @@ public class DanhSachDaGiaoAdapter extends ArrayAdapter<DanhSachDagiao> {
         viewHolder.btn_Huy_dsdagiao_lsv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                taoDialogHuyDonHang(huyGiaoHang_.getId(),huyGiaoHang_,true);
+//     taoDialogHuyDonHang(huyGiaoHang_.getId(),huyGiaoHang_);
                 deletePay(dagiaoModel.getId());
                 HuyDaGiao(dagiaoModel.getId(),dagiaoModel);
             }
@@ -148,26 +148,6 @@ public class DanhSachDaGiaoAdapter extends ArrayAdapter<DanhSachDagiao> {
         DatabaseReference data = FirebaseDatabase.getInstance().getReference("DaGiaoNhanVien").child(idPay);
         data.removeValue();
     }
-    //dialog
-//    public void taoDialogHuyDonHang(final String id, final HuyGiaoHang Huygiaohang, final boolean tinhTrang) {
-//        final Dialog dialog = new Dialog(context);
-//        dialog.setContentView(R.layout.dialog_lido_huy_donhang_layout);
-//        final EditText edtLiDo = dialog.findViewById(R.id.edtLiDo);
-//        final Button btn_Huy_dsdagiao_lsv = dialog.findViewById(R.id.btn_Huy_dsdagiao_lsv);
-//        final Button btn_Huy = dialog.findViewById(R.id.btn_Huy);
-//        dialog.show();
-//
-//        btn_Huy_dsdagiao_lsv.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                huyGiaoHang_.setLyDo(edtLiDo.getText().toString());
-//                dialog.dismiss();
-//            }
-//        });
-//    }
-
-
-
     /********Cap nhap du lieu huy**********/
     public void HuyDaGiao(String iddata, DanhSachDagiao value) {
         DatabaseReference data = FirebaseDatabase.getInstance().getReference();
@@ -188,5 +168,7 @@ public class DanhSachDaGiaoAdapter extends ArrayAdapter<DanhSachDagiao> {
     //Them du lieu vao don hang da giao
     String id = data.child("DonHangDaGiaoQuanLy").push().getKey();
         data.child("DonHangDaGiaoQuanLy").child(id).setValue(value);
+
+
 }
 }

@@ -3,16 +3,16 @@ package com.example.appbangiay.data_models;
 public class ThanhToanKhachHang {
 
     private String id,tenkhachhang,sodienthoai,diachi;
-    private double tongtien;
+    private double tongTien;
 
     public ThanhToanKhachHang() {
     }
 
-    public ThanhToanKhachHang(String id, String tenkhachhang, String sodienthoai, String diachi, String phivanchuyen, double tongtien) {
+    public ThanhToanKhachHang(String id, String tenkhachhang, String sodienthoai, String diachi, String phivanchuyen, double tongTien) {
         this.tenkhachhang = tenkhachhang;
         this.sodienthoai = sodienthoai;
         this.diachi = diachi;
-        this.tongtien = tongtien;
+        this.tongTien = tongTien;
         this.id = id;
 }
 
@@ -48,10 +48,10 @@ public class ThanhToanKhachHang {
         this.diachi = diachi;
     }
     public double getTongtien() {
-        return tongtien;
+        return tongTien;
     }
 
     public void setTongtien(double tongtien) {
-        this.tongtien = tongtien;
+        this.tongTien = tongtien;
     }
 }

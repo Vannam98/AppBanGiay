@@ -2,12 +2,12 @@ package com.example.appbangiay.data_models;
 
 public class DanhSachDagiao {
     private String id, maDonHang,tenSanPham,soLuong, size,tinhTrang,tenKhachHang,soDienThoai,diaChi;
-    private double tongtien;
+    private double tongTien;
 
     public DanhSachDagiao() {
     }
 
-    public DanhSachDagiao(String id, String maDonHang, String tenSanPham, String soLuong, String size, String tinhTrang, String tenKhachHang, String soDienThoai, String diaChi, double tongtien) {
+    public DanhSachDagiao(String id, String maDonHang, String tenSanPham, String soLuong, String size, String tinhTrang, String tenKhachHang, String soDienThoai, String diaChi, double tongTien) {
         this.id = id;
         this.maDonHang = maDonHang;
         this.tenSanPham = tenSanPham;
@@ -17,7 +17,7 @@ public class DanhSachDagiao {
         this.tenKhachHang = tenKhachHang;
         this.soDienThoai = soDienThoai;
         this.diaChi = diaChi;
-        this.tongtien = tongtien;
+        this.tongTien = tongTien;
     }
 
     public String getId() {
@@ -93,10 +93,18 @@ public class DanhSachDagiao {
     }
 
     public double getTongtien() {
-        return tongtien;
+        return tongTien;
     }
 
     public void setTongtien(double tongtien) {
-        this.tongtien = tongtien;
+        this.tongTien = tongtien;
     }
+
+//    public String getLiDoHuy() {
+//        return liDoHuy;
+//    }
+//
+//    public void setLiDoHuy(String liDoHuy) {
+//        this.liDoHuy = liDoHuy;
+//    }
 }

@@ -120,6 +120,7 @@
     <string name="txt_size_dsdonhangdagiao"> Size :  </string>
 
     <string name="btn_tinhtrang_dsdonhangdagiao"> Tình trạng :  </string>
+    <string name="btn_lido_dsdonhangdagiao"> Lí do :  </string>
     <string name="btn_xacnhan_dsdonhangdagiao"> Xác nhận </string>
     <string name="btn_huy_dsdonhangdagiao"> Hủy </string>
     <string name="btn_refresh_dsdonhangdagiao"> Refresh</string>
@@ -214,6 +215,8 @@
     <string name="txt_danhsachdonhanghoanthanh_dsdonhanghoanthanhqly"> Danh sách đơn hàng hoàn thành </string>
     <string name="txt_madonhang_dsdonhanghoanthanhqly"> Mã đơn hàng :  </string>
     <string name="txt_tensanpham_dsdonhanghoanthanhqly"> Tên sản phẩm :  </string>
+    <string name="txt_soluong_dsdonhanghoanthanhqly"> Số lượng :  </string>
+    <string name="txt_size_dsdonhanghoanthanhqly"> Size :  </string>
     <string name="txt_tenkhachhang_dsdonhanghoanthanhqly"> Tên khách hàng :  </string>
     <string name="txt_sodienthoaikhachhang_dsdonhanghoanthanhqly"> Số điện thoại khách hàng :  </string>
     <string name="txt_diachikhachhang_dsdonhanghoanthanhqly"> Dịa chỉ khách hàng :  </string>

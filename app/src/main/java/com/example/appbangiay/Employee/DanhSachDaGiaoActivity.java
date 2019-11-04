@@ -8,11 +8,8 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-
 import com.example.appbangiay.Adapter.DanhSachDaGiaoAdapter;
 import com.example.appbangiay.Adapter.VanChuyenNhanVienAdapter;
 import com.example.appbangiay.Manager.DanhSachDaGiaoQuanLyActivity;
@@ -31,8 +28,8 @@ import java.util.ArrayList;
 public class DanhSachDaGiaoActivity extends AppCompatActivity {
 
     public static Intent intent;
-    private Button btn_trolai_dsdagiao;
-    private Button btn_Huy_dsdagiao;
+//    private Button btn_trolai_dsdagiao;
+//    private Button btn_Huy_dsdagiao;
     private SearchView sv_Dsdonhangdagiao;
     private ListView lv_Dsdagiaonv;
     private DanhSachDaGiaoAdapter thanhToanAdapter;
@@ -76,28 +73,28 @@ public class DanhSachDaGiaoActivity extends AppCompatActivity {
 
     private void AnhXa() {
 
-        btn_Huy_dsdagiao = (Button) findViewById(R.id.btn_Huy_dsdagiao);
-        btn_trolai_dsdagiao = (Button) findViewById(R.id.btn_trolai_dsdagiao);
+//        btn_Huy_dsdagiao = (Button) findViewById(R.id.btn_Huy_dsdagiao);
+//        btn_trolai_dsdagiao = (Button) findViewById(R.id.btn_trolai_dsdagiao);
         lv_Dsdagiaonv = findViewById(R.id.lv_Dsdagiaonv);
 
     }
 
     private void DieuKhien() {
-        btn_Huy_dsdagiao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-
-            }
-        });
-        btn_trolai_dsdagiao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(DanhSachDaGiaoActivity.this, DanhSachDaGiaoQuanLyActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(intent);
-            }
-        });
+//        btn_Huy_dsdagiao.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//
+//            }
+//        });
+//        btn_trolai_dsdagiao.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                intent = new Intent(DanhSachDaGiaoActivity.this, DanhSachDaGiaoQuanLyActivity.class);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+//                startActivity(intent);
+//            }
+//        });
 
         // perform set on query text listener event
         sv_Dsdonhangdagiao.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -139,11 +136,11 @@ public class DanhSachDaGiaoActivity extends AppCompatActivity {
     }
 
     //them vao firebase
-    private void databaseTT() {
-        String id = data.child("DaGiaoNhanVien").push().getKey();
-        DanhSachDagiao dagiao = new DanhSachDagiao(id,"05", "bistis","5", "40", "giao", "tai", "0961446997","sai gon", 9000000);
-        data.child("DaGiaoNhanVien").child(id).setValue(dagiao);
-    }
+//    private void databaseTT() {
+//        String id = data.child("DaGiaoNhanVien").push().getKey();
+//        DanhSachDagiao dagiao = new DanhSachDagiao(id,"05", "bistis","5", "40", "giao", "tai", "0961446997","sai gon", 9000000);
+//        data.child("DaGiaoNhanVien").child(id).setValue(dagiao);
+//    }
     //lay tu farebase
     private void loadData() {
         data.child("DaGiaoNhanVien").addValueEventListener(new ValueEventListener() {
