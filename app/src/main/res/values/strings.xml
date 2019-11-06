@@ -1,31 +1,26 @@
 <resources>
     <string name="app_name">AppBanGiay</string>
-    <string name="txt_register">Đăng Ký</string>
-    <string name="txt_login">Đăng Nhập </string>
-    <string name="txt_name"> Tên </string>
-    <string name="txt_fullname"> Họ và Tên </string>
-    <string name="txt_date">Ngày Sinh </string>
-    <string name="txt_email">Email  </string>
-    <string name="txt_phone">Phone  </string>
-    <string name="txt_user"> Tên Đăng Nhập  </string>
-    <string name="txt_password"> Mật khẩu  </string>
-    <string name="txt_confirmpass"> Nhập lại mật khẩu </string>
-    <string name="txt_gioitinh"> Giới Tính  </string>
-    <string name="txt_nam"> Nam  </string>
-    <string name="txt_nu"> Nu  </string>
-    <string name="btn_link_to_register"> Bạn chưa có tài khoản đăng kí ngay !!  </string>
-    <string name="btn_login"> Login  </string>
-    <string name="sign_up_button"> Đăng Ký  </string>
-    <string name="have_account"> Có tài khoản , đăng nhập ngay  </string>
-    <string name="open">Nav </string>
-    <string name="close">Nav </string>
 
-    <string name="nav_thongtin">Thông Tin khách hàng</string>
-    <string name="nav_tinhtrang">Tình trạn đơn hàng</string>
-    <string name="nav_giaynam">Giầy Nam</string>
-    <string name="nav_giaynu">Giầy Nữ</string>
-    <string name="nav_giaykid">Giầy trẻ em</string>
-    <string name="nav_logout">Đăng Xuất</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Email">Email ID</string>
+    <string name="Password">Mật Khẩu</string>
+    <string name="PasswordQuestion">Bạn Quên Mật Khẩu</string>
+    <string name="or">Hoặc</string>
+    <string name="question_signUp">Bạn chưa có tài khoản , đăng kí ngay !!!!</string>
+    <string name="fullName">Họ Tên </string>
+    <string name="confrimpassword">Nhập Lại Mật Khẩu</string>
+    <string name="gender">Giới Tính</string>
+    <string name="female">Nữ</string>
+    <string name="Male">Nam</string>
+    <string name="btn_SignIn">Đăng Nhập</string>
+    <string name="btn_SignUp">Đăng Ký</string>
+    <string name="question_SignIn">Có Tài Khoản Đăng Nhập Ngay !!!!</string>
+    <string name="reset_Password">Bạn quên mật khẩu !!!!</string>
+    <string name="text_Password">Đừng lo lắng, chúng tôi chỉ cần địa chỉ email đã đăng ký của bạn !</string>
+    <string name="email_Reset">Cung cấp email đã đăng kí</string>
+    <string name="btn_email_reset">Reset Password</string>
+    <string name="reminders_email">Kiểm tra hộp thư</string>
+    <string name="go_Back">&lt;&lt;Trở Lại </string>
 
     <string name="txt_shoename">Tên Giày</string>
     <string name="txt_shoedescription">Hãng</string>
@@ -34,74 +29,93 @@
     <string name="txt_shoeprice">Giá Giày</string>
     <string name="btn_choose">Chọn</string>
     <string name="btn_upload">Tải lên</string>
-    //
+    <string name="txt_search">Tìm kiếm</string>
+    <string name="btn_delete">Xóa</string>
+    <string name="btn_update">Cập nhật</string>
 
-    //string của tài
-    <string name="txt_DSDH">Danh sách đơn hàng</string>
-    <string name="txt_DSDHXN">Danh sác xác nhận(NV)</string>
-    <string name="txt_DSHuy">Danh sách đã hủy(NV)</string>
-    <string name="txt_DSQLNV">Quản lý nhân viên</string>
-    <string name="txt_taoTKNV">Tạo tài khoản nhân viên</string>
-    <string name="txt_DSDXN_QL">Danh sách đã xác nhận(QL)</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Not Signed In </string>
+    <string name="nav_header_subtitle">Email Addres</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_search">Tìm kiếm</string>
+    <string name="action_notification">Thông Báo</string>
+    <string name="action_cart">Giỏ Hàng</string>
 
-    <string name="txt_ID">ID:</string>
-    <string name="txt_MaSP">Mã Sản Phẩm:</string>
-    <string name="txt_TenSP">Tên Sản Phẩm:</string>
-    <string name="txt_SoLuong">Số lượng:</string>
-    <string name="txt_Size">Size:</string>
-    <string name="txt_TongTien">Tổng Tiền:</string>
+    <string name="menu_mall">My Mall</string>
+    <string name="menu_oders">My Orders</string>
+    <string name="menu_rewards">My Rewards</string>
+    <string name="menu_cart">My cart</string>
+    <string name="menu_wishlist">My Wishlist</string>
+    <string name="menu_account">My Account</string>
+    <string name="menu_sign_out">Đăng xuất</string>
 
-    <string name="txt_maDH">Mã đơn hàng:</string>
-    <string name="txt_tenKH">Tên khách hàng:</string>
-    <string name="txt_soDTKH">Số ĐT khách hàng:</string>
-    <string name="txt_diaChiKH">Địa chỉ khách hàng:</string>
+    <string name="category_home">Trang chủ</string>
+    <string name="category_new">Sản phẩm mới</string>
+    <string name="category_discount">Giảm giá</string>
+    <string name="category_boy">Nam</string>
+    <string name="category_girl">Nữ</string>
+    <string name="category_kid">Trẻ em</string>
 
-    <string name="txt_tinhTrang">Tình trạng:</string>
-    <string name="txt_liDoHuy">Lí do hủy:</string>
+    <string name="deals_of_day">Ưu đãi trong ngày</string>
+    <string name="btn_view_all">Xem tất cả</string>
+    <string name="tilte">Trending</string>
+    <string name="product_tilte">Tên Sản Phẩm</string>
+    <string name="total_rating">Tổng xếp hạng</string>
+    <string name="price">Giá </string>
+    <string name="cutted_price">Giá giảm</string>
+    <string name="discount">Mã có sẵn</string>
+    <string name="check_coupen">Kiểm tra sau khi nhập mã giảm giá</string>
+    <string name="redeem">Mua lại</string>
+    <string name="title_product">Tiêu đề </string>
 
-    <string name="txt_maNV">Mã nhân viên:</string>
-    <string name="txt_tenNV">Tên nhân viên:</string>
-    <string name="txt_soDTNV">SĐT nhân viên:</string>
-    <string name="txt_diaChiNV">Địa chỉ nhân viên:</string>
-    <string name="txt_diaChi">Địa chỉ:</string>
-    <string name="txt_chucVu">Chức vụ:</string>
-    <string name="txt_ngaySinh">Ngày sinh</string>
+    <string name="specification">Đặc điểm </string>
+    <string name="description">Thông Tin </string>
+    <string name="other_details">Chi tiết khác</string>
+    <string name="feature_name">Đặc tả </string>
+    <string name="feature_value">Đặc tả dữ liệu </string>
+    <string name="product_details"> Thông tin chi tiết sản phẩm </string>
+    <string name="text">Lorem ipsum dolor sit amet, eu diam scripta facilis usu. Vim  erat persequeris concludaturque an, usu vidit nominati  complectitur ex. Pri mundi albucius elaboraret id. Cu nam  omnium audire necessitatibus.  Id vel verear legimus dissentias, mea oratio pet</string>
+    <string name="ratings"> Đánh giá</string>
+    <string name="you_ratings"> Bạn đánh giá</string>
+    <string name="add_cart"> Giỏ hàng </string>
+    <string name="buy_now"> Mua  Ngay</string>
+    <string name="total_amount"> Tổng cộng</string>
+    <string name="continue_btn"> Tiếp tục </string>
+    <string name="offers_applied">Ưu đãi áp dụng</string>
+    <string name="coupen_applied">Phiếu giảm giá</string>
+    <string name="remove_btn">Xóa</string>
+    <string name="price_details">Chi tiết giá</string>
+    <string name="delivery">Vận chuyển</string>
+    <string name="you_save">Bạn lưu sản phẩm này với giá</string>
+    <string name="ordered">Đặt hàng</string>
+    <string name="packed">Đóng gói</string>
+    <string name="shipped">Vận chuyển</string>
+    <string name="delivered">Đã giao hàng</string>
+    <string name="shipping_detail">Chi tiết giao hàng</string>
+    <string name="fullname">Tên khách hàng</string>
+    <string name="address">Địa chỉ</string>
+    <string name="pincode">Mã</string>
+    <string name="cash_On_Delivery_Available">Cash On Delivery Available</string>
+    <string name="discound">Mã Giảm giá</string>
 
-    <string name="txt_passWord">Password</string>
+    <string name="change_or_address">Thay đổi hoặc thêm địa chỉ</string>
+    <string name="city">Thành Phố </string>
+    <string name="locality_area_or_street">Địa phương, khu vực hoặc đường phố </string>
+    <string name="building_name">Số nhà</string>
+    <string name="State">Khu vực </string>
+    <string name="landmark_optional">Cột mốc (chỉ dẫn ) </string>
+    <string name="Phone">Số điện thoại</string>
+    <string name="Phone_new">Số điện thoại, thay thế</string>
+    <string name="add_addresses"> Địa chỉ mới </string>
+    <string name="edit"> Sửa </string>
+    <string name="remove"> Xóa</string>
+    <string name="sign_in"> Đăng Nhập</string>
+    <string name="sign_up"> Đăng Ký</string>
+    <string name="from_your_cart"> Vài chỉ vài bước bạn đã có thể mua hàng </string>
 
-    <string name="txt_timKiem">Tìm kiếm</string>
 
-    <string name="btn_ThanhToan">Thanh Toán</string>
-    <string name="btn_Thoat">Thoát</string>
-    <string name="btn_OK">OK</string>
-    <string name="btn_TroVe">Trở về</string>
-    <string name="btn_XacNhan">Xác nhận</string>
-    <string name="btn_Huy">Hủy</string>
-    <string name="btn_chinhSua">Chỉnh sửa</string>
-    <string name="btn_Tao">Tạo</string>
-    <string name="btn_taoTK">Tạo tài khoản</string>
 
-    <string name="edt_tenNV">nhập tên nhân viên</string>
-    <string name="edt_soDT">nhập số điện thoại</string>
-    <string name="edt_email">nhập email</string>
-    <string name="edt_diachi">Nhập địa chỉ</string>
-    <string name="edt_password">nhập mật khẩu</string>
-    <string name="edt_ngaySinh">Nhâp ngày sinh</string>
 
-    <array name="spn_size">
-        <item>35</item>
-        <item>36</item>
-        <item>37</item>
-        <item>38</item>
-        <item>39</item>
-        <item>40</item>
-        <item>41</item>
-        <item>42</item>
-        <item>43</item>
-        <item>44</item>
-        <item>45</item>
-    </array>
-
-    <string name="hint_lido">Nhập lí do hủy đơn hàng....</string>
-    //
 </resources>
