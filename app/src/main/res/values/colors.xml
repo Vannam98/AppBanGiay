@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#cc0000</color>
+    <color name="colorPrimaryDark">#cc0000</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="btn_Color">#2196f3</color>
+    <color name="btn_Color">#cc0000</color>
     <color name="background_inside">#d5eafb</color>
     <color name="txt_Color">#000</color>
     <color name="black">#000</color>
     <color name="white">#fff</color>
     <color name="input_login">#fff</color>
-    <color name="input_login_hint">#999999</color>
+    <color name="input_login_hint">#EEEEEE</color>
     <color name="btn_login">#26ae90</color>
     <color name="btn_login_bg">#eceef1</color>
     <color name="chk_color">#59E20E</color>
     <color name="txt_color">#000000</color>
     <!-- Của long -->
-    <color name="color_button">#2196f3</color>
-    <color name="color_backroud">#d5eafb</color>
+    <color name="color_button">#EEEEEE</color>
+    <color name="color_backroud">#EEEEEE</color>
     <color name="txt_black">#000</color>
     <color name="color_item_xac_nhan">#EFF2EE</color>
     <color name="color_item_chua_xac_nhan">#fff</color>
@@ -27,7 +27,7 @@
     //Màu của tài
     <color name="diveder_color">#f000</color>
     <color name="bg_item_dhxn">#EFF2EE</color>
-    <color name="bg_item_dhxn1">#2196f3</color>
+    <color name="bg_item_dhxn1">#cc0000</color>
     <color name="xac_nhan">#3BFE00</color>
     <color name="txt_huy">#F8130B</color>
 

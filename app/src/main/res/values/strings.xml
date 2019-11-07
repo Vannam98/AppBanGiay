@@ -129,7 +129,7 @@
     <string name="txt_hoten_danhsachnguoigiao"> Họ tên :  </string>
     <string name="txt_sodienthoai_danhsachnguoigiao"> Số điện thoại :  </string>
     <string name="txt_tinhtrang_danhsachnguoigiao"> Tình trạng :  </string>
-    <string name="btn_giao_danhsachnguoigiao"> Giao :  </string>
+    <string name="btn_giao_danhsachnguoigiao"> Giao  </string>
     <string name="btn_huy_danhsachnguoigiao"> Hủy </string>
     <string name="btn_thoat_danhsachnguoigiao"> Thoát </string>
     <string name="btn_xacnhan_danhsachnguoigiao"> Xác nhận </string>
@@ -203,7 +203,7 @@
     <string name="btn_xacnhan_dsdonhangdagiaoqly"> Xác nhận </string>
     <string name="btn_huy_dsdonhangdagiaoqly"> Hủy </string>
     <string name="btn_trolai_dsdonhangdagiaoqly"> Trở lại</string>
-    <string name="txt_danhsachnguoigiao_dsdonhangdagiaoqly"> Danh sách người giao </string>
+    <string name="txt_danhsachdagiao_dsdonhangdagiaoqly"> Danh sách đã giao (quản lý) </string>
     <string name="txt_hoten_dsdonhangdagiaoqly"> Họ tên </string>
     <string name="txt_sodienthoai_dsdonhangdagiaoqly"> Số điện thoại </string>
     <string name="txt_tinhtrang_dsdonhangdagiaoqly"> Tình trạng </string>

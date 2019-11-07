@@ -53,14 +53,17 @@
         </activity>
         <activity android:name=".Employee.VanChuyenNhanVienActivity"
             android:parentActivityName=".User.ThanhToanActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
         <activity android:name=".Employee.DanhSachHuyDonHangActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+            android:windowSoftInputMode="adjustPan|stateHidden">
+
+        </activity>
 
     </application>
 

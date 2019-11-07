@@ -47,7 +47,7 @@
             android:layout_margin="@dimen/layout_margin"
             android:background="@drawable/vienbutton"
             android:text="@string/btn_xacnhan_danhsachnguoigiao"
-            android:textColor="@color/txt_black" />
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btn_thoat_dsnguoigiao"
@@ -56,7 +56,7 @@
             android:layout_margin="@dimen/layout_margin"
             android:background="@drawable/vienbutton"
             android:text="@string/btn_thoat_danhsachnguoigiao"
-            android:textColor="@color/txt_black" />
+            android:textColor="@color/white" />
 
     </LinearLayout>
 

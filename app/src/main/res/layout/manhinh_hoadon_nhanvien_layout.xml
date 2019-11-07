@@ -162,7 +162,7 @@
             android:layout_margin="@dimen/layout_margin_thongtin"
             android:background="@drawable/vienbutton"
             android:text="@string/btn_giao_hoadon"
-            android:textColor="@color/txt_black" />
+            android:textColor="@color/white" />
         <Button
             android:id="@+id/btn_thoat_hoadon"
             android:layout_width="wrap_content"
@@ -170,7 +170,7 @@
             android:layout_margin="@dimen/layout_margin_thongtin"
             android:background="@drawable/vienbutton"
             android:text="@string/btn_thoat_hoadon"
-            android:textColor="@color/txt_black" />
+            android:textColor="@color/white" />
         <Button
             android:id="@+id/btn_huy_hoadon"
             android:layout_width="wrap_content"
@@ -178,7 +178,7 @@
             android:layout_margin="@dimen/layout_margin_thongtin"
             android:background="@drawable/vienbutton"
             android:text="@string/btn_huy_hoadon"
-            android:textColor="@color/txt_black" />
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
