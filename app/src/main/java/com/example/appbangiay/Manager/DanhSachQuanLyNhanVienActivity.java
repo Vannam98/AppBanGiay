@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.SearchView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,6 +26,7 @@ public class DanhSachQuanLyNhanVienActivity extends AppCompatActivity {
 
     public  static Intent intent;
     private ListView list_QLNV;
+    private SearchView sv_DSNV;
     private ArrayList<QuanLyNhanVien> quanLyNhanViens;
     private AdapterQuanLyNhanVien adapterQuanLyNhanVien;
     private  Button btn_taoTK;
@@ -36,16 +39,11 @@ public class DanhSachQuanLyNhanVienActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manhinh_quanly_nhanvien_layout);
 
-//        ListView listView = (ListView) findViewById(R.id.list);
-        //Get view from layout
-
         //Processing events
         AnhXa();
         run();
 
-        //intent = new Intent(this, DanhSachTaoNhanVienActivity.class);
         taoAdapter();
-//        create();
         loadData();
     }
 
@@ -61,6 +59,7 @@ public class DanhSachQuanLyNhanVienActivity extends AppCompatActivity {
     {
         btn_taoTK = (Button) findViewById(R.id.btn_taoTK);
         btn_Huy = (Button) findViewById(R.id.btn_Huy);
+        sv_DSNV = (SearchView) findViewById(R.id.sv_DSNV);
         list_QLNV = findViewById(R.id.list_QLNV);
     }
 
@@ -86,32 +85,11 @@ public class DanhSachQuanLyNhanVienActivity extends AppCompatActivity {
 
 
 
-    private void create()
-    {
-//        String id1 = mData.push().getKey();
-//        String id2 = mData.push().getKey();
-//        String id3 = mData.push().getKey();
-//        String id4 = mData.push().getKey();
-//        String imgURL1 = "https://firebasestorage.googleapis.com/v0/b/project-t2512.appspot.com/o/animal-animal-photography-cat-1576193.jpg?alt=media&token=9140f33c-be63-40dd-b2b9-780039b738c6";
-//        String imgURL2 = "https://firebasestorage.googleapis.com/v0/b/project-t2512.appspot.com/o/adorable-animal-cat-730896.jpg?alt=media&token=00847f18-d34b-43e8-9fbf-4fe199ee0403";
-//        String imgURL3 = "https://firebasestorage.googleapis.com/v0/b/project-t2512.appspot.com/o/adorable-animal-anxious-669015.jpg?alt=media&token=0acc0066-b5da-48b5-9dc6-8b6d574e66e9";
-//        String imgURL4 = "https://firebasestorage.googleapis.com/v0/b/project-t2512.appspot.com/o/animal-cat-cute-126407.jpg?alt=media&token=23426310-0459-4d64-944c-646bb159693c";
-//
-//        QuanLiNhanVien nv1 = new QuanLiNhanVien(id1,"N51","Nam","032695142", "Quan9", "Nam@gmail.com", "NhanVien",imgURL1);
-//        QuanLiNhanVien nv2 = new QuanLiNhanVien(id2,"L12","Long","0963127921", "Quan4", "Long@gmail.com", "QuanLyKho",imgURL2);
-//        QuanLiNhanVien nv3 = new QuanLiNhanVien(id3,"T63","Thư","0914213671", "Quan10", "Thu@gmail.com", "ThuQuy",imgURL3);
-//        QuanLiNhanVien nv4 = new QuanLiNhanVien(id4,"X27","Xuân","0932147632", "Quan2", "Xuan@gmail.com", "NhanVien",imgURL4);
-//
-//        mData.child("QuanLyNhanVien").child(id1).setValue(nv1);
-//        mData.child("QuanLyNhanVien").child(id2).setValue(nv2);
-//        mData.child("QuanLyNhanVien").child(id3).setValue(nv3);
-//        mData.child("QuanLyNhanVien").child(id4).setValue(nv4);
-    }
-
     private void loadData(){
         mData.child("QuanLyNhanVien").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                quanLyNhanViens.clear();
                 QuanLyNhanVien QLNV;
                 for(DataSnapshot ds : dataSnapshot.getChildren()){
                     QLNV = ds.getValue(QuanLyNhanVien.class);
@@ -126,6 +104,50 @@ public class DanhSachQuanLyNhanVienActivity extends AppCompatActivity {
                 //TODO HERE
             }
         });
+
+        sv_DSNV.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                letSearch(query, true);
+                Toast.makeText(DanhSachQuanLyNhanVienActivity.this, "OK",Toast.LENGTH_SHORT).show();
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if(newText.isEmpty() || "".equals(newText))
+                {
+                    letSearch("", false);
+                }
+                else
+                {
+                    letSearch(newText, true);
+                }
+                return false;
+            }
+        });
+    }
+
+    public void letSearch(String keyWord, boolean isSearch)
+    {
+        if(isSearch)
+        {
+            ArrayList<QuanLyNhanVien> arrNhanVien = new ArrayList<>();
+            for(QuanLyNhanVien item : quanLyNhanViens)
+            {
+                if(item.getMaNhanVien().contains(keyWord) || item.getTenNhanVien().contains(keyWord) || item.getDiaChi().contains(keyWord))
+                {
+                    arrNhanVien.add(item);
+                }
+            }
+            adapterQuanLyNhanVien = new AdapterQuanLyNhanVien(this, R.layout.listview_danhsach_quanly_nhanvien_layout, arrNhanVien);
+            list_QLNV.setAdapter(adapterQuanLyNhanVien);
+        }
+        else
+        {
+            taoAdapter();
+            loadData();
+        }
     }
 }
 

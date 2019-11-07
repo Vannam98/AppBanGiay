@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,6 +28,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Random;
@@ -37,9 +40,11 @@ public class DanhSachTaoNhanVienActivity extends AppCompatActivity {
     EditText edt_tenNV,edt_soDT,edt_email, edt_ngaySinh,edt_password,edt_diaChi, edt_chucVu;
     ImageView img_nhanVien;
     Uri uri;
+    TextView result;
     String imageUrl;
     DatabaseReference mData = FirebaseDatabase.getInstance().getReference();
     StorageReference storageReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -65,6 +70,7 @@ public class DanhSachTaoNhanVienActivity extends AppCompatActivity {
         edt_password = (EditText) findViewById(R.id.edt_password);
         edt_diaChi = (EditText) findViewById(R.id.edt_diaChi);
         edt_chucVu = (EditText) findViewById(R.id.edt_chucVu);
+        result = (TextView) findViewById(R.id.hashpass);
         img_nhanVien = (ImageView) findViewById(R.id.img_nhanVien);
     }
 
@@ -142,6 +148,7 @@ public class DanhSachTaoNhanVienActivity extends AppCompatActivity {
 
     public void btn_TAO(View view) {
         upImage();
+        hashPass(edt_password.toString());
         //uploadnv();
         Intent intent = new Intent(DanhSachTaoNhanVienActivity.this,DanhSachQuanLyNhanVienActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
@@ -149,6 +156,7 @@ public class DanhSachTaoNhanVienActivity extends AppCompatActivity {
     }
     public  void uploadnv()
     {
+        String e = result.getText().toString();
         int idNV = new Random().nextInt();
         QuanLyNhanVien quanLyNhanVien = new QuanLyNhanVien("0",
                 "NV"+idNV,
@@ -170,7 +178,7 @@ public class DanhSachTaoNhanVienActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful())
                 {
-                    Toast.makeText(DanhSachTaoNhanVienActivity.this,"Uploaded",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DanhSachTaoNhanVienActivity.this,"Thành công",Toast.LENGTH_SHORT).show();
                     finish();
                 }
 
@@ -182,6 +190,30 @@ public class DanhSachTaoNhanVienActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void hashPass(String pass)
+    {
+        try {
+            MessageDigest digest = java.security.MessageDigest.getInstance("MD5");
+            digest.update(pass.getBytes());
+            byte messageDigest[] = digest.digest();
+
+            StringBuffer MDSHash = new StringBuffer();
+            for(int i = 0; i < messageDigest.length; i++)
+            {
+                String h = Integer.toHexString(0xFF & messageDigest[i]);
+                while ((h.length() < 0))
+                {
+                    h = "0" + h;
+                    MDSHash.append(h);
+                }
+                result.setText(MDSHash);
+            }
+        }catch (NoSuchAlgorithmException e)
+        {
+            e.printStackTrace();
+        }
     }
 }
 

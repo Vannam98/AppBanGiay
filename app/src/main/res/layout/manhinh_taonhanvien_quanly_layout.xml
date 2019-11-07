@@ -11,7 +11,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:background="@color/background_inside">
+        android:background="@color/background">
 
         <TextView
             android:layout_width="wrap_content"
@@ -28,13 +28,14 @@
         android:layout_height="0dp"
         android:layout_weight="4"
         android:orientation="horizontal"
-        android:background="@color/background_inside">
+        >
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/background_listview">
 
             <ImageView
                 android:id="@+id/img_nhanVien"
@@ -47,15 +48,15 @@
             </ImageView>
 
             <Button
+                android:id="@+id/btn_chinhSua"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/btn_chinhSua"
-                android:id="@+id/btn_chinhSua"
-                android:layout_marginTop="@dimen/layout_margin_Top_20dp"
                 android:layout_marginLeft="@dimen/layout_margin_Left_20dp"
+                android:layout_marginTop="@dimen/layout_margin_Top_20dp"
                 android:background="@drawable/vienbutton"
+                android:textColor="@color/btn_txt_color"
                 android:onClick="btn_chinhsua"
-               >
+                android:text="@string/btn_chinhSua">
 
             </Button>
         </LinearLayout>
@@ -64,7 +65,7 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:orientation="vertical"
-            >
+            android:background="@color/background_listview">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -166,6 +167,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/vien"
+                android:inputType="textPassword"
                 android:hint="@string/edt_password"
                 android:id="@+id/edt_password"
                 android:layout_marginTop="@dimen/layout_margin_Top_5dp">
@@ -187,9 +189,14 @@
                 android:hint="@string/edt_password"
                 android:id="@+id/edt_chucVu"
                 android:layout_marginTop="@dimen/layout_margin_Top_5dp">
-
             </EditText>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hashpass">
+
+            </TextView>
         </LinearLayout>
     </LinearLayout>
 
@@ -199,7 +206,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="horizontal"
-        android:background="@color/background_inside">
+        android:background="@color/background">
 
         <Button
             android:layout_width="wrap_content"
@@ -207,6 +214,7 @@
             android:id="@+id/btn_Tao"
             android:text="@string/btn_Tao"
             android:layout_marginRight="@dimen/layout_margin_Right_70dp"
+            android:textColor="@color/btn_txt_color"
             android:background="@drawable/vienbutton"
             android:onClick="btn_TAO">
 
@@ -217,6 +225,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_Huy"
+            android:textColor="@color/btn_txt_color"
             android:text="@string/btn_Huy"
             android:background="@drawable/vienbutton"
             >

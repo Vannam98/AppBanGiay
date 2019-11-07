@@ -49,7 +49,7 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
         DieuKhien();
         //intent = new Intent(this, DanhSachXacNhanDonHangActivity.class);
         taoAdapters();
-        create();
+        //create();
         loadData();
     }
 

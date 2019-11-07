@@ -9,7 +9,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:background="@color/background_inside">
+        android:background="@color/background">
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.5"
         android:gravity="center"
-        android:background="@color/background_inside">
+        android:background="@color/background">
 
         <TextView
             android:layout_width="wrap_content"
@@ -59,6 +59,7 @@
             android:layout_height="wrap_content"
             android:divider="@color/diveder_color"
             android:dividerHeight="@dimen/diveder_Height"
+            android:background="@color/background_listview"
             android:id="@+id/list_DSHuy">
 
         </ListView>
@@ -69,13 +70,14 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:background="@color/background_inside">
+        android:background="@color/background">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_OK"
             android:id="@+id/btn_OK"
+            android:textColor="@color/btn_txt_color"
             android:background="@drawable/vienbutton"
             android:layout_marginRight="@dimen/layout_margin_Right_70dp">
 
@@ -85,6 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_TroVe"
+            android:textColor="@color/btn_txt_color"
             android:id="@+id/btn_TroVe"
             android:background="@drawable/vienbutton"
             >

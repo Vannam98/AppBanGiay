@@ -7,10 +7,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="@color/background_inside">
+        android:background="@color/background">
 
         <TextView
             android:layout_width="wrap_content"
@@ -26,13 +26,39 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_timKiem"
+            android:id="@+id/txt_timKiem"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/txt_color">
+
+        </TextView>
+        <SearchView
+            android:id="@+id/sv_DSNV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/vien"
+            android:layout_margin="@dimen/layout_margin_10dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="4"
-        android:background="@color/background_inside">
+        >
 
         <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:divider="@color/diveder_color"
+            android:background="@color/background_listview"
             android:dividerHeight="@dimen/diveder_Height"
             android:id="@+id/list_QLNV">
 
@@ -42,15 +68,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="@color/background_inside">
+        android:background="@color/background">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_taoTK"
+            android:textColor="@color/btn_txt_color"
             android:id="@+id/btn_taoTK"
             android:background="@drawable/vienbutton"
             android:layout_marginRight="@dimen/layout_margin_Right_70dp"
@@ -62,6 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_Huy"
+            android:textColor="@color/btn_txt_color"
             android:background="@drawable/vienbutton"
             android:id="@+id/btn_Huy">
 
