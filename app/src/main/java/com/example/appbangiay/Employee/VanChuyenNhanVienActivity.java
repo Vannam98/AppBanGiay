@@ -56,7 +56,7 @@ public class VanChuyenNhanVienActivity extends AppCompatActivity{
         AnhXa();
         DieuKhien();
         taoAdapters();
-        databaseTT();
+//        databaseTT();
         loadData();
 
 
@@ -121,7 +121,7 @@ public class VanChuyenNhanVienActivity extends AppCompatActivity{
     }
     //lay tu farebase
     private void loadData() {
-        data.child("VanChuyenNhanVien").addValueEventListener(new ValueEventListener() {
+        data.child("DonHangXacNhan").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 vanChuyenNhanViens.clear();

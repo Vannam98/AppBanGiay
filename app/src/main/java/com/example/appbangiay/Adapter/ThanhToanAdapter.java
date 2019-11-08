@@ -23,12 +23,13 @@ public class ThanhToanAdapter extends ArrayAdapter<ThanhToan> {
     private Activity context;
     private int layoutID;
     private ArrayList<ThanhToan> data;
-
+    Tinhtong tinhtong;
     public ThanhToanAdapter(Activity context, int resource, ArrayList<ThanhToan> objects) {
         super(context, resource, objects);
         this.context = context;
         this.layoutID = resource;
         this.data = objects;
+        tinhtong = (Tinhtong) context;
 
     }
 
@@ -85,7 +86,9 @@ public class ThanhToanAdapter extends ArrayAdapter<ThanhToan> {
             public void onClick(View v) {
                 student.setSoLuong((Integer.parseInt(student.getSoLuong()) + 1)+"");
                 viewHolder.edt_soluong_lsv.setText(student.getSoLuong());
-
+               double tong = student.getGia() * (Integer.parseInt(student.getSoLuong()));
+//
+                tinhtong.Tong(tong);
             }
         });
 
@@ -118,8 +121,12 @@ public class ThanhToanAdapter extends ArrayAdapter<ThanhToan> {
 
 
     public void deletePay(String idPay){
-        DatabaseReference data = FirebaseDatabase.getInstance().getReference("DonHang");
+        DatabaseReference data = FirebaseDatabase.getInstance().getReference("DonHangDatMua");
         data.child(idPay).removeValue();
+    }
+
+    public interface Tinhtong {
+        void Tong(double toTal);
     }
 
 }

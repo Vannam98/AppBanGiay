@@ -54,10 +54,9 @@
         <activity android:name=".Employee.DanhSachHuyDonHangActivity"
             android:windowSoftInputMode="adjustPan|stateHidden"></activity>
 
-        <activity android:name=".Employee.MangHinhChinhNhanvienActivity">
-
-        </activity>
         <activity android:name=".User.LoginActivity">
+        </activity>
+        <activity android:name=".Employee.MangHinhChinhNhanvienActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

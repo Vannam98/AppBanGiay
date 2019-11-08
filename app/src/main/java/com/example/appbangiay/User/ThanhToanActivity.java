@@ -14,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.appbangiay.Adapter.ThanhToanAdapter;
 import com.example.appbangiay.Adapter.ThanhToanKhachHangAdapter;
-import com.example.appbangiay.Employee.DanhSachDaGiaoActivity;
 import com.example.appbangiay.Employee.DanhSachDonHangActivity;
 import com.example.appbangiay.Employee.VanChuyenNhanVienActivity;
 import com.example.appbangiay.Manager.DanhSachDaGiaoQuanLyActivity;
@@ -33,7 +32,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ThanhToanActivity extends AppCompatActivity {
+public class ThanhToanActivity extends AppCompatActivity implements ThanhToanAdapter.Tinhtong {
 
     public static Intent intent;
     private Button btn_huy_thanhtoan;
@@ -222,6 +221,9 @@ public class ThanhToanActivity extends AppCompatActivity {
     }
 
 
-
+    @Override
+    public void Tong(double toTal) {
+        txt_tongtien_thanhtoan2.setText(toTal + "");
+    }
 }
 
