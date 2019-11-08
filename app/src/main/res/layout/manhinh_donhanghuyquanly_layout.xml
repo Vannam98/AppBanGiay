@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background_inside"
+    android:background="@color/btn_nen"
     tools:context=".ManHinhDonHangHuyQuanLyActivity">
 
     <LinearLayout
@@ -55,6 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
+        android:background="@color/white"
         android:layout_weight="5">
         <ListView
             android:id="@+id/lst_DanhSach"
@@ -75,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/btn_heightTinhTrang"
             android:background="@drawable/vienbutton"
-            android:textColor="@color/txt_Color"
+            android:textColor="@color/white"
             android:text="@string/btn_Trolai"></Button>
 
     </LinearLayout>

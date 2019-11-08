@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.appbangiay.Adapter.DonHangHoanThanhNhanVienAdapter;
+import com.example.appbangiay.User.NavMainActivity;
 import com.example.appbangiay.data_models.DonHangHoanThanhNhanVien;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -25,8 +26,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class ManHinhDonHangHoanThanhNhanVienActivity extends AppCompatActivity {
-
-
 
     public static Intent intent;
     private Button btn_Thoat;
@@ -48,7 +47,7 @@ public class ManHinhDonHangHoanThanhNhanVienActivity extends AppCompatActivity {
         txt_Size = findViewById(R.id.txt_Size);
         txt_Tenkhachhang = findViewById(R.id.txt_Tenkhachhang);
         txt_SodienthoaiKH = findViewById(R.id.txt_SodienthoaiKH);
-        txt_DiachiKH = findViewById(R.id.txt_DiachiKH);
+        txt_DiachiKH = findViewById(R.id.txt_Diachi);
         txt_Tongtien = findViewById(R.id.txt_Tongtien);
         txt_Tinhtrang = findViewById(R.id.txt_Tinhtrang);
         srTimKiem = findViewById(R.id.srTimKiem);
@@ -57,7 +56,6 @@ public class ManHinhDonHangHoanThanhNhanVienActivity extends AppCompatActivity {
         AnhXa();
         DieuKhien();
         taoAdapters();
-        databaseTT();
         loadData();
     }
 
@@ -78,7 +76,7 @@ public class ManHinhDonHangHoanThanhNhanVienActivity extends AppCompatActivity {
         btn_Thoat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(ManHinhDonHangHoanThanhNhanVienActivity.this, ManHinhDonHangHuyQuanLyActivity.class);
+                intent = new Intent(ManHinhDonHangHoanThanhNhanVienActivity.this, NavMainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(intent);
             }
@@ -107,10 +105,8 @@ public class ManHinhDonHangHoanThanhNhanVienActivity extends AppCompatActivity {
         if (isSearch) {
             ArrayList<DonHangHoanThanhNhanVien> lstDanhSachDaGiaoNew = new ArrayList<>();
             for (DonHangHoanThanhNhanVien item : donHangHoanThanhs) {
-                if (item.getMaDH().equalsIgnoreCase(keyWord) || item.getTenSP().equalsIgnoreCase(keyWord) ||
-                        item.getSoLuong().equalsIgnoreCase(keyWord) || item.getSize().equalsIgnoreCase(keyWord) ||item.getTenKH().equalsIgnoreCase(keyWord) ||
-                        item.getSoDTKH().equalsIgnoreCase(keyWord) || item.getDiaChiKH().equalsIgnoreCase(keyWord) || item.getTongTien().equalsIgnoreCase(keyWord) ||
-                        item.getTinhTrang().equalsIgnoreCase(keyWord)) {
+                if (item.getMaDonHang().equalsIgnoreCase(keyWord) || item.getTenSanPham().equalsIgnoreCase(keyWord)
+                        ||item.getTenKhachHang().equalsIgnoreCase(keyWord) || item.getTinhTrang().equalsIgnoreCase(keyWord)) {
                     lstDanhSachDaGiaoNew.add(item);
                 }
             }
@@ -122,15 +118,9 @@ public class ManHinhDonHangHoanThanhNhanVienActivity extends AppCompatActivity {
         }
     }
 
-    //them vao firebase
-    private void databaseTT() {
-        String id = data.child("DonHangHoanThanhNhanVien").push().getKey();
-//        DonHangHoanThanhNhanVien dagiao = new DonHangHoanThanhNhanVien(id,"sp006", "FiLa", "1", "40", "Long", "0123456","Quận 7", "350000VND","Đang giao");
-//        data.child("DonHangHoanThanhNhanVien").child(id).setValue(dagiao);
-    }
     //lay tu farebase
     private void loadData() {
-        data.child("DonHangHoanThanhNhanVien").addValueEventListener(new ValueEventListener() {
+        data.child("HoanThanhNhanVien").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 donHangHoanThanhs.clear();
@@ -140,8 +130,6 @@ public class ManHinhDonHangHoanThanhNhanVienActivity extends AppCompatActivity {
                     donHangHoanThanhs.add(dagiao);
                 }
                 donHangHoanThanhAdapter.notifyDataSetChanged();
-
-
             }
 
             @Override

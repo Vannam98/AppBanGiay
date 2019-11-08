@@ -106,14 +106,14 @@
     //String cua Quanh
     <string name="btn_Trove">Trở về</string>
     <string name="txt_Diachicuahang">Địa chỉ cửa hàng: 53 Võ Văn Ngân - Phường Linh Chiểu - Quận Thủ Đức - TP.Hồ Chí Minh</string>
-    <string name="txt_Tinhtrangdonhang">TÌNH TRẠNG ĐƠN HÀNG</string>
+    <string name="txt_Tinhtrangdonhang">Tình trạng đơn hàng</string>
     <string name="txt_Madonhang">Mã đơn hàng:</string>
     <string name="txt_Tendonhang">Tên đơn hàng:</string>
     <string name="txt_Thongtindonhang">Thông tin đơn hàng:</string>
     <string name="txt_Tinhtrangvanchuyen">Tình trạng vận chuyển:</string>
     <string name="txt_Tongtien">Tổng tiền:</string>
     <string name="txt_Ngay">Ngày:</string>
-    <string name="txt_Donhangdaxacnhan_Quanly">DANH SÁCH ĐƠN HÀNG ĐÃ XÁC NHẬN (QUẢN LÝ)</string>
+    <string name="txt_Donhangdaxacnhan_Quanly">Danh sách đơn hàng xác nhận (Quản Lý)</string>
     <string name="btn_Trolai">Trở lại</string>
     <string name="txt_Timkiem">Tìm kiếm</string>
     <string name="txt_Tensanpham">Tên sản phẩm:</string>
@@ -122,12 +122,140 @@
     <string name="txt_SodienthoaiKH">Số điện thoại khách hàng:</string>
     <string name="txt_DiachiKH">Địa chỉ khách hàng:</string>
     <string name="txt_Tinhtrang">Tình trạng:</string>
-    <string name="txt_Donhanghoanthanh_Nhanvien">DANH SÁCH ĐƠN HÀNG HOÀN THÀNH (NHÂN VIÊN)</string>
+    <string name="txt_Donhanghoanthanh_Nhanvien">Danh sách đơn hàng hoàn thành (nhân viên)</string>
     <string name="btn_Hoanthanh">Hoàn thành</string>
-    <string name="txt_Donhanghuy_Quanly">DANH SÁCH ĐƠN HÀNG HỦY (QUẢN LÝ)</string>
+    <string name="txt_Donhanghuy_Quanly">Danh sách đơn hàng hủy (Quản Lý)</string>
     <string name="txt_Lydohuy">Lý do hủy:</string>
-    <string name="txt_Donhangvanchuyen_Quanly">DANH SÁCH ĐƠN HÀNG VẬN CHUYỂN (QUẢN LÝ)</string>
+    <string name="txt_Donhangvanchuyen_Quanly">Danh sách đơn hàng vận chuyển (Quản Lý)</string>
     <string name="txt_id">ID</string>
     <string name="btn_tiepTuc">Tiếp tục</string>
     <string name="btn_Refresh">Refresh</string>
+    <string name="btn_Capnhat">Cập nhật</string>
+
+
+    //  Của LONG
+
+    <string name="name_page">Thanh toán</string>
+    <string name="btn_dathan">Đặt hàng</string>
+    <string name="btn_huy">Hủy</string>
+
+
+    <string name="txt_tenkhachhang_thanhtoan">Tên khách hàng: </string>
+    <string name="txt_sodienthoai_thanhtoan">Số điện thoại: </string>
+    <string name="txt_diachigiao_thanhtoan">Địa chỉ giao: </string>
+    <string name="txt_phivanchuyen_thanhtoan">Phí vận chuyển: </string>
+    <string name="txt_chinhsua_thanhtoan">Chỉnh sửa </string>
+    <string name="txt_tongtien_thanhtoan">Tổng tiền: </string>
+    <string name="txt_tensanpham_thanhtoan">Tên sản phẩm: </string>
+    <string name="txt_size_thanhtoan">Size: </string>
+    <string name="txt_soluong_thanhtoan">Số lượng: </string>
+    <string name="txt_gia_thanhtoan">Giá: </string>
+    <string name="txt_Msp_thanhtoan">Mã sản Phẩm: </string>
+    <string name="txt_Xoa_thanhtoan"> Xóa </string>
+
+
+    <string name="txt_dsvanchuyen"> Danh sách vận chuyển </string>
+    <string name="btn_xacnhan_dsvanchuyen"> Xác nhận </string>
+    <string name="txt_Madonhang_dsvanchuyen"> Mã đơn hàng:</string>
+    <string name="txt_soluong_dsvanchuyen"> số lượng:</string>
+    <string name="txt_tensanpham__dsvanchuyen"> Tên sản phẩm:</string>
+    <string name="txt_size_dsvanchuyen"> Size:</string>
+    <string name="txt_mau_dsvanchuyen"> Màu:</string>
+    <string name="txt_tinhtrang_dsvanchuyen"> Tình trạng:</string>
+    <string name="txt_timkiem_dsvanchuyen"> Tìm kiếm </string>
+    <string name="txt_Tongtien_dsvanchuyen"> Tổng tiền : </string>
+    <string name="txt_tenkhachhang_dsvanchuyen"> Tên khách hàng:</string>
+    <string name="txt_sodienthoai_dsvanchuyen"> Số điện thoại:</string>
+    <string name="txt_diachikhachhang_dsvanchuyen"> Địa chỉ khách hàng:</string>
+    <string name="btn_huy_dsvanchuyen"> Hủy </string>
+    <string name="btn_refresh_dsvanchuyen"> Refresh </string>
+    <string name="btn_thoat_dsvanchuyen"> Thoát </string>
+
+
+
+    <string name="txt_danhsachdonhangdagiao"> Danh sách đơn hàng đã giao </string>
+    <string name="txt_timkiem_dsdonhangdagiao"> Tìm kiếm :  </string>
+    <string name="txt_Madonhang_dsdonhangdagiao"> Mã đơn hàng : </string>
+    <string name="txt_tensanpham_dsdonhangdagiao"> Tên sản phẩm : </string>
+    <string name="txt_tenkhachhang_dsdonhangdagiao"> Tên khách hàng : </string>
+    <string name="txt_soluong_dsdonhangdagiao"> Số lượng : </string>
+    <string name="txt_sodienthoaikhachhang_dsdonhangdagiao"> Số điện thoại khách hàng : </string>
+    <string name="txt_diachi_dsdonhangdagiao"> Địa chỉ :  </string>
+    <string name="txt_tongtien_dsdonhangdagiao"> Tổng tiền :  </string>
+    <string name="txt_size_dsdonhangdagiao"> Size :  </string>
+
+    <string name="btn_tinhtrang_dsdonhangdagiao"> Tình trạng :  </string>
+    <string name="btn_xacnhan_dsdonhangdagiao"> Xác nhận </string>
+    <string name="btn_huy_dsdonhangdagiao"> Hủy </string>
+    <string name="btn_refresh_dsdonhangdagiao"> Refresh</string>
+    <string name="btn_trolai_dsdonhangdagiao"> Trở Lại</string>
+    <string name="txt_danhsachnguoigiao_danhsachnguoigiao"> Danh sách người giao </string>
+    <string name="txt_hoten_danhsachnguoigiao"> Họ tên :  </string>
+    <string name="txt_sodienthoai_danhsachnguoigiao"> Số điện thoại :  </string>
+    <string name="txt_tinhtrang_danhsachnguoigiao"> Tình trạng :  </string>
+    <string name="btn_giao_danhsachnguoigiao"> Giao :  </string>
+    <string name="btn_huy_danhsachnguoigiao"> Hủy </string>
+    <string name="btn_thoat_danhsachnguoigiao"> Thoát </string>
+    <string name="btn_xacnhan_danhsachnguoigiao"> Xác nhận </string>
+    <string name="btn_trolai_danhsachnguoigiao"> Trở lại </string>
+    //
+
+
+
+
+    <string name="txt_inhoadon_hoadon"> In hóa đơn </string>
+    <string name="txt_madonhang_hoadon"> Mã dơn hàng : </string>
+    <string name="txt_tensanpham_hoadon"> Tên sản phẩm :  </string>
+    <string name="txt_mau_hoadon"> Màu :  </string>
+    <string name="txt_size_hoadon"> Size :  </string>
+    <string name="txt_tenkhachhang_hoadon"> Tên khách hàng :  </string>
+    <string name="txt_sodienthoaikhachhang_hoadon"> Số điện thoại khách hàng :  </string>
+    <string name="txt_diachi_hoadon"> địa chỉ :  </string>
+    <string name="txt_tongtien_hoadon"> Tổng tiền :  </string>
+    <string name="btn_giao_hoadon"> Giao </string>
+    <string name="btn_thoat_hoadon"> Thoát </string>
+    <string name="btn_huy_hoadon"> Hủy </string>
+
+
+    <string name="txt_danhsachdonhangdagiao_quangly"> Danh sách đơn hàng đã giao </string>
+    <string name="txt_timkiem_dsdonhangdagiaoqly"> Tìm kiếm :  </string>
+    <string name="txt_Madonhang_dsdonhangdagiaoqly"> Mã đơn hàng :  </string>
+    <string name="txt_tensanpham_dsdonhangdagiaoqly"> Tên sản phẩm :  </string>
+    <string name="txt_tenkhachhang_dsdonhangdagiaoqly"> Tên khách hàng :  </string>
+    <string name="txt_soluong_dsdonhangdagiaoqly"> Số lượng : </string>
+    <string name="txt_size_dsdonhangdagiaoqly"> Size : </string>
+    <string name="txt_sodienthoaikhachhang_dsdonhangdagiaoqly"> Số điện thoại khách hàng : </string>
+    <string name="txt_diachi_dsdonhangdagiaoqly"> Địa chỉ :  </string>
+    <string name="btn_tongtien_dsdonhangdagiaoqly"> Tổng tiền :  </string>
+    <string name="btn_tinhtrang_dsdonhangdagiaoqly"> Tình trạng :  </string>
+    <string name="btn_xacnhan_dsdonhangdagiaoqly"> Xác nhận </string>
+    <string name="btn_huy_dsdonhangdagiaoqly"> Hủy </string>
+    <string name="btn_trolai_dsdonhangdagiaoqly"> Trở lại</string>
+    <string name="txt_danhsachnguoigiao_dsdonhangdagiaoqly"> Danh sách người giao </string>
+    <string name="txt_hoten_dsdonhangdagiaoqly"> Họ tên </string>
+    <string name="txt_sodienthoai_dsdonhangdagiaoqly"> Số điện thoại </string>
+    <string name="txt_tinhtrang_dsdonhangdagiaoqly"> Tình trạng </string>
+    <string name="btn_giao_dsdonhangdagiaoqly"> Giao </string>
+    <string name="btn_thoat_dsdonhangdagiaoqly"> Thoát </string>
+
+
+
+    <string name="txt_danhsachdonhanghoanthanh_dsdonhanghoanthanhqly"> Danh sách đơn hàng hoàn thành </string>
+    <string name="txt_madonhang_dsdonhanghoanthanhqly"> Mã đơn hàng :  </string>
+    <string name="txt_tensanpham_dsdonhanghoanthanhqly"> Tên sản phẩm :  </string>
+    <string name="txt_tenkhachhang_dsdonhanghoanthanhqly"> Tên khách hàng :  </string>
+    <string name="txt_sodienthoaikhachhang_dsdonhanghoanthanhqly"> Số điện thoại khách hàng :  </string>
+    <string name="txt_diachikhachhang_dsdonhanghoanthanhqly"> Dịa chỉ khách hàng :  </string>
+    <string name="txt_nguoigiao_dsdonhanghoanthanhqly"> Người giao :  </string>
+    <string name="txt_sodienthoainguoigiao_dsdonhanghoanthanhqly"> Số điện thoại người giao :  </string>
+    <string name="txt_tongtien_dsdonhanghoanthanhqly"> Tổng tiền :  </string>
+    <string name="txt_tinhtrang_dsdonhanghoanthanhqly">Tình trạng : </string>
+    <string name="btn_tongtien_dsdonhanghoanthanhqly">Tổng tiền : </string>
+    <string name="btn_trolai_dsdonhanghoanthanhqly">Trở lại</string>
+    <string name="btn_Thoat_dsdonhanghoanthanhqly">Thoát</string>
+    <string name="btn_refresh_danhsachnguoigiao">Tro lai</string>
+
+
+
+    // Hết của Longs
 </resources>

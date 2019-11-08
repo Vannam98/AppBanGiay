@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background_inside"
+    android:background="@color/btn_nen"
     tools:context=".ManHinhTinhTrangDonHangActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/height"
         android:orientation="vertical"
+        android:background="@color/btn_nen"
         android:gravity="center"
         android:layout_weight="1">
 
@@ -20,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/txt_Size"
-            android:textColor="@color/txt_Color"
+            android:textColor="@color/txt_color"
             android:text="@string/txt_Tinhtrangdonhang">
         </TextView>
     </LinearLayout>
@@ -28,6 +29,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/height"
+        android:background="@color/white"
         android:layout_weight="6">
 
         <ListView
@@ -55,7 +57,7 @@
                 android:id="@+id/btn_Thoat"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_heightTinhTrang"
-                android:textColor="@color/txt_Color"
+                android:textColor="@color/white"
                 android:background="@drawable/vienbutton"
                 android:text="@string/btn_Thoat"></Button>
 
@@ -64,8 +66,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_heightTinhTrang"
                 android:layout_marginLeft="80dp"
+                android:textColor="@color/white"
                 android:background="@drawable/vienbutton"
-                android:textColor="@color/txt_Color"
                 android:text="@string/btn_Trove"></Button>
 
 

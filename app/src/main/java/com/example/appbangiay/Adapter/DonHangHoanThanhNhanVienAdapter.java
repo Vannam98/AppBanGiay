@@ -49,10 +49,12 @@ public class DonHangHoanThanhNhanVienAdapter extends ArrayAdapter<DonHangHoanTha
         TextView txt_Soluong;
         TextView txt_Size;
         TextView txt_Tenkhachhang;
-        TextView txt_SodienthoaiKH;
-        TextView txt_DiachiKH;
-        TextView txt_Tongtien;
+        TextView txt_Sodienthoai;
+        TextView txt_Diachi;
         TextView txt_Tinhtrang;
+        TextView txt_Tongtien;
+
+
         Button btn_Hoanthanh;
         Button btn_Huy;
         SearchView srTimKiem;
@@ -73,9 +75,9 @@ public class DonHangHoanThanhNhanVienAdapter extends ArrayAdapter<DonHangHoanTha
             viewHolder.txt_Tensanpham = convertView.findViewById(R.id.txt_Tensanpham);
             viewHolder.txt_Soluong = convertView.findViewById(R.id.txt_Soluong);
             viewHolder.txt_Size = convertView.findViewById(R.id.txt_Size);
-            viewHolder.txt_Tenkhachhang = convertView.findViewById(R.id.txt_Tenkhachhang);
-            viewHolder.txt_SodienthoaiKH = convertView.findViewById(R.id.txt_SodienthoaiKH);
-            viewHolder.txt_DiachiKH = convertView.findViewById(R.id.txt_DiachiKH);
+            viewHolder.txt_Tenkhachhang= convertView.findViewById(R.id.txt_Tenkhachhang);
+            viewHolder.txt_Sodienthoai = convertView.findViewById(R.id.txt_Sodienthoai);
+            viewHolder.txt_Diachi = convertView.findViewById(R.id.txt_Diachi);
             viewHolder.txt_Tongtien = convertView.findViewById(R.id.txt_Tongtien);
             viewHolder.txt_Tinhtrang = convertView.findViewById(R.id.txt_Tinhtrang);
             viewHolder.btn_Hoanthanh = convertView.findViewById(R.id.btn_Hoanthanh);
@@ -89,15 +91,16 @@ public class DonHangHoanThanhNhanVienAdapter extends ArrayAdapter<DonHangHoanTha
         }
 
         final DonHangHoanThanhNhanVien donHangHoanThanh = data.get(position);
-        viewHolder.txt_Madonhang.setText("Mã đơn hàng:" + donHangHoanThanh.getMaDH());
-        viewHolder.txt_Tensanpham.setText("Tên sản phẩm:" + donHangHoanThanh.getTenSP());
+        viewHolder.txt_Madonhang.setText("Mã đơn hàng:" + donHangHoanThanh.getMaDonHang());
+        viewHolder.txt_Tensanpham.setText("Tên sản phẩm:" + donHangHoanThanh.getTenSanPham());
         viewHolder.txt_Soluong.setText("Số lượng:" + donHangHoanThanh.getSoLuong());
         viewHolder.txt_Size.setText("Size:" + donHangHoanThanh.getSize());
-        viewHolder.txt_Tenkhachhang.setText("Tên KH:" + donHangHoanThanh.getTenKH());
-        viewHolder.txt_SodienthoaiKH.setText("Số điện thoại KH:" + donHangHoanThanh.getSoDTKH());
-        viewHolder.txt_DiachiKH.setText("Địa chỉ KH:" + donHangHoanThanh.getDiaChiKH());
-        viewHolder.txt_Tongtien.setText("Tổng tiền: " + donHangHoanThanh.getTongTien());
+        viewHolder.txt_Tenkhachhang.setText("Tên khách hàng:" + donHangHoanThanh.getTenKhachHang());
+        viewHolder.txt_Sodienthoai.setText("Số điện thoại:" + donHangHoanThanh.getSoDienThoai());
+        viewHolder.txt_Diachi.setText("Địa chỉ" +  donHangHoanThanh.getDiaChi());
         viewHolder.txt_Tinhtrang.setText("Tình trạng:" + donHangHoanThanh.getTinhTrang());
+        viewHolder.txt_Tongtien.setText("Tổng tiền: " + donHangHoanThanh.getTongTien());
+
 
         if (donHangHoanThanh.getTinhTrang().equalsIgnoreCase("Hoàn thành")){
             viewHolder.lnItem.setBackgroundColor(context.getResources().getColor(R.color.color_item_xac_nhan));
@@ -144,7 +147,7 @@ public class DonHangHoanThanhNhanVienAdapter extends ArrayAdapter<DonHangHoanTha
 
     public void deletePay(String idPay)
     {
-        DatabaseReference data = FirebaseDatabase.getInstance().getReference("DonHangHoanThanhNhanVien");
+        DatabaseReference data = FirebaseDatabase.getInstance().getReference("HoanThanhNhanVien");
         data.child(idPay).removeValue();
     }
 
@@ -165,7 +168,7 @@ public class DonHangHoanThanhNhanVienAdapter extends ArrayAdapter<DonHangHoanTha
 
         //Cap nhat
         value.setTinhTrang("Hoàn thành");
-        data.child("DonHangHoanThanhNhanVien").child(iddata).setValue(value);
+        data.child("HoanThanhNhanVien").child(iddata).setValue(value);
 
         //Them
         String id = data.child("DonHangHoanThanhQuanLy").push().getKey();

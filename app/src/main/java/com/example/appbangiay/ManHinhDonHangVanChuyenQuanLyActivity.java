@@ -6,85 +6,132 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.appbangiay.Adapter.DonHangHoanThanhNhanVienAdapter;
 import com.example.appbangiay.Adapter.DonHangVanChuyenAdapter;
+import com.example.appbangiay.User.NavMainActivity;
+import com.example.appbangiay.data_models.DonHangHoanThanhNhanVien;
 import com.example.appbangiay.data_models.DonHangVanChuyenQuanLy;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
 public class ManHinhDonHangVanChuyenQuanLyActivity extends AppCompatActivity {
 
-    Button btn_Trolai;
+    public static Intent intent;
+    private Button btn_Trolai;
+    private SearchView srTimKiem;
+    private ListView lstDanhsach;
+    private DonHangVanChuyenAdapter donHangVanChuyenAdapter;
+    private ArrayList<DonHangVanChuyenQuanLy> donHangVanChuyenQuanLys;
+    private TextView txt_Madonhang, txt_Tensanpham, txt_Soluong, txt_Size,txt_Tenkhachhang,txt_SodienthoaiKH,
+            txt_DiachiKH,txt_Tongtien,txt_Tinhtrang;
 
-    ListView lstDanhSach;
-
-    SearchView srTimKiem;
-
-    ArrayList<DonHangVanChuyenQuanLy> mangDonHangVanChuyen;
-    DonHangVanChuyenAdapter adapterDonHangVanChuyen = null;
-
-    DatabaseReference mData;
-
+    DatabaseReference data;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manhinh_donhangvanchuyenquanly_layout);
+        txt_Madonhang = findViewById(R.id.txt_Madonhang);
+        txt_Tensanpham = findViewById(R.id.txt_Tensanpham);
+        txt_Soluong = findViewById(R.id.txt_Soluong);
+        txt_Size = findViewById(R.id.txt_Size);
+        txt_Tenkhachhang = findViewById(R.id.txt_Tenkhachhang);
+        txt_SodienthoaiKH = findViewById(R.id.txt_SodienthoaiKH);
+        txt_DiachiKH = findViewById(R.id.txt_Diachi);
+        txt_Tongtien = findViewById(R.id.txt_Tongtien);
+        txt_Tinhtrang = findViewById(R.id.txt_Tinhtrang);
+        srTimKiem = findViewById(R.id.srTimKiem);
+        data = FirebaseDatabase.getInstance().getReference();
 
-        btn_Trolai = (Button)findViewById(R.id.btn_Trolai);
-        srTimKiem = (SearchView)findViewById(R.id.srTimKiem);
+        AnhXa();
+        DieuKhien();
+        taoAdapters();
+        loadData();
+    }
+
+    private void taoAdapters() {
+        donHangVanChuyenQuanLys = new ArrayList<>();
+        donHangVanChuyenAdapter = new DonHangVanChuyenAdapter(this, R.layout.listview_donhangvanchuyenquanly_layout, donHangVanChuyenQuanLys);
+        lstDanhsach.setAdapter(donHangVanChuyenAdapter);
+    }
+
+    private void AnhXa() {
+        btn_Trolai = (Button) findViewById(R.id.btn_Trolai);
+        lstDanhsach = findViewById(R.id.lst_DanhSach);
+        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+
+    }
+
+    private void DieuKhien() {
         btn_Trolai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ManHinhDonHangVanChuyenQuanLyActivity.this,ManHinhDonHangXacNhanQuanLyActivity.class);
+                intent = new Intent(ManHinhDonHangVanChuyenQuanLyActivity.this, NavMainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(intent);
             }
         });
 
-        mData = FirebaseDatabase.getInstance().getReference();
+        // perform set on query text listener event
+        srTimKiem.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                letSearch(query, true);
+                Toast.makeText(ManHinhDonHangVanChuyenQuanLyActivity.this, "Enter", Toast.LENGTH_SHORT).show();
+                return false;
+            }
 
-        AnhXa();
-
-        taoAdapter();
-
-        tao();
-
-
-        LoadData();
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if (newText.isEmpty() || "".trim().equals(newText)) {
+                    letSearch("", false);
+                }
+                return false;
+            }
+        });
+    }
+    //ham tim san pham
+    private void letSearch(String keyWord, boolean isSearch) {
+        if (isSearch) {
+            ArrayList<DonHangVanChuyenQuanLy> lstDanhSachVanChuyenNew = new ArrayList<>();
+            for (DonHangVanChuyenQuanLy item : donHangVanChuyenQuanLys ) {
+                if (item.getMaDonHang().equalsIgnoreCase(keyWord) || item.getTenSanPham().equalsIgnoreCase(keyWord)
+                        ||item.getTenKhachHang().equalsIgnoreCase(keyWord) || item.getTinhTrang().equalsIgnoreCase(keyWord)) {
+                    lstDanhSachVanChuyenNew.add(item);
+                }
+            }
+            donHangVanChuyenAdapter = new DonHangVanChuyenAdapter(this, R.layout.listview_donhangvanchuyenquanly_layout, lstDanhSachVanChuyenNew);
+            lstDanhsach.setAdapter(donHangVanChuyenAdapter);
+        } else {
+            taoAdapters();
+            loadData();
+        }
     }
 
-    private void LoadData(){
-        mData.child("DonHangVanChuyenQuanLy").addChildEventListener(new ChildEventListener() {
+    //lay tu farebase
+    private void loadData() {
+        data.child("VanChuyenQuanLy").addValueEventListener(new ValueEventListener() {
             @Override
-            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                DonHangVanChuyenQuanLy donHangVanChuyen = dataSnapshot.getValue(DonHangVanChuyenQuanLy.class);
-                mangDonHangVanChuyen.add(new DonHangVanChuyenQuanLy(donHangVanChuyen.id,donHangVanChuyen.maDH,donHangVanChuyen.tenSP,donHangVanChuyen.soLuong,donHangVanChuyen.size,donHangVanChuyen.tenKH,donHangVanChuyen.soDTKH,donHangVanChuyen.diaChiKH,donHangVanChuyen.tongTien,donHangVanChuyen.tinhTrang));
-                adapterDonHangVanChuyen.notifyDataSetChanged();
-
-            }
-
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                donHangVanChuyenQuanLys.clear();
+                DonHangVanChuyenQuanLy vanchuyen;
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                    vanchuyen = ds.getValue(DonHangVanChuyenQuanLy.class);
+                    donHangVanChuyenQuanLys.add(vanchuyen);
+                }
+                donHangVanChuyenAdapter.notifyDataSetChanged();
             }
 
             @Override
@@ -92,65 +139,6 @@ public class ManHinhDonHangVanChuyenQuanLyActivity extends AppCompatActivity {
 
             }
         });
-
-        srTimKiem.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                letSearch(query,true);
-                Toast.makeText(ManHinhDonHangVanChuyenQuanLyActivity.this,"Enter",Toast.LENGTH_SHORT).show();
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                if (newText.isEmpty() || "".trim().equals(newText)){
-                    letSearch("",false);
-                }
-                return false;
-            }
-        });
-    }
-
-    public void tao(){
-        String id = mData.push().getKey();
-//        DonHangVanChuyenQuanLy donHangVanChuyen = new DonHangVanChuyenQuanLy(id,"sp010","FiLa","1","37","Hà","0789635","Khánh Hòa","350.000VND","Đang giao");
-//        mData.child("DonHangVanChuyenQuanLy").push().setValue(donHangVanChuyen);
-    }
-
-
-    public void taoAdapter(){
-        mangDonHangVanChuyen = new ArrayList<>();
-        adapterDonHangVanChuyen = new DonHangVanChuyenAdapter(this,R.layout.listview_donhangvanchuyenquanly_layout,mangDonHangVanChuyen);
-        lstDanhSach.setAdapter(adapterDonHangVanChuyen);
-    }
-
-    private void AnhXa() {
-        lstDanhSach = (ListView)findViewById(R.id.lst_DanhSach);
-
-    }
-
-    public void letSearch(String search, boolean isSearch){
-        if (isSearch)
-        {
-            ArrayList<DonHangVanChuyenQuanLy> donHangVanChuyens = new ArrayList<>();
-            for (DonHangVanChuyenQuanLy donHangVC:mangDonHangVanChuyen)
-            {
-                if (donHangVC.getId().equalsIgnoreCase(search)|| donHangVC.getMaDH().equalsIgnoreCase(search)|| donHangVC.getTenSP().equalsIgnoreCase(search) || donHangVC.getSoLuong().equalsIgnoreCase(search)|| donHangVC.getSize().equalsIgnoreCase(search)||
-                        donHangVC.getTenKH().equalsIgnoreCase(search)|| donHangVC.getSoDTKH().equalsIgnoreCase(search)||
-                        donHangVC.getDiaChiKH().equalsIgnoreCase(search)|| donHangVC.getTongTien().equalsIgnoreCase(search)||
-                        donHangVC.getTinhTrang().equalsIgnoreCase(search))
-                {
-                    donHangVanChuyens.add(donHangVC);
-                }
-            }
-
-            adapterDonHangVanChuyen = new DonHangVanChuyenAdapter(this,R.layout.listview_donhangvanchuyenquanly_layout,donHangVanChuyens);
-            lstDanhSach.setAdapter(adapterDonHangVanChuyen);
-        }
-        else {
-            taoAdapter();
-            LoadData();
-        }
-
     }
 }
+

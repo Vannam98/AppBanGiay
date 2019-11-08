@@ -41,7 +41,7 @@ public class List_DonHangHoanThanhNhanVienActivity extends AppCompatActivity {
         txt_Size = findViewById(R.id.txt_Size);
         txt_Tenkhachhang = findViewById(R.id.txt_Tenkhachhang);
         txt_SodienthoaiKH = findViewById(R.id.txt_SodienthoaiKH);
-        txt_DiachiKH = findViewById(R.id.txt_DiachiKH);
+        txt_DiachiKH = findViewById(R.id.txt_Diachi);
         txt_Tongtien = findViewById(R.id.txt_Tongtien);
         txt_Tinhtrang = findViewById(R.id.txt_Tinhtrang);
         intent = new Intent(this,ManHinhTinhTrangDonHangActivity.class);

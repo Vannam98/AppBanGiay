@@ -2,7 +2,6 @@ package com.example.appbangiay.Adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
-import android.view.animation.AlphaAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -11,8 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import java.util.ArrayList;
 
 import com.example.appbangiay.data_models.DonHangXacNhan;
@@ -95,7 +92,6 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
         viewHolder.txt_soDT.setText(dhxn.getSoDT());
         viewHolder.txt_diaChi.setText(dhxn.getDiaChi());
         viewHolder.txt_tongTien.setText(String.valueOf(dhxn.getTongTien()));
-
         viewHolder.btn_XN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -12,16 +12,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ManHinhDonHangVanChuyenQuanLyActivity"></activity>
-        <activity android:name=".ManHinhDonHangXacNhanQuanLyActivity" />
-        <activity android:name=".ManHinhDonHangHuyQuanLyActivity" />
-        <activity android:name=".ManHinhDonHangHoanThanhNhanVienActivity" />
+        <activity android:name=".ManHinhDonHangVanChuyenQuanLyActivity">
+
+        </activity>
+        <activity android:name=".ManHinhDonHangXacNhanQuanLyActivity">
+
+        </activity>
+        <activity android:name=".ManHinhDonHangHuyQuanLyActivity">
+
+        </activity>
+
+        <activity android:name=".ManHinhDonHangHoanThanhNhanVienActivity">
+
+        </activity>
         <activity android:name=".ManHinhTinhTrangDonHangActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Manager.DanhSachHoanThanhQuanLyActivity">
+
         </activity>
         <activity android:name=".Manager.MangerShoe" />
         <activity android:name=".Manager.UploadImage" />
@@ -32,16 +44,27 @@
         <activity android:name=".User.LoginActivity" />
         <activity android:name=".User.MemberActivity" />
         <activity android:name=".Employee.DanhSachDonHangActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".Employee.DanhSachXacNhanDonHangActivity" />
-        <activity android:name=".Employee.DanhSachHuyDonHangActivity" />
+        <activity android:name=".Employee.DanhSachXacNhanDonHangActivity">
+
+        </activity>
+        <activity android:name=".Employee.DanhSachHuyDonHangActivity">
+
+        </activity>
         <activity android:name=".Manager.DanhSachTaoNhanVienActivity" />
         <activity android:name=".Manager.DanhSachQuanLyNhanVienActivity" />
+        <activity android:name=".Employee.DanhSachDaGiaoActivity">
+
+        </activity>
+        <activity android:name=".Employee.VanChuyenNhanVienActivity">
+
+        </activity>
+        <activity android:name=".Employee.DanhSachNguoiGiaoActivity"></activity>
+        <activity android:name=".Employee.InHoaDonActivity"></activity>
+        <activity android:name=".User.ThanhToanActivity">
+
+        </activity>
     </application>
 
 </manifest>

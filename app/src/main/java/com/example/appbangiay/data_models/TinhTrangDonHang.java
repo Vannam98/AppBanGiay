@@ -1,27 +1,18 @@
 package com.example.appbangiay.data_models;
 
+import java.util.ArrayList;
+
 public class TinhTrangDonHang {
 
-    public String id;
-    public String maDH;
-    public String tenDH;
-    public String thongTinDH;
-    public String tinhTrang;
-    public String tongTien;
-    public String ngay;
+    private  String id;
+    private ThanhToanKhachHang thongTinKH;
+    private ArrayList<ThanhToan> dsSanPham;
 
-    public TinhTrangDonHang(){
 
-    }
-
-    public TinhTrangDonHang(String id, String maDH, String tenDH, String thongTinDH, String tinhTrang, String tongTien, String ngay) {
+    public TinhTrangDonHang(String id , ThanhToanKhachHang thongTinKH, ArrayList<ThanhToan> dsSanPham) {
         this.id = id;
-        this.maDH = maDH;
-        this.tenDH = tenDH;
-        this.thongTinDH = thongTinDH;
-        this.tinhTrang = tinhTrang;
-        this.tongTien = tongTien;
-        this.ngay = ngay;
+        this.thongTinKH = thongTinKH;
+        this.dsSanPham = dsSanPham;
     }
 
     public String getId() {
@@ -32,59 +23,27 @@ public class TinhTrangDonHang {
         this.id = id;
     }
 
-    public String getMaDH() {
-        return maDH;
+    public TinhTrangDonHang() {
     }
 
-    public void setMaDH(String maDH) {
-        this.maDH = maDH;
+    public ThanhToanKhachHang getThongTinKH() {
+        return thongTinKH;
     }
 
-    public String getTenDH() {
-        return tenDH;
+    public void setThongTinKH(ThanhToanKhachHang thongTinKH) {
+        this.thongTinKH = thongTinKH;
     }
 
-    public void setTenDH(String tenDH) {
-        this.tenDH = tenDH;
+    public ArrayList<ThanhToan> getDsSanPham() {
+        return dsSanPham;
     }
 
-    public String getThongTinDH() {
-        return thongTinDH;
+    public void setDsSanPham(ArrayList<ThanhToan> dsSanPham) {
+        this.dsSanPham = dsSanPham;
     }
 
-    public void setThongTinDH(String thongTinDH) {
-        this.thongTinDH = thongTinDH;
-    }
 
-    public String getTinhTrang() {
-        return tinhTrang;
-    }
-
-    public void setTinhTrang(String tinhTrang) {
-        this.tinhTrang = tinhTrang;
-    }
-
-    public String getTongTien() {
-        return tongTien;
-    }
-
-    public void setTongTien(String tongTien) {
-        this.tongTien = tongTien;
-    }
-
-    public String getNgay() {
-        return ngay;
-    }
-
-    public void setNgay(String ngay) {
-        this.ngay = ngay;
-    }
-
-    @Override
-    public String toString() {
-        return this.id + this.maDH + this.tenDH + this.thongTinDH
-                + this.tinhTrang
-                + this.tongTien + this.ngay;
-    }
 }
+
+
 

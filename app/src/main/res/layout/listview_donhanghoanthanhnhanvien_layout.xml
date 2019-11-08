@@ -3,7 +3,6 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:id="@+id/lnItem"
-    android:background="@color/background_inside"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -56,18 +55,18 @@
             android:textColor="@color/txt_Color"></TextView>
 
         <TextView
-            android:id="@+id/txt_SodienthoaiKH"
+            android:id="@+id/txt_Sodienthoai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txt_SodienthoaiKH"
-            android:textColor="@color/txt_Color"></TextView>
+            android:text="@string/txt_sodienthoai_thanhtoan"
+            android:textColor="@color/txt_black" />
 
         <TextView
-            android:id="@+id/txt_DiachiKH"
+            android:id="@+id/txt_Diachi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/txt_DiachiKH"
-            android:textColor="@color/txt_Color"></TextView>
+            android:textColor="@color/txt_black" />
 
         <TextView
             android:id="@+id/txt_Tongtien"
@@ -103,8 +102,8 @@
                 android:id="@+id/btn_Hoanthanh"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_lvHeightHoanThanh"
-                android:textColor="@color/txt_Color"
-                android:textSize="10dp"
+                android:textSize="12dp"
+                android:textColor="@color/white"
                 android:background="@drawable/vienbutton"
                 android:text="@string/btn_Hoanthanh"></Button>
 
@@ -113,10 +112,10 @@
                 android:layout_width="50dp"
                 android:layout_height="@dimen/btn_lvHeightHoanThanh"
                 android:layout_marginLeft="5dp"
+                android:textColor="@color/white"
                 android:background="@drawable/vienbutton"
                 android:text="@string/btn_Huy"
-                android:textColor="@color/txt_Color"
-                android:textSize="10dp"></Button>
+                android:textSize="12dp"></Button>
         </LinearLayout>
     </LinearLayout>
 

@@ -2,34 +2,25 @@ package com.example.appbangiay.data_models;
 
 public class DonHangHuyQuanLy {
 
-    public String id;
-    public String maDH;
-    public String tenSP;
-    public String soLuong;
-    public String size;
-    public String tenKH;
-    public String soDTKH;
-    public String diaChiKH;
-    public String tongTien;
-    public String tinhTrang;
-    public String lyDoHuy;
+    private String id, maDonHang,tenSanPham,soLuong, size,tinhTrang,tenKhachHang,soDienThoai,diaChi,liDoHuy;
+    private double tongTien;
 
     public DonHangHuyQuanLy(){
 
     }
 
-    public DonHangHuyQuanLy(String id, String maDH, String tenSP, String soLuong, String size, String tenKH, String soDTKH, String diaChiKH, String tongTien, String tinhTrang, String lyDoHuy) {
+    public DonHangHuyQuanLy(String id, String maDonHang, String tenSanPham, String soLuong, String size, String tinhTrang, String tenKhachHang, String soDienThoai, String diaChi, String liDoHuy, double tongTien) {
         this.id = id;
-        this.maDH = maDH;
-        this.tenSP = tenSP;
+        this.maDonHang = maDonHang;
+        this.tenSanPham = tenSanPham;
         this.soLuong = soLuong;
         this.size = size;
-        this.tenKH = tenKH;
-        this.soDTKH = soDTKH;
-        this.diaChiKH = diaChiKH;
-        this.tongTien = tongTien;
         this.tinhTrang = tinhTrang;
-        this.lyDoHuy = lyDoHuy;
+        this.tenKhachHang = tenKhachHang;
+        this.soDienThoai = soDienThoai;
+        this.diaChi = diaChi;
+        this.liDoHuy = liDoHuy;
+        this.tongTien = tongTien;
     }
 
     public String getId() {
@@ -40,20 +31,20 @@ public class DonHangHuyQuanLy {
         this.id = id;
     }
 
-    public String getMaDH() {
-        return maDH;
+    public String getMaDonHang() {
+        return maDonHang;
     }
 
-    public void setMaDH(String maDH) {
-        this.maDH = maDH;
+    public void setMaDonHang(String maDonHang) {
+        this.maDonHang = maDonHang;
     }
 
-    public String getTenSP() {
-        return tenSP;
+    public String getTenSanPham() {
+        return tenSanPham;
     }
 
-    public void setTenSP(String tenSP) {
-        this.tenSP = tenSP;
+    public void setTenSanPham(String tenSanPham) {
+        this.tenSanPham = tenSanPham;
     }
 
     public String getSoLuong() {
@@ -72,38 +63,6 @@ public class DonHangHuyQuanLy {
         this.size = size;
     }
 
-    public String getTenKH() {
-        return tenKH;
-    }
-
-    public void setTenKH(String tenKH) {
-        this.tenKH = tenKH;
-    }
-
-    public String getSoDTKH() {
-        return soDTKH;
-    }
-
-    public void setSoDTKH(String soDTKH) {
-        this.soDTKH = soDTKH;
-    }
-
-    public String getDiaChiKH() {
-        return diaChiKH;
-    }
-
-    public void setDiaChiKH(String diaChiKH) {
-        this.diaChiKH = diaChiKH;
-    }
-
-    public String getTongTien() {
-        return tongTien;
-    }
-
-    public void setTongTien(String tongTien) {
-        this.tongTien = tongTien;
-    }
-
     public String getTinhTrang() {
         return tinhTrang;
     }
@@ -112,16 +71,44 @@ public class DonHangHuyQuanLy {
         this.tinhTrang = tinhTrang;
     }
 
-    public String getLyDoHuy() {
-        return lyDoHuy;
+    public String getTenKhachHang() {
+        return tenKhachHang;
     }
 
-    public void setLyDoHuy(String lyDoHuy) {
-        this.lyDoHuy = lyDoHuy;
+    public void setTenKhachHang(String tenKhachHang) {
+        this.tenKhachHang = tenKhachHang;
     }
-    @Override
-    public String toString() {
-        return id + maDH +tenSP + soLuong + size + tenKH + soDTKH + diaChiKH +  tongTien + tinhTrang + lyDoHuy;
+
+    public String getSoDienThoai() {
+        return soDienThoai;
+    }
+
+    public void setSoDienThoai(String soDienThoai) {
+        this.soDienThoai = soDienThoai;
+    }
+
+    public String getDiaChi() {
+        return diaChi;
+    }
+
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
+    }
+
+    public String getLiDoHuy() {
+        return liDoHuy;
+    }
+
+    public void setLyDoHuy(String liDoHuy) {
+        this.liDoHuy = liDoHuy;
+    }
+
+    public double getTongTien() {
+        return tongTien;
+    }
+
+    public void setTongTien(double tongTien) {
+        this.tongTien = tongTien;
     }
 }
 

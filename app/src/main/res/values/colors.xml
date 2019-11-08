@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#Cc0000</color>
+    <color name="colorPrimaryDark">#Cc0000</color>
     <color name="colorAccent">#D81B60</color>
     <color name="btn_Color">#2196f3</color>
     <color name="background_inside">#d5eafb</color>
@@ -14,6 +14,13 @@
     <color name="btn_login_bg">#eceef1</color>
     <color name="chk_color">#59E20E</color>
     <color name="txt_color">#000000</color>
+    <!-- Của long -->
+    <color name="color_button">#2196f3</color>
+    <color name="color_backroud">#d5eafb</color>
+    <color name="txt_black">#000</color>
+    <color name="color_thongtin_khach_hang">#F0FFFF</color>
+
+    <!-- Hết Của long -->
 
     //Màu của tài
     <color name="diveder_color">#f000</color>
@@ -23,5 +30,7 @@
     //Mau cua Quanh
     <color name="color_item_xac_nhan">#90A4AE</color>
     <color name="color_item_chua_xac_nhan">#fff</color>
+    <color name="btn_maubutton">#Cc0000</color>
+    <color name="btn_nen">#EEEE</color>
 
 </resources>
