@@ -12,7 +12,7 @@
     <string name="txt_confirmpass"> Nhập lại mật khẩu </string>
     <string name="txt_gioitinh"> Giới Tính  </string>
     <string name="txt_nam"> Nam  </string>
-    <string name="txt_nu"> Nu  </string>
+    <string name="txt_nu"> Nữ  </string>
     <string name="btn_link_to_register"> Bạn chưa có tài khoản đăng kí ngay !!  </string>
     <string name="btn_login"> Login  </string>
     <string name="sign_up_button"> Đăng Ký  </string>
@@ -134,6 +134,10 @@
     <string name="btn_thoat_danhsachnguoigiao"> Thoát </string>
     <string name="btn_xacnhan_danhsachnguoigiao"> Xác nhận </string>
     <string name="btn_trolai_danhsachnguoigiao"> Trở lại </string>
+    <string name="nav_taosanpham"> Tạo sản phẩm </string>
+    <string name="nav_taonhanvien"> Tạo nhân viên </string>
+    <string name="nav_logoutqly"> Đăng xuất </string>
+
     //
 
     //string của tài
@@ -228,6 +232,16 @@
     <string name="btn_trolai_dsdonhanghoanthanhqly">Trở lại</string>
     <string name="btn_Thoat_dsdonhanghoanthanhqly">Thoát</string>
     <string name="btn_refresh_danhsachnguoigiao">Tro lai</string>
+
+    <string name="rad_user">Người dùng</string>
+    <string name="rad_nhanvien">Nhân Viên</string>
+    <string name="rad_quanly">Quản lý</string>
+    <string name="taonhanvienqly"> Tạo nhân viên </string>
+    <string name="vanchuyenqly"> Danh sách vận chuyển đơn hàng</string>
+    <string name="huyqly"> Danh sách hủy đơn hàng</string>
+    <string name="txt_DSDXN">Danh sách đã xác nhận</string>
+
+
 
 
 

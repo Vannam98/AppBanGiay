@@ -76,7 +76,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_gioitinh"
-                android:textSize="@dimen/txt_Size" />
+                android:textSize="@dimen/txt_Size"
+                android:textColor="@color/white"/>
 
             <RadioButton
                 android:id="@+id/radio_nam"
@@ -84,7 +85,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
                 android:text="@string/txt_nam"
-                android:textSize="@dimen/txt_Size" />
+                android:textSize="@dimen/txt_Size"
+                android:textColor="@color/white"/>
 
             <RadioButton
                 android:id="@+id/radio_nu"
@@ -92,7 +94,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
                 android:text="@string/txt_nu"
-                android:textSize="@dimen/txt_Size" />
+                android:textSize="@dimen/txt_Size"
+                android:textColor="@color/white"/>
 
         </RadioGroup>
 

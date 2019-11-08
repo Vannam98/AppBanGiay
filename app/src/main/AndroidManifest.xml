@@ -26,10 +26,10 @@
         <activity android:name=".User.ThanhToanActivity"
             android:windowSoftInputMode="adjustPan|stateHidden">
 
-
         </activity>
         <activity android:name=".Employee.DanhSachXacNhanDonHangActivity"
             android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+
         <activity android:name=".Employee.DanhSachNguoiGiaoActivity"
             android:windowSoftInputMode="adjustPan|stateHidden">
 
@@ -53,10 +53,7 @@
         </activity>
         <activity android:name=".Employee.VanChuyenNhanVienActivity"
             android:parentActivityName=".User.ThanhToanActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
 
 
         </activity>
@@ -64,6 +61,32 @@
             android:windowSoftInputMode="adjustPan|stateHidden">
 
         </activity>
+        <activity android:name=".Manager.MangerShoe">
+
+        </activity>
+        <activity android:name=".User.NavMainActivity">
+
+        </activity>
+        <activity android:name=".User.RegisterActivity">
+
+        </activity>
+        <activity android:name=".User.MemberActivity">
+
+        </activity>
+        <activity android:name=".Manager.MangHinhChinhQuanLy">
+
+        </activity>
+        <activity android:name=".User.LoginActivity">
+        </activity>
+        <activity android:name=".Employee.MangHinhChinhNhanvienActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
 
     </application>
 
