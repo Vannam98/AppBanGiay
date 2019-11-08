@@ -15,7 +15,6 @@
 
         </activity>
 
-
         <activity android:name=".Manager.DanhSachTaoNhanVienActivity">
 
         </activity>
@@ -55,14 +54,17 @@
             android:windowSoftInputMode="adjustPan|stateHidden"></activity>
 
         <activity android:name=".User.LoginActivity">
-        </activity>
-        <activity android:name=".Employee.MangHinhChinhNhanvienActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Employee.MangHinhChinhNhanvienActivity">
+        </activity>
+        <activity android:name=".Manager.MangHinhChinhQuanLy">
+        </activity>
+        <activity android:name=".Manager.DetailActivity"></activity>
+        <activity android:name=".Manager.UploadImage"></activity>
     </application>
 
 </manifest>
