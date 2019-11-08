@@ -223,7 +223,7 @@ public class ThanhToanActivity extends AppCompatActivity implements ThanhToanAda
 
     @Override
     public void Tong(double toTal) {
-        txt_tongtien_thanhtoan2.setText(toTal+"");
+        txt_tongtien_thanhtoan2.setText(toTal + "");
     }
 }
 

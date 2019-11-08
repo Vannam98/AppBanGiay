@@ -86,8 +86,8 @@ public class ThanhToanAdapter extends ArrayAdapter<ThanhToan> {
             public void onClick(View v) {
                 student.setSoLuong((Integer.parseInt(student.getSoLuong()) + 1)+"");
                 viewHolder.edt_soluong_lsv.setText(student.getSoLuong());
-               double tong = (((student.getGia() * (Integer.parseInt(student.getSoLuong())))));
-//                double amen = (((Integer.parseInt(((((student.getSoLuong()))))) * (Integer.parseInt(100+"")))));
+               double tong = student.getGia() * (Integer.parseInt(student.getSoLuong()));
+//
                 tinhtong.Tong(tong);
             }
         });
