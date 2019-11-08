@@ -47,6 +47,7 @@ public class ThanhToanKhachHang {
     public void setDiachi(String diachi) {
         this.diachi = diachi;
     }
+
     public double getTongtien() {
         return tongTien;
     }

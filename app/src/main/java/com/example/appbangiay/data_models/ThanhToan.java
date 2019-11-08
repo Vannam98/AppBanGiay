@@ -3,11 +3,12 @@ package com.example.appbangiay.data_models;
 public class ThanhToan {
     private String id, tenSanPham, maSanPham, size ,soLuong;
     private double gia;
-
+    private boolean isXacNhan = false;
+    private String tinhTrang;
     public ThanhToan() {
     }
 
-    public ThanhToan(String id, String maSanPham, String tenSanPham , String soLuong , String size,double gia) {
+    public ThanhToan(String id, String maSanPham, String tenSanPham , String soLuong , String size,double gia, String tinhTrang) {
         this.tenSanPham = tenSanPham;
         this.maSanPham = maSanPham;
         this.gia = gia;
@@ -15,6 +16,7 @@ public class ThanhToan {
         this.soLuong = soLuong;
         this.gia = gia;
         this.id = id;
+        this.tinhTrang = tinhTrang;
     }
 
     public String getId() {
@@ -63,5 +65,21 @@ public class ThanhToan {
 
     public void setGia(double gia) {
         this.gia = gia;
+    }
+
+    public boolean isXacNhan() {
+        return isXacNhan;
+    }
+
+    public void setXacNhan(boolean xacNhan) {
+        isXacNhan = xacNhan;
+    }
+
+    public String getTinhTrang() {
+        return tinhTrang;
+    }
+
+    public void setTinhTrang(String tinhTrang) {
+        this.tinhTrang = tinhTrang;
     }
 }

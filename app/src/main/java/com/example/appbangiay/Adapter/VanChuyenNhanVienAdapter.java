@@ -18,7 +18,7 @@ import com.example.appbangiay.Employee.DanhSachNguoiGiaoActivity;
 import com.example.appbangiay.Employee.VanChuyenNhanVienActivity;
 import com.example.appbangiay.R;
 import com.example.appbangiay.data_models.HuyGiaoHang;
-import com.example.appbangiay.data_models.HuyVanChuyen;
+//import com.example.appbangiay.data_models.HuyVanChuyen;
 import com.example.appbangiay.data_models.VanChuyenNhanVien;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -185,6 +185,6 @@ public class VanChuyenNhanVienAdapter extends ArrayAdapter<VanChuyenNhanVien> {
         //Them du lieu vao don hang da giao
 //        String id = data.child("XacNhanVanchuyen").push().getKey();
 //        value.setId(id);
-        data.child("XacNhanVanchuyen").child(iddata).setValue(value);
+        data.child("VanChuyenQuanLy").child(iddata).setValue(value);
     }
 }

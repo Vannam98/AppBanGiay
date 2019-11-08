@@ -34,7 +34,6 @@ public class DanhSachHoanThanhQuanLyActivity extends AppCompatActivity {
     public static Intent intent;
     private ListView lsv_dshoanthanhqly;
     private SearchView sv_dshoanthanhqly;
-    private Button btn_thoat_dshoanthanhqly,btn_trolai_dshoanthanhqly;
     private DanhSachHoanThanhQuanLyAdapter danhSachHoanThanhQuanLyAdapter;
     private ArrayList<DanhSachHoanThanhQuanLy> danhSachHoanThanhQuanLys;
     TextView txtdate_dshoanthanhqly;
@@ -55,8 +54,6 @@ public class DanhSachHoanThanhQuanLyActivity extends AppCompatActivity {
         txt_tongtien_dsdonhanghoanthanh1 = findViewById(R.id.txt_tongtien_dsdonhanghoanthanh1);
         txt_tinhtrang_dsdonhanghoanthanh1 = findViewById(R.id.txt_tinhtrang_dsdonhanghoanthanh1);
         txtdate_dshoanthanhqly = findViewById(R.id.txtdate_dshoanthanhqly);
-        btn_thoat_dshoanthanhqly = findViewById(R.id.btn_thoat_dshoanthanhqly);
-        btn_trolai_dshoanthanhqly = findViewById(R.id.btn_trolai_dshoanthanhqly);
         sv_dshoanthanhqly = findViewById(R.id.sv_dshoanthanhqly);
 
         //database
@@ -83,22 +80,6 @@ public class DanhSachHoanThanhQuanLyActivity extends AppCompatActivity {
     }
 
     private void DieuKhien() {
-        btn_thoat_dshoanthanhqly.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-
-
-            }
-        });
-        btn_trolai_dshoanthanhqly.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(DanhSachHoanThanhQuanLyActivity.this, ThanhToanActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(intent);
-            }
-        });
         // perform set on query text listener event
         sv_dshoanthanhqly.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -172,7 +153,7 @@ public class DanhSachHoanThanhQuanLyActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                //TODO HERE
+
             }
         });
     }

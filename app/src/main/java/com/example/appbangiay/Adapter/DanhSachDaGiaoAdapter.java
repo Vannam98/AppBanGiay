@@ -121,6 +121,7 @@ public class DanhSachDaGiaoAdapter extends ArrayAdapter<DanhSachDagiao> {
             @Override
             public void onClick(View v) {
                 xacNhanDonHang(dagiaoModel.getId(),dagiaoModel);
+                XacNhanDaGiao(dagiaoModel.getId(),dagiaoModel);
             }
         });
 
@@ -171,4 +172,13 @@ public class DanhSachDaGiaoAdapter extends ArrayAdapter<DanhSachDagiao> {
 
 
 }
+    public void XacNhanDaGiao(String iddata, DanhSachDagiao value) {
+        DatabaseReference data = FirebaseDatabase.getInstance().getReference();
+        value.setTinhTrang("da giao");
+        data.child("DaGiaoNhanVien").child(iddata).setValue(value);
+        //Them du lieu vao don hang da giao
+//        String id = data.child("HoanThanhNhanVien").push().getKey();
+        data.child("HoanThanhNhanVien").child(iddata).setValue(value);
+    }
+
 }

@@ -39,16 +39,16 @@ public class MyAdapter extends RecyclerView.Adapter<ShoeViewHolder>{
                 .into(shoeViewHolder.imageView);
 
 //        shoeViewHolder.imageView.setImageResource(myShoeList.get(i).getItemImage());
-        shoeViewHolder.mTitle.setText(myShoeList.get(i).getItemName());
-        shoeViewHolder.mDescription.setText(myShoeList.get(i).getItemDescription());
-        shoeViewHolder.mPrice.setText(myShoeList.get(i).getItemPrice());
+        shoeViewHolder.mTitle.setText(myShoeList.get(i).getTenSanPham());
+        shoeViewHolder.mDescription.setText(myShoeList.get(i).getMoTa());
+        shoeViewHolder.mPrice.setText(myShoeList.get(i).getGia());
 
         shoeViewHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mcontext, DetailActivity.class);
                 intent.putExtra("Image",myShoeList.get(shoeViewHolder.getAdapterPosition()).getItemImage());
-                intent.putExtra("Description",myShoeList.get(shoeViewHolder.getAdapterPosition()).getItemDescription());
+                intent.putExtra("Description",myShoeList.get(shoeViewHolder.getAdapterPosition()).getMoTa());
                 mcontext.startActivity(intent);
 
             }

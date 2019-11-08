@@ -13,6 +13,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.appbangiay.ManHinhDonHangHuyQuanLyActivity;
+import com.example.appbangiay.ManHinhDonHangVanChuyenQuanLyActivity;
 import com.example.appbangiay.R;
 import com.example.appbangiay.User.LoginActivity;
 import com.example.appbangiay.User.MemberActivity;
@@ -50,7 +52,7 @@ public class MangHinhChinhQuanLy extends AppCompatActivity {
                 {
                     case R.id.taonhanvien:
                         Toast.makeText(MangHinhChinhQuanLy.this," Tạo nhân viên" ,Toast.LENGTH_SHORT ).show();
-                        startActivity(new Intent(getApplicationContext(), DanhSachTaoNhanVienActivity.class));
+                        startActivity(new Intent(getApplicationContext(), DanhSachQuanLyNhanVienActivity.class));
                         return true;
                     case R.id.taosanpham:
                         Toast.makeText(MangHinhChinhQuanLy.this," Tạo sản Phẩm" ,Toast.LENGTH_SHORT ).show();
@@ -85,7 +87,7 @@ public class MangHinhChinhQuanLy extends AppCompatActivity {
         lnI_dsttdh_qly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MangHinhChinhQuanLy.this, DanhSachTaoNhanVienActivity.class);
+                Intent intent = new Intent(MangHinhChinhQuanLy.this, DanhSachQuanLyNhanVienActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(intent);
             }
@@ -94,7 +96,7 @@ public class MangHinhChinhQuanLy extends AppCompatActivity {
         lnI_dshdh_qly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MangHinhChinhQuanLy.this, DanhSachDaGiaoQuanLyActivity.class);
+                Intent intent = new Intent(MangHinhChinhQuanLy.this, ManHinhDonHangHuyQuanLyActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(intent);
             }
@@ -103,7 +105,7 @@ public class MangHinhChinhQuanLy extends AppCompatActivity {
         lnI_dsvcdh_qly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MangHinhChinhQuanLy.this, DanhSachDaGiaoQuanLyActivity.class);
+                Intent intent = new Intent(MangHinhChinhQuanLy.this, ManHinhDonHangVanChuyenQuanLyActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(intent);
             }

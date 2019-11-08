@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.appbangiay">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,49 +12,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ManHinhDonHangVanChuyenQuanLyActivity"></activity>
+        <activity android:name=".ManHinhDonHangXacNhanQuanLyActivity">
+
+        </activity>
+        <activity android:name=".ManHinhDonHangHuyQuanLyActivity"></activity>
         <activity android:name=".Employee.DanhSachDonHangActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden">
-
-        </activity>
-
-        <activity android:name=".Manager.DanhSachTaoNhanVienActivity">
-
-        </activity>
-
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity android:name=".ManHinhDonHangHoanThanhNhanVienActivity"></activity>
+        <activity android:name=".Manager.DanhSachTaoNhanVienActivity"></activity>
+        <activity android:name=".ManHinhTinhTrangDonHangActivity"></activity>
+            <activity android:name=".Manager.DanhSachHoanThanhQuanLyActivity"></activity>
         <activity android:name=".Manager.DanhSachQuanLyNhanVienActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden">
-
-        </activity>
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
         <activity android:name=".User.ThanhToanActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden">
-
-        </activity>
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
         <activity android:name=".Employee.DanhSachXacNhanDonHangActivity"
             android:windowSoftInputMode="adjustPan|stateHidden"></activity>
         <activity android:name=".Employee.DanhSachNguoiGiaoActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden">
-
-        </activity>
-        <activity android:name=".Employee.InHoaDonActivity"
             android:windowSoftInputMode="adjustPan|stateHidden"></activity>
-        <activity android:name=".Manager.DanhSachHoanThanhQuanLyActivity"></activity>
-        <activity android:name=".Manager.DanhSachDaGiaoQuanLyActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
-        <activity android:name=".Employee.DanhSachDaGiaoActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden">
-
-
-        </activity>
-        <activity android:name=".Employee.VanChuyenNhanVienActivity"
-            android:parentActivityName=".User.ThanhToanActivity"></activity>
-
-        <activity android:name=".Manager.MangerShoe">
-
-
-        </activity>
+        <activity android:name=".Manager.MangerShoe"></activity>
+        <activity android:name=".Employee.VanChuyenNhanVienActivity"></activity>
+        <activity android:name=".Employee.InHoaDonActivity"></activity>
         <activity android:name=".Employee.DanhSachHuyDonHangActivity"
             android:windowSoftInputMode="adjustPan|stateHidden"></activity>
-
         <activity android:name=".User.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -65,6 +48,11 @@
         </activity>
         <activity android:name=".Manager.DetailActivity"></activity>
         <activity android:name=".Manager.UploadImage"></activity>
+        <activity android:name=".Manager.DanhSachDaGiaoQuanLyActivity"></activity>
+        <activity android:name=".Employee.DanhSachDaGiaoActivity">
+
+        </activity>
+
     </application>
 
 </manifest>

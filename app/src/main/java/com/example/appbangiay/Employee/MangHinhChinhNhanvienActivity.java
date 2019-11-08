@@ -13,6 +13,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.appbangiay.ManHinhDonHangHoanThanhNhanVienActivity;
 import com.example.appbangiay.Manager.DanhSachDaGiaoQuanLyActivity;
 import com.example.appbangiay.Manager.DanhSachHoanThanhQuanLyActivity;
 import com.example.appbangiay.Manager.DanhSachTaoNhanVienActivity;
@@ -70,7 +71,7 @@ public class MangHinhChinhNhanvienActivity extends AppCompatActivity {
         lnI_dsdhhh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MangHinhChinhNhanvienActivity.this, DanhSachHoanThanhQuanLyActivity.class);
+                Intent intent = new Intent(MangHinhChinhNhanvienActivity.this, ManHinhDonHangHoanThanhNhanVienActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(intent);
             }

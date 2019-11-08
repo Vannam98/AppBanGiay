@@ -19,7 +19,7 @@ import com.example.appbangiay.data_models.DanhSachDagiao;
 import com.example.appbangiay.data_models.DanhSachNguoiGiao;
 import com.example.appbangiay.data_models.HuyGiaoHang;
 import com.example.appbangiay.data_models.HuyNguoiGiao;
-import com.example.appbangiay.data_models.HuyVanChuyen;
+//import com.example.appbangiay.data_models.HuyVanChuyen;
 import com.example.appbangiay.data_models.ThanhToan;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;

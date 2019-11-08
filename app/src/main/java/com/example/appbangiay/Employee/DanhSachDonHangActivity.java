@@ -73,7 +73,7 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 double tongTien =  tinh();
-                intent = new Intent(DanhSachDonHangActivity.this, DanhSachXacNhanDonHangActivity.class);
+                intent = new Intent(DanhSachDonHangActivity.this, ThanhToanActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 intent.putExtra("tongTien", tongTien);
                 startActivity(intent);

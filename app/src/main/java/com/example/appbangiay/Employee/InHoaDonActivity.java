@@ -87,8 +87,8 @@ public class InHoaDonActivity extends AppCompatActivity {
         btn_giao_hoadon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(InHoaDonActivity.this, DanhSachDaGiaoActivity.class);
-                Toast.makeText(InHoaDonActivity.this, "Xac Nhan Giao", Toast.LENGTH_SHORT).show();
+                intent = new Intent(InHoaDonActivity.this, VanChuyenNhanVienActivity.class);
+                Toast.makeText(InHoaDonActivity.this, "Xac Nhan da Giao", Toast.LENGTH_SHORT).show();
                 intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(intent);
                 xacNhanDonHang(vanchuyen);

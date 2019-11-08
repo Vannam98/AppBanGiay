@@ -2,7 +2,6 @@ package com.example.appbangiay.Adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
-import android.view.animation.AlphaAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -11,8 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import java.util.ArrayList;
 
 import com.example.appbangiay.data_models.DonHangXacNhan;

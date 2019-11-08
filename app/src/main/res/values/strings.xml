@@ -19,12 +19,14 @@
     <string name="have_account"> Có tài khoản , đăng nhập ngay  </string>
     <string name="open">Nav </string>
     <string name="close">Nav </string>
+
     <string name="nav_thongtin">Thông Tin khách hàng</string>
     <string name="nav_tinhtrang">Tình trạn đơn hàng</string>
     <string name="nav_giaynam">Giầy Nam</string>
     <string name="nav_giaynu">Giầy Nữ</string>
     <string name="nav_giaykid">Giầy trẻ em</string>
     <string name="nav_logout">Đăng Xuất</string>
+
     <string name="txt_shoename">Tên Giày</string>
     <string name="txt_shoedescription">Hãng</string>
     <string name="txt_shoesize">Size</string>
@@ -246,9 +248,33 @@
     <string name="huyqly"> Danh sách hủy đơn hàng</string>
     <string name="txt_DSDXN">Danh sách đã xác nhận</string>
 
-
-
-
-
 // Hết của Long
+
+    <string name="btn_Trove">Trở về</string>
+    <string name="txt_Diachicuahang">Địa chỉ cửa hàng: 53 Võ Văn Ngân - Phường Linh Chiểu - Quận Thủ Đức - TP.Hồ Chí Minh</string>
+    <string name="txt_Tinhtrangdonhang">TÌNH TRẠNG ĐƠN HÀNG</string>
+    <string name="txt_Madonhang">Mã đơn hàng:</string>
+    <string name="txt_Tendonhang">Tên đơn hàng:</string>
+    <string name="txt_Thongtindonhang">Thông tin đơn hàng:</string>
+    <string name="txt_Tinhtrangvanchuyen">Tình trạng vận chuyển:</string>
+    <string name="txt_Tongtien">Tổng tiền:</string>
+    <string name="txt_Ngay">Ngày:</string>
+    <string name="txt_Donhangdaxacnhan_Quanly">DANH SÁCH ĐƠN HÀNG ĐÃ XÁC NHẬN (QUẢN LÝ)</string>
+    <string name="btn_Trolai">Trở lại</string>
+    <string name="txt_Timkiem">Tìm kiếm</string>
+    <string name="txt_Tensanpham">Tên sản phẩm:</string>
+    <string name="txt_Soluong">Số lượng:</string>
+    <string name="txt_Tenkhachhang">Tên khách hàng:</string>
+    <string name="txt_SodienthoaiKH">Số điện thoại khách hàng:</string>
+    <string name="txt_DiachiKH">Địa chỉ khách hàng:</string>
+    <string name="txt_Tinhtrang">Tình trạng:</string>
+    <string name="txt_Donhanghoanthanh_Nhanvien">DANH SÁCH ĐƠN HÀNG HOÀN THÀNH (NHÂN VIÊN)</string>
+    <string name="btn_Hoanthanh">Hoàn thành</string>
+    <string name="txt_Donhanghuy_Quanly">DANH SÁCH ĐƠN HÀNG HỦY (QUẢN LÝ)</string>
+    <string name="txt_Lydohuy">Lý do hủy:</string>
+    <string name="txt_Donhangvanchuyen_Quanly">DANH SÁCH ĐƠN HÀNG VẬN CHUYỂN (QUẢN LÝ)</string>
+    <string name="txt_id">ID</string>
+    <string name="btn_tiepTuc">Tiếp tục</string>
+    <string name="btn_Refresh">Refresh</string>
+    <string name="btn_Capnhat">Cập nhập</string>
 </resources>

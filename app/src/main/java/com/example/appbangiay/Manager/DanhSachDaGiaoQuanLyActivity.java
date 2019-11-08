@@ -150,7 +150,7 @@ public class DanhSachDaGiaoQuanLyActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                //TODO HERE
+
             }
         });
     }

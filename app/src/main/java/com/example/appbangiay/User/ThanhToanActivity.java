@@ -126,7 +126,7 @@ public class ThanhToanActivity extends AppCompatActivity implements ThanhToanAda
                 data.child("DatHang").child(id).setValue(dathang).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        intent.setClass(ThanhToanActivity.this, VanChuyenNhanVienActivity.class);
+                        intent.setClass(ThanhToanActivity.this,DanhSachDonHangActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                         startActivity(intent);
                     }
@@ -188,7 +188,7 @@ public class ThanhToanActivity extends AppCompatActivity implements ThanhToanAda
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                //TODO HERE
+
             }
         });
     }
@@ -215,7 +215,7 @@ public class ThanhToanActivity extends AppCompatActivity implements ThanhToanAda
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                //TODO HERE
+               
             }
         });
     }

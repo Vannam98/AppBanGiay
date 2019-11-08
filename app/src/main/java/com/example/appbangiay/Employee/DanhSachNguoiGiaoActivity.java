@@ -122,7 +122,7 @@ public class DanhSachNguoiGiaoActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                //TODO HERE
+
             }
         });
     }
