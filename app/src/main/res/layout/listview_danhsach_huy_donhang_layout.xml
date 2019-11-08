@@ -318,6 +318,7 @@
                 android:id="@+id/btn_xacNhan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/btn_txt_color"
                 android:layout_marginRight="@dimen/layout_margin_Right_10dp"
                 android:background="@drawable/vienbutton"
                 android:gravity="center"

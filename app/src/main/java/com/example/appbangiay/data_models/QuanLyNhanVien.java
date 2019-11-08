@@ -1,97 +1,50 @@
 package com.example.appbangiay.data_models;
 
 public class QuanLyNhanVien {
-    private String maNhanVien;
-    private String tenNhanVien;
-    private String soDienThoai;
-    private String diaChi;
+    private String fullName;
+    private String username;
+    private String password;
     private String email;
-    private String chucVu;
-    private String id;
-    private String image;
-    private String passWord;
-    private String ngaySinh;
+    private String gender;
+    private String job;
+
+
 
     public QuanLyNhanVien() {
 
     }
 
-
-    public QuanLyNhanVien(String id, String maNhanVien, String tenNhanVien, String ngaySinh, String soDienThoai, String diaChi, String email, String chucVu, String image, String passWord) {
-        this.maNhanVien = maNhanVien;
-        this.tenNhanVien = tenNhanVien;
-        this.soDienThoai = soDienThoai;
-        this.diaChi = diaChi;
+    public QuanLyNhanVien(String fullName, String username, String email, String password,String gender, String job) {
+        this.fullName = fullName;
+        this.username = username;
+        this.password = password;
         this.email = email;
-        this.chucVu = chucVu;
-        this.id = id;
-        this.image = image;
-        this.passWord = passWord;
-        this.ngaySinh = ngaySinh;
+        this.gender = gender;
+        this.job = job;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public String getNgaySinh() {
-        return ngaySinh;
+    public String getUsername() {
+        return username;
     }
 
-    public void setNgaySinh(String ngaySinh) {
-        this.ngaySinh = ngaySinh;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getId() {
-        return id;
+    public String getPassword() {
+        return password;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public String getMaNhanVien() {
-        return maNhanVien;
-    }
-
-    public void setMaNhanVien(String maNhanVien) {
-        this.maNhanVien = maNhanVien;
-    }
-
-    public String getTenNhanVien() {
-        return tenNhanVien;
-    }
-
-    public void setTenNhanVien(String tenNhanVien) {
-        this.tenNhanVien = tenNhanVien;
-    }
-
-    public String getSoDienThoai() {
-        return soDienThoai;
-    }
-
-    public void setSoDienThoai(String soDienThoai) {
-        this.soDienThoai = soDienThoai;
-    }
-
-    public String getDiaChi() {
-        return diaChi;
-    }
-
-    public void setDiaChi(String diaChi) {
-        this.diaChi = diaChi;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getEmail() {
@@ -102,12 +55,20 @@ public class QuanLyNhanVien {
         this.email = email;
     }
 
-    public String getChucVu() {
-        return chucVu;
+    public String getGender() {
+        return gender;
     }
 
-    public void setChucVu(String chucVu) {
-        this.chucVu = chucVu;
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getJob() {
+        return job;
+    }
+
+    public void setJob(String job) {
+        this.job = job;
     }
 }
 

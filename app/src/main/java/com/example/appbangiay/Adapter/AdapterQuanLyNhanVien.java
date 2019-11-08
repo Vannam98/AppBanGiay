@@ -32,8 +32,8 @@ public class AdapterQuanLyNhanVien extends ArrayAdapter<QuanLyNhanVien>
 
     public class ViewHolder
     {
-        TextView txt_maNV, txt_tenNV, txt_soDT, txt_diaChi, txt_email, txt_chucVu, txt_id, txt_ngaySinh;
-        ImageView img_hinhAnh;
+        TextView txt_hoTen, txt_tenTK, txt_email, txt_gioiTinh, txt_chucVu;
+        //ImageView img_hinhAnh;
     }
     public View getView(final int position, View convertView, ViewGroup parent)
     {
@@ -42,16 +42,11 @@ public class AdapterQuanLyNhanVien extends ArrayAdapter<QuanLyNhanVien>
         {
             convertView = LayoutInflater.from(context).inflate(layoutID, parent, false);
             viewHolder = new ViewHolder();
-            viewHolder.txt_id = convertView.findViewById(R.id.txt_id);
-            viewHolder.txt_maNV = convertView.findViewById(R.id.txt_MNV);
-            viewHolder.txt_tenNV = convertView.findViewById(R.id.txt_TNV);
-            viewHolder.txt_ngaySinh = convertView.findViewById(R.id.txt_NS);
-            viewHolder.txt_soDT = convertView.findViewById(R.id.txt_SDTNV);
-            viewHolder.txt_diaChi = convertView.findViewById(R.id.txt_DCNV);
+            viewHolder.txt_hoTen = convertView.findViewById(R.id.txt_HVT);
+            viewHolder.txt_tenTK = convertView.findViewById(R.id.txt_TTK);
             viewHolder.txt_email = convertView.findViewById(R.id.txt_E);
+            viewHolder.txt_gioiTinh = convertView.findViewById(R.id.txt_GT);
             viewHolder.txt_chucVu = convertView.findViewById(R.id.txt_CV);
-            viewHolder.img_hinhAnh = convertView.findViewById(R.id.img_hinhAnh);
-
             convertView.setTag(viewHolder);
         }
         else
@@ -60,19 +55,15 @@ public class AdapterQuanLyNhanVien extends ArrayAdapter<QuanLyNhanVien>
         }
 
         QuanLyNhanVien ql = quanLyNhanVien.get(position);
-        viewHolder.txt_id.setText(ql.getId());
-        viewHolder.txt_maNV.setText(ql.getMaNhanVien());
-        viewHolder.txt_tenNV.setText(ql.getTenNhanVien());
-        viewHolder.txt_ngaySinh.setText(ql.getNgaySinh());
-        viewHolder.txt_soDT.setText(ql.getSoDienThoai());
-        viewHolder.txt_diaChi.setText(ql.getDiaChi());
+        viewHolder.txt_hoTen.setText(ql.getFullName());
+        viewHolder.txt_tenTK.setText(ql.getUsername());
         viewHolder.txt_email.setText(ql.getEmail());
-        viewHolder.txt_chucVu.setText(ql.getChucVu());
-
-        Glide.with(context)
-                .load(ql.getImage())
-                .centerCrop()
-                .into(viewHolder.img_hinhAnh);
+        viewHolder.txt_gioiTinh.setText(ql.getGender());
+        viewHolder.txt_chucVu.setText(ql.getJob());
+//        Glide.with(context)
+//                .load(ql.getImage())
+//                .centerCrop()
+//                .into(viewHolder.img_hinhAnh);
 
 
 

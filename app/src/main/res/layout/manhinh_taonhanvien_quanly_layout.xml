@@ -19,59 +19,25 @@
             android:text="@string/txt_taoTKNV"
             android:id="@+id/txt_taoTKNV"
             android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/layout_margin_Top_10dp"
+            android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
             android:textColor="@color/txt_color">
 
         </TextView>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
-        android:orientation="horizontal"
-        >
-
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
             android:orientation="vertical"
-            android:background="@color/background_listview">
-
-            <ImageView
-                android:id="@+id/img_nhanVien"
-                android:layout_width="101dp"
-                android:layout_height="108dp"
-                android:layout_marginLeft="@dimen/layout_margin_Left_20dp"
-                android:layout_marginTop="@dimen/layout_margin_Top_20dp"
-                android:src="@mipmap/ic_launcher_round">
-
-            </ImageView>
-
-            <Button
-                android:id="@+id/btn_chinhSua"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/layout_margin_Left_20dp"
-                android:layout_marginTop="@dimen/layout_margin_Top_20dp"
-                android:background="@drawable/vienbutton"
-                android:textColor="@color/btn_txt_color"
-                android:onClick="btn_chinhsua"
-                android:text="@string/btn_chinhSua">
-
-            </Button>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:orientation="vertical"
+            android:gravity="center_vertical"
             android:background="@color/background_listview">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_tenNV"
-                android:id="@+id/txt_tenNV">
+                android:text="@string/txt_hoTen"
+                android:id="@+id/txt_HoTen">
 
             </TextView>
 
@@ -79,8 +45,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/vien"
-                android:hint="@string/edt_tenNV"
-                android:id="@+id/edt_tenNV"
+                android:hint="@string/edt_hoTen"
+                android:id="@+id/edt_fullName"
                 android:layout_marginTop="@dimen/layout_margin_Top_5dp">
 
             </EditText>
@@ -88,44 +54,47 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_ngaySinh"
-                android:id="@+id/txt_ngaySinh"
+                android:text="@string/txt_tenTK"
+                android:id="@+id/txt_tentk"
                 android:layout_marginTop="@dimen/layout_margin_Top_5dp">
             </TextView>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/vien"
-                android:hint="@string/edt_ngaySinh"
-                android:id="@+id/edt_ngaySinh"
+                android:hint="@string/edt_tenTK"
+                android:id="@+id/edt_userName"
                 android:layout_marginTop="@dimen/layout_margin_Top_5dp">
 
             </EditText>
 
+
+
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/txt_soDTNV"
-                android:id="@+id/txt_SDTNV"
-                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_passWord"
+            android:id="@+id/txt_passWord"
+            android:layout_marginTop="@dimen/layout_margin_Top_5dp">
             </TextView>
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/vien"
-                android:hint="@string/edt_soDT"
-                android:id="@+id/edt_soDT"
-                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/vien"
+            android:inputType="textPassword"
+            android:hint="@string/edt_password"
+            android:id="@+id/edt_password"
+            android:layout_marginTop="@dimen/layout_margin_Top_5dp">
 
             </EditText>
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/txt_email"
                 android:id="@+id/txt_email"
-                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
-            </TextView>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_Top_5dp"
+                android:text="@string/txt_email"></TextView>
 
             <EditText
                 android:layout_width="match_parent"
@@ -138,58 +107,21 @@
             </EditText>
 
             <TextView
+                android:id="@+id/txt_gioiTinh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_diaChiNV"
-                android:id="@+id/txt_diaChiNV"
-                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
-            </TextView>
+                android:layout_marginTop="@dimen/layout_margin_Top_10dp"
+                android:text="@string/txt_gioiTinh">
 
-            <EditText
+            </TextView>
+            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/vien"
-                android:hint="@string/edt_diachi"
-                android:id="@+id/edt_diaChi"
-                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
+                android:layout_marginTop="@dimen/layout_margin_Top_10dp"
+                android:entries="@array/spn_gioitinh"
+                android:id="@+id/spn_gioiTinh">
 
-            </EditText>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/txt_passWord"
-                android:id="@+id/txt_passWord"
-                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
-            </TextView>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/vien"
-                android:inputType="textPassword"
-                android:hint="@string/edt_password"
-                android:id="@+id/edt_password"
-                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
-
-            </EditText>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/txt_chucVu"
-                android:id="@+id/txt_chucVu"
-                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
-            </TextView>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/vien"
-                android:hint="@string/edt_password"
-                android:id="@+id/edt_chucVu"
-                android:layout_marginTop="@dimen/layout_margin_Top_5dp">
-            </EditText>
+            </Spinner>
 
             <TextView
                 android:layout_width="match_parent"
@@ -198,7 +130,6 @@
 
             </TextView>
         </LinearLayout>
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

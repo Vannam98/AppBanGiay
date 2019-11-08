@@ -12,19 +12,19 @@
         android:orientation="vertical"
         android:gravity="center">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:visibility="gone">
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_ID"
-                android:textColor="@color/txt_color"
+                android:text="@string/txt_hoTen"
                 android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
-                android:id="@+id/txt_ID"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_fullName"
                 >
 
             </TextView>
@@ -32,10 +32,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@color/txt_color"
-                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
                 android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
-                android:id="@+id/txt_id"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_HVT"
                 >
 
             </TextView>
@@ -49,11 +49,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_maNV"
+                android:text="@string/txt_tenTK"
                 android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
                 android:textColor="@color/txt_color"
-                android:id="@+id/txt_maNV"
-                >
+                android:id="@+id/txt_userName">
 
             </TextView>
 
@@ -63,117 +62,12 @@
                 android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
                 android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
                 android:textColor="@color/txt_color"
-                android:id="@+id/txt_MNV"
-                >
-
-            </TextView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/txt_tenNV"
-                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
-                android:textColor="@color/txt_color"
-                android:id="@+id/txt_tenNV">
-
-            </TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
-                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
-                android:textColor="@color/txt_color"
-                android:id="@+id/txt_TNV">
-
-            </TextView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/txt_ngaySinh"
-                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
-                android:textColor="@color/txt_color"
-                android:id="@+id/txt_ngaySinh"
-                >
-
-            </TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
-                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
-                android:textColor="@color/txt_color"
-                android:id="@+id/txt_NS"
-                >
-
-            </TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/txt_soDTNV"
-                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
-                android:textColor="@color/txt_color"
-                android:id="@+id/txt_soDTNV">
-
-            </TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
-                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
-                android:textColor="@color/txt_color"
-                android:id="@+id/txt_SDTNV">
+                android:id="@+id/txt_TTK">
 
             </TextView>
         </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/txt_diaChiNV"
-                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
-                android:textColor="@color/txt_color"
-                android:id="@+id/txt_diaChiNV">
-
-            </TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
-                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
-                android:textColor="@color/txt_color"
-                android:id="@+id/txt_DCNV">
-
-            </TextView>
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -202,6 +96,32 @@
 
             </TextView>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_gioiTinh"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_gioiTinh">
+
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:textColor="@color/txt_color"
+                android:id="@+id/txt_GT">
+
+            </TextView>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -213,7 +133,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/txt_chucVu"
                 android:textColor="@color/txt_color"
-                android:id="@+id/txt_chucVu">
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
+                android:id="@+id/txt_chucVu"
+               >
 
 
             </TextView>
@@ -221,6 +143,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/layout_margin_Bottom_10dp"
                 android:layout_marginLeft="@dimen/layout_margin_Left_10dp"
                 android:textColor="@color/txt_color"
                 android:id="@+id/txt_CV">
@@ -228,23 +151,7 @@
             </TextView>
         </LinearLayout>
 
+
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center_vertical">
-
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@mipmap/ic_launcher"
-            android:id="@+id/img_hinhAnh"
-            android:layout_gravity="right">
-
-
-        </ImageView>
-    </LinearLayout>
 </LinearLayout>

@@ -57,13 +57,11 @@
     <string name="txt_tinhTrang">Tình trạng:</string>
     <string name="txt_liDoHuy">Lí do hủy:</string>
 
-    <string name="txt_maNV">Mã nhân viên:</string>
-    <string name="txt_tenNV">Tên nhân viên:</string>
-    <string name="txt_soDTNV">SĐT nhân viên:</string>
-    <string name="txt_diaChiNV">Địa chỉ nhân viên:</string>
-    <string name="txt_diaChi">Địa chỉ:</string>
-    <string name="txt_chucVu">Chức vụ:</string>
-    <string name="txt_ngaySinh">Ngày sinh</string>
+    <string name="txt_hoTen">Họ và tên</string>
+    <string name="txt_tenTK">Tên tài khoản</string>
+    <string name="txt_gioiTinh">Giới tính</string>
+    <string name="txt_chucVu">Chức vụ</string>
+
 
     <string name="txt_passWord">Password</string>
 
@@ -149,13 +147,19 @@
     <string name="btn_Tao">Tạo</string>
     <string name="btn_taoTK">Tạo tài khoản</string>
 
-    <string name="edt_tenNV">nhập tên nhân viên</string>
-    <string name="edt_soDT">nhập số điện thoại</string>
+    <string name="edt_hoTen">nhập họ và tên</string>
+    <string name="edt_tenTK">nhập tên tài khoản</string>
     <string name="edt_email">nhập email</string>
-    <string name="edt_diachi">Nhập địa chỉ</string>
     <string name="edt_password">nhập mật khẩu</string>
-    <string name="edt_ngaySinh">Nhâp ngày sinh</string>
 
+    <array name="spn_chucvu">
+        <item>Nhân viên</item>
+        <item>Kế toán</item>
+    </array>
+    <array name="spn_gioitinh">
+        <item>Nam</item>
+        <item>Nữ</item>
+    </array>
     <array name="spn_size">
         <item>35</item>
         <item>36</item>
@@ -171,6 +175,7 @@
     </array>
 
     <string name="hint_lido">Nhập lí do hủy đơn hàng....</string>
+    <string name="hint_chucvu">nhập chức vụ</string>
     //
 
 

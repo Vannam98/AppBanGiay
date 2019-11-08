@@ -135,7 +135,7 @@ public class DanhSachQuanLyNhanVienActivity extends AppCompatActivity {
             ArrayList<QuanLyNhanVien> arrNhanVien = new ArrayList<>();
             for(QuanLyNhanVien item : quanLyNhanViens)
             {
-                if(item.getMaNhanVien().contains(keyWord) || item.getTenNhanVien().contains(keyWord) || item.getDiaChi().contains(keyWord))
+                if(item.getFullName().contains(keyWord) || item.getUsername().contains(keyWord) || item.getGender().contains(keyWord))
                 {
                     arrNhanVien.add(item);
                 }
