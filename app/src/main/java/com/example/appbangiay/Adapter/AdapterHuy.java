@@ -84,7 +84,7 @@ public class AdapterHuy extends ArrayAdapter<DonHangHuy> {
         viewHolder.txt_tenKhachHang.setText(dhHuy.getTenKhachHang());
         viewHolder.txt_soDienThoai.setText(dhHuy.getSoDienThoai());
         viewHolder.txt_diaChi.setText(dhHuy.getDiaChi());
-        viewHolder.txt_tongTien.setText(String.valueOf(dhHuy.getTongTien()));
+        viewHolder.txt_tongTien.setText(String.valueOf(dhHuy.getGia()));
         viewHolder.txt_lidoHuyDonHang.setText(dhHuy.getLiDoHuy());
 
         viewHolder.btn_XN.setOnClickListener(new View.OnClickListener() {

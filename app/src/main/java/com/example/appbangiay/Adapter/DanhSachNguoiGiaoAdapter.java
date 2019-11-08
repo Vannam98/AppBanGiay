@@ -139,16 +139,6 @@ public class DanhSachNguoiGiaoAdapter extends ArrayAdapter<DanhSachNguoiGiao> {
         data.child(idPay).removeValue();
     }
 
-//    public void chuyendata(String iddata){
-//        DatabaseReference data = FirebaseDatabase.getInstance().getReference();
-//        String id = data.child("HuyNguoiGiao").push().getKey();
-//        HuyNguoiGiao huygiao = new HuyNguoiGiao(id,danhSachNguoiGiaos);
-//        data.child("HuyNguoiGiao").child(id).setValue(huygiao).addOnCompleteListener(new OnCompleteListener<Void>() {
-//            @Override
-//            public void onComplete(@NonNull Task<Void> task) {
-//            }
-//        });
-//    }
 public void HuyNguoiGiao(String iddata, DanhSachNguoiGiao value) {
     DatabaseReference data = FirebaseDatabase.getInstance().getReference();
 

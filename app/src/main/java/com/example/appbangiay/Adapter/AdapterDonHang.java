@@ -71,7 +71,7 @@ public class AdapterDonHang extends ArrayAdapter<DonHang>
         viewHolder.txt_tenKhachHang.setText(dh.getTenKhachHang());
         viewHolder.txt_soDienThoai.setText(dh.getSoDienThoai());
         viewHolder.txt_diaChi.setText(dh.getDiaChi());
-        viewHolder.txt_tongTien.setText(String.valueOf(dh.getTongTien()));
+        viewHolder.txt_tongTien.setText(String.valueOf(dh.getGia()));
         viewHolder.chk_XN.setOnClickListener(new View.OnClickListener() {
 
             @Override

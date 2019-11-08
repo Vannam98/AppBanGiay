@@ -38,7 +38,7 @@ public class DanhSachHoanThanhQuanLyActivity extends AppCompatActivity {
     private DanhSachHoanThanhQuanLyAdapter danhSachHoanThanhQuanLyAdapter;
     private ArrayList<DanhSachHoanThanhQuanLy> danhSachHoanThanhQuanLys;
     TextView txtdate_dshoanthanhqly;
-    TextView txt_madonhang_dsdonhanghoanthanh1,txt_tensanpham_dsdonhanghoanthanh1,txt_tenkhachhang_dsdonhanghoanthanh1,txt_sodienthoaikhachhang_dsdonhanghoanthanh1,txt_diachikhachhang_dsdonhanghoanthanh1,txt_nguoigiao_dsdonhanghoanthanh1,txt_sodienthoainguoigiao_dsdonhanghoanthanh1,txt_tongtien_dsdonhanghoanthanh1,txt_tinhtrang_dsdonhanghoanthanh1  ;
+    TextView txt_madonhang_dsdonhanghoanthanh1,txt_tensanpham_dsdonhanghoanthanh1,txt_size_dsdonhanghoanthanh,txt_soluong_dsdonhanghoanthanh,txt_tenkhachhang_dsdonhanghoanthanh1,txt_sodienthoaikhachhang_dsdonhanghoanthanh1,txt_diachikhachhang_dsdonhanghoanthanh1,txt_tongtien_dsdonhanghoanthanh1,txt_tinhtrang_dsdonhanghoanthanh1  ;
 
     DatabaseReference data;
 
@@ -50,8 +50,8 @@ public class DanhSachHoanThanhQuanLyActivity extends AppCompatActivity {
         txt_tenkhachhang_dsdonhanghoanthanh1 = findViewById(R.id.txt_tenkhachhang_dsdonhanghoanthanh1);
         txt_sodienthoaikhachhang_dsdonhanghoanthanh1 = findViewById(R.id.txt_sodienthoaikhachhang_dsdonhanghoanthanh1);
         txt_diachikhachhang_dsdonhanghoanthanh1 = findViewById(R.id.txt_diachikhachhang_dsdonhanghoanthanh1);
-        txt_nguoigiao_dsdonhanghoanthanh1 = findViewById(R.id.txt_nguoigiao_dsdonhanghoanthanh1);
-        txt_sodienthoainguoigiao_dsdonhanghoanthanh1 = findViewById(R.id.txt_sodienthoainguoigiao_dsdonhanghoanthanh1);
+        txt_size_dsdonhanghoanthanh = findViewById(R.id.txt_size_dsdonhanghoanthanh);
+        txt_soluong_dsdonhanghoanthanh = findViewById(R.id.txt_soluong_dsdonhanghoanthanh);
         txt_tongtien_dsdonhanghoanthanh1 = findViewById(R.id.txt_tongtien_dsdonhanghoanthanh1);
         txt_tinhtrang_dsdonhanghoanthanh1 = findViewById(R.id.txt_tinhtrang_dsdonhanghoanthanh1);
         txtdate_dshoanthanhqly = findViewById(R.id.txtdate_dshoanthanhqly);
@@ -65,7 +65,7 @@ public class DanhSachHoanThanhQuanLyActivity extends AppCompatActivity {
         AnhXa();
         DieuKhien();
         taoAdapters();
-//        databaseTT();
+      databaseTT();
         loadData();
         loaddate();
     }
@@ -152,13 +152,13 @@ public class DanhSachHoanThanhQuanLyActivity extends AppCompatActivity {
     //them vao firebase
     private void databaseTT() {
         String id = data.child("DanhSachHoanThanh").push().getKey();
-        DanhSachHoanThanhQuanLy hoanthanh = new DanhSachHoanThanhQuanLy(id,"01", "Nike","Tai","0961446997","Saigon","Namshipper","0788551997","dagiao",10000);
+        DanhSachHoanThanhQuanLy hoanthanh = new DanhSachHoanThanhQuanLy(id,"01", "Nike","05","40","hoan thanh","Namshipper","0788551997","saigon",10000);
         data.child("DanhSachHoanThanh").child(id).setValue(hoanthanh);
     }
 
     //lay tu farebase
     private void loadData() {
-        data.child("DanhSachHoanThanh").addValueEventListener(new ValueEventListener() {
+        data.child("DonHangHoanThanhQuanLy").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 danhSachHoanThanhQuanLys.clear();

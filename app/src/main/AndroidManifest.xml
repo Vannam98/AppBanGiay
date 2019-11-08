@@ -14,11 +14,10 @@
             android:windowSoftInputMode="adjustPan|stateHidden">
 
         </activity>
+
+
         <activity android:name=".Manager.DanhSachTaoNhanVienActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
         <activity android:name=".Manager.DanhSachQuanLyNhanVienActivity"
@@ -30,22 +29,41 @@
 
         </activity>
         <activity android:name=".Employee.DanhSachXacNhanDonHangActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity android:name=".Employee.DanhSachNguoiGiaoActivity"
             android:windowSoftInputMode="adjustPan|stateHidden">
 
         </activity>
-
-
-        <activity android:name=".Employee.DanhSachHuyDonHangActivity"
+        <activity android:name=".Employee.InHoaDonActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity android:name=".Manager.DanhSachHoanThanhQuanLyActivity"></activity>
+        <activity android:name=".Manager.DanhSachDaGiaoQuanLyActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity android:name=".Employee.DanhSachDaGiaoActivity"
             android:windowSoftInputMode="adjustPan|stateHidden">
 
+
         </activity>
+        <activity android:name=".Employee.VanChuyenNhanVienActivity"
+            android:parentActivityName=".User.ThanhToanActivity"></activity>
 
         <activity android:name=".Manager.MangerShoe">
 
+
         </activity>
-        <activity android:name=".Manager.UploadImage"></activity>
-        <activity android:name=".Manager.DetailActivity"></activity>
-        <activity android:name=".Manager.MainActivity"></activity>
+        <activity android:name=".Employee.DanhSachHuyDonHangActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+
+        <activity android:name=".Employee.MangHinhChinhNhanvienActivity">
+
+        </activity>
+        <activity android:name=".User.LoginActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

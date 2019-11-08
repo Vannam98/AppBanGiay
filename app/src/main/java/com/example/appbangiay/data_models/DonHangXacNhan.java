@@ -9,7 +9,7 @@ public class DonHangXacNhan {
     private String tenKhachHang;
     private String soDienThoai;
     private String diaChi;
-    private double tongTien;
+    private double gia;
     private String tinhTrang;
     private boolean isXacNhan = false;
 
@@ -18,7 +18,7 @@ public class DonHangXacNhan {
 
     }
 
-    public DonHangXacNhan(String id, String maDonHang, String tenSanPham, String soLuong, String size, String tenKhachHang, String soDienThoai, String diaChi, double tongTien, String tinhTrang) {
+    public DonHangXacNhan(String id, String maDonHang, String tenSanPham, String soLuong, String size, String tenKhachHang, String soDienThoai, String diaChi, double gia, String tinhTrang) {
         this.id = id;
         this.maDonHang = maDonHang;
         this.tenSanPham = tenSanPham;
@@ -27,7 +27,7 @@ public class DonHangXacNhan {
         this.tenKhachHang = tenKhachHang;
         this.soDienThoai = soDienThoai;
         this.diaChi = diaChi;
-        this.tongTien = tongTien;
+        this.gia = gia;
         this.tinhTrang = tinhTrang;
     }
 
@@ -96,12 +96,12 @@ public class DonHangXacNhan {
     }
 
 
-    public double getTongTien() {
-        return tongTien;
+    public double getGia() {
+        return gia;
     }
 
-    public void setTongTien(double tongTien) {
-        this.tongTien = tongTien;
+    public void setGia(double gia) {
+        this.gia = gia;
     }
 
     public String getTinhTrang() {

@@ -12,7 +12,7 @@
     <string name="txt_confirmpass"> Nhập lại mật khẩu </string>
     <string name="txt_gioitinh"> Giới Tính  </string>
     <string name="txt_nam"> Nam  </string>
-    <string name="txt_nu"> Nu  </string>
+    <string name="txt_nu"> Nữ  </string>
     <string name="btn_link_to_register"> Bạn chưa có tài khoản đăng kí ngay !!  </string>
     <string name="btn_login"> Login  </string>
     <string name="sign_up_button"> Đăng Ký  </string>
@@ -118,6 +118,7 @@
     <string name="txt_size_dsdonhangdagiao"> Size :  </string>
 
     <string name="btn_tinhtrang_dsdonhangdagiao"> Tình trạng :  </string>
+    <string name="btn_lido_dsdonhangdagiao"> Lí do :  </string>
     <string name="btn_xacnhan_dsdonhangdagiao"> Xác nhận </string>
     <string name="btn_huy_dsdonhangdagiao"> Hủy </string>
     <string name="btn_refresh_dsdonhangdagiao"> Refresh</string>
@@ -126,11 +127,15 @@
     <string name="txt_hoten_danhsachnguoigiao"> Họ tên :  </string>
     <string name="txt_sodienthoai_danhsachnguoigiao"> Số điện thoại :  </string>
     <string name="txt_tinhtrang_danhsachnguoigiao"> Tình trạng :  </string>
-    <string name="btn_giao_danhsachnguoigiao"> Giao :  </string>
+    <string name="btn_giao_danhsachnguoigiao"> Giao  </string>
     <string name="btn_huy_danhsachnguoigiao"> Hủy </string>
     <string name="btn_thoat_danhsachnguoigiao"> Thoát </string>
     <string name="btn_xacnhan_danhsachnguoigiao"> Xác nhận </string>
     <string name="btn_trolai_danhsachnguoigiao"> Trở lại </string>
+    <string name="nav_taosanpham"> Tạo sản phẩm </string>
+    <string name="nav_taonhanvien"> Tạo nhân viên </string>
+    <string name="nav_logoutqly"> Đăng xuất </string>
+
     //
 
     //string của tài
@@ -207,7 +212,7 @@
     <string name="btn_xacnhan_dsdonhangdagiaoqly"> Xác nhận </string>
     <string name="btn_huy_dsdonhangdagiaoqly"> Hủy </string>
     <string name="btn_trolai_dsdonhangdagiaoqly"> Trở lại</string>
-    <string name="txt_danhsachnguoigiao_dsdonhangdagiaoqly"> Danh sách người giao </string>
+    <string name="txt_danhsachdagiao_dsdonhangdagiaoqly"> Danh sách đã giao (quản lý) </string>
     <string name="txt_hoten_dsdonhangdagiaoqly"> Họ tên </string>
     <string name="txt_sodienthoai_dsdonhangdagiaoqly"> Số điện thoại </string>
     <string name="txt_tinhtrang_dsdonhangdagiaoqly"> Tình trạng </string>
@@ -219,6 +224,8 @@
     <string name="txt_danhsachdonhanghoanthanh_dsdonhanghoanthanhqly"> Danh sách đơn hàng hoàn thành </string>
     <string name="txt_madonhang_dsdonhanghoanthanhqly"> Mã đơn hàng :  </string>
     <string name="txt_tensanpham_dsdonhanghoanthanhqly"> Tên sản phẩm :  </string>
+    <string name="txt_soluong_dsdonhanghoanthanhqly"> Số lượng :  </string>
+    <string name="txt_size_dsdonhanghoanthanhqly"> Size :  </string>
     <string name="txt_tenkhachhang_dsdonhanghoanthanhqly"> Tên khách hàng :  </string>
     <string name="txt_sodienthoaikhachhang_dsdonhanghoanthanhqly"> Số điện thoại khách hàng :  </string>
     <string name="txt_diachikhachhang_dsdonhanghoanthanhqly"> Dịa chỉ khách hàng :  </string>
@@ -230,6 +237,16 @@
     <string name="btn_trolai_dsdonhanghoanthanhqly">Trở lại</string>
     <string name="btn_Thoat_dsdonhanghoanthanhqly">Thoát</string>
     <string name="btn_refresh_danhsachnguoigiao">Tro lai</string>
+
+    <string name="rad_user">Người dùng</string>
+    <string name="rad_nhanvien">Nhân Viên</string>
+    <string name="rad_quanly">Quản lý</string>
+    <string name="taonhanvienqly"> Tạo nhân viên </string>
+    <string name="vanchuyenqly"> Danh sách vận chuyển đơn hàng</string>
+    <string name="huyqly"> Danh sách hủy đơn hàng</string>
+    <string name="txt_DSDXN">Danh sách đã xác nhận</string>
+
+
 
 
 

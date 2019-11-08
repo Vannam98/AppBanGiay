@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.example.appbangiay.Adapter.AdapterDonHang;
 
 import com.example.appbangiay.R;
+import com.example.appbangiay.User.LoginActivity;
 import com.example.appbangiay.User.ThanhToanActivity;
 import com.example.appbangiay.data_models.DonHang;
 import com.google.firebase.database.DataSnapshot;
@@ -81,7 +82,9 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
         btn_Thoat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                intent = new Intent(DanhSachDonHangActivity.this, LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent);
             }
         });
     }
@@ -91,8 +94,8 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
         String id1 = mData.push().getKey();
         String id2 = mData.push().getKey();
         //String id3 = mData.push().getKey();
-        DonHang dh1 = new DonHang(id1, "N59", "Nike", "1", "43","Nam","0329687451","Quận 9", 700000);
-        DonHang dh2 = new DonHang(id2, "A12", "Adidas", "3", "37","Long","0196721428","Quận 2", 1500000);
+        DonHang dh1 = new DonHang(id1, "B85", "Bitis", "2", "40","Thu","0329687451","Quận 8", 1600000);
+        DonHang dh2 = new DonHang(id2, "V93", "Vans", "1", "42","Thanh","0196721428","Quận 4", 1200000);
         //DonHang dh2 = new DonHang(id2, "B31", "Bitis", "3", "40", 2300000);
         //DonHang dh3 = new DonHang(id3, "A87", "Adidas", "4", "37", 4500000);
 
@@ -173,7 +176,7 @@ public class DanhSachDonHangActivity extends AppCompatActivity {
         double temp = 0;
         for(DonHang dh : donHangs)
         {
-            temp += dh.getTongTien();
+            temp += dh.getGia();
         }
         return temp;
     }

@@ -29,7 +29,7 @@ public class DanhSachDaGiaoQuanLyActivity extends AppCompatActivity {
     public static Intent intent;
     private ListView lv_Dsdagiaoqly;
     private SearchView sv_Dsdonhangdagiaoqly;
-    private Button btn_trolai_dsvanchuyenqly,btn_Huy_dsvanchuyenqly;
+//    private Button btn_trolai_dsvanchuyenqly,btn_Huy_dsvanchuyenqly;
     private DanhSachDaGiaoQuanLyAdapter danhSachDaGiaoQuanLyAdapter;
     private ArrayList<DanhSachDaGiaoQuanLy> danhsachdagiaoquanlys;
     private TextView txt_madonhang_dsdagiao2,txt_size_dsdagiao2, txt_tensanpham_dsdagiao2, txt_soluong_dsdagiao2, txt_tenkhachhang_dsdagiao2, txt_sodienthoaikhachhang_dsdagiao2, txt_diachi_dsdagiao2, txt_tongtien_dsdagiao2, tinhtrang_dsdagiaoqly_lsv2;
@@ -49,8 +49,8 @@ public class DanhSachDaGiaoQuanLyActivity extends AppCompatActivity {
         txt_tongtien_dsdagiao2 = findViewById(R.id.txt_tongtien_dsdagiao2);
         tinhtrang_dsdagiaoqly_lsv2 = findViewById(R.id.tinhtrang_dsdagiaoqly_lsv2);
         sv_Dsdonhangdagiaoqly = findViewById(R.id.sv_Dsdonhangdagiaoqly);
-        btn_trolai_dsvanchuyenqly = findViewById(R.id.btn_trolai_dsvanchuyenqly);
-        btn_Huy_dsvanchuyenqly = findViewById(R.id.btn_Huy_dsvanchuyenqly);
+//        btn_trolai_dsvanchuyenqly = findViewById(R.id.btn_trolai_dsvanchuyenqly);
+//        btn_Huy_dsvanchuyenqly = findViewById(R.id.btn_Huy_dsvanchuyenqly);
 
         //database
         data = FirebaseDatabase.getInstance().getReference();
@@ -77,24 +77,24 @@ public class DanhSachDaGiaoQuanLyActivity extends AppCompatActivity {
     }
 
     private void DieuKhien() {
-        btn_Huy_dsvanchuyenqly.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(DanhSachDaGiaoQuanLyActivity.this, DanhSachHoanThanhQuanLyActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(intent);
-
-
-            }
-        });
-        btn_trolai_dsvanchuyenqly.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(DanhSachDaGiaoQuanLyActivity.this, ThanhToanActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                startActivity(intent);
-            }
-        });
+//        btn_Huy_dsvanchuyenqly.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                intent = new Intent(DanhSachDaGiaoQuanLyActivity.this, DanhSachHoanThanhQuanLyActivity.class);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+//                startActivity(intent);
+//
+//
+//            }
+//        });
+//        btn_trolai_dsvanchuyenqly.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                intent = new Intent(DanhSachDaGiaoQuanLyActivity.this, ThanhToanActivity.class);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+//                startActivity(intent);
+//            }
+//        });
 
         // perform set on query text listener event
         sv_Dsdonhangdagiaoqly.setOnQueryTextListener(new SearchView.OnQueryTextListener() {

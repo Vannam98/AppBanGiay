@@ -8,22 +8,22 @@
     android:background="@drawable/log_in_background"
     >
     //Đăng Nhập
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical"
         android:paddingLeft="20dp"
-        android:paddingRight="20dp" >
+        android:paddingRight="20dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/txt_login"
-            android:textSize="28dp"
             android:gravity="center"
+            android:text="@string/txt_login"
             android:textColor="@color/white"
-            >
+            android:textSize="28dp">
 
         </TextView>
 
@@ -55,22 +55,49 @@
             android:textColor="@color/input_login"
             android:textColorHint="@color/input_login_hint" />
 
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <RadioButton
+                android:id="@+id/radio_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_user"
+                android:textColor="@color/white">
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/radio_nhanvien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_nhanvien"
+                android:textColor="@color/white"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/radio_quanly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rad_quanly"
+                android:textColor="@color/white"></RadioButton>
+        </RadioGroup>
         <TextView
             android:id="@+id/txtQuen"
-            android:onClick="onclick"
-            android:layout_marginBottom="5dp"
-            android:textColor="@color/white"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:onClick="onclick"
+            android:textColor="@color/white" />
         <!-- Login Button -->
 
         <Button
             android:id="@+id/btnLogin"
-            android:onClick="onCLick"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/sign_up_button"
+            android:onClick="onCLick"
             android:text="@string/btn_login"
             android:textColor="@color/black" />
 
@@ -81,8 +108,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:text="@string/btn_link_to_register"
             android:onClick="btn_dangki"
+            android:text="@string/btn_link_to_register"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="15dp" />

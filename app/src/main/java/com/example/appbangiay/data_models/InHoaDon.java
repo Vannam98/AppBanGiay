@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class InHoaDon {
     private String id, maDonHang,tenSanPham,soLuong, size,tinhTrang,tenKhachHang,soDienThoai,diaChi;
-    private double tongtien;
+    private double tongTien;
 
     public InHoaDon() {
     }
 
-    public InHoaDon(String id,String maDonHang, String tenSanPham, String soLuong, String size, String tinhTrang, String tenKhachHang, String soDienThoai, String diaChi, double tongtien) {
+    public InHoaDon(String id,String maDonHang, String tenSanPham, String soLuong, String size, String tinhTrang, String tenKhachHang, String soDienThoai, String diaChi, double tongTien) {
         this.maDonHang = maDonHang;
         this.tenSanPham = tenSanPham;
         this.soLuong = soLuong;
@@ -18,7 +18,7 @@ public class InHoaDon {
         this.tenKhachHang = tenKhachHang;
         this.soDienThoai = soDienThoai;
         this.diaChi = diaChi;
-        this.tongtien = tongtien;
+        this.tongTien = tongTien;
         this.id = id;
     }
 
@@ -87,11 +87,11 @@ public class InHoaDon {
     }
 
     public double getTongtien() {
-        return tongtien;
+        return tongTien;
     }
 
     public void setTongtien(double tongtien) {
-        this.tongtien = tongtien;
+        this.tongTien = tongtien;
     }
 
     public String getId() {

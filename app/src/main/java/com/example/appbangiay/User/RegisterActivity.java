@@ -1,4 +1,5 @@
 package com.example.appbangiay.User;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -24,7 +25,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class RegisterActivity extends AppCompatActivity {
     EditText txt_fullName, txt_username, txt_email, txt_password;
     Button btn_register;
-    RadioButton radioNam,radioNu;
+    RadioButton radioNam, radioNu;
     String gender = "";
     DatabaseReference databaseReference;
     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -34,12 +35,12 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.manhinh_dangky_layout);
         super.onCreate(savedInstanceState);
         //
-        txt_fullName = (EditText)findViewById(R.id.txt_full_name);
-        txt_username = (EditText)findViewById(R.id.txt_user_name);
-        txt_email = (EditText)findViewById(R.id.txt_email);
-        txt_password = (EditText)findViewById(R.id.txt_password);
-        btn_register = (Button)findViewById(R.id.sign_up);
-        radioNam =(RadioButton)findViewById(R.id.radio_nam);
+        txt_fullName = (EditText) findViewById(R.id.txt_full_name);
+        txt_username = (EditText) findViewById(R.id.txt_user_name);
+        txt_email = (EditText) findViewById(R.id.txt_email);
+        txt_password = (EditText) findViewById(R.id.txt_password);
+        btn_register = (Button) findViewById(R.id.sign_up);
+        radioNam = (RadioButton) findViewById(R.id.radio_nam);
         radioNu = (RadioButton) findViewById(R.id.radio_nu);
 
         databaseReference = FirebaseDatabase.getInstance().getReference(" Users");
@@ -49,36 +50,36 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-             final String fullName = txt_fullName.getText().toString();
-             final String userName = txt_username.getText().toString();
-             final String email    = txt_email.getText().toString();
-             String password = txt_password.getText().toString();
+                final String fullName = txt_fullName.getText().toString();
+                final String userName = txt_username.getText().toString();
+                final String email = txt_email.getText().toString();
+                final String password = txt_password.getText().toString();
 
-                if(radioNam.isChecked()){
+                if (radioNam.isChecked()) {
 
-                    gender ="Nam";
-                    }
-                if(radioNu.isChecked()){
-
-                    gender ="Nữ";
+                    gender = "Nam";
                 }
-                if (TextUtils.isEmpty(email)){
+                if (radioNu.isChecked()) {
 
-                    Toast.makeText(RegisterActivity.this,"Nhập email",Toast.LENGTH_SHORT).show();
+                    gender = "Nữ";
                 }
-                if (TextUtils.isEmpty(password)){
+                if (TextUtils.isEmpty(email)) {
 
-                    Toast.makeText(RegisterActivity.this,"Nhập password",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Nhập email", Toast.LENGTH_SHORT).show();
                 }
+                if (TextUtils.isEmpty(password)) {
 
-                if (TextUtils.isEmpty(fullName)){
-
-                    Toast.makeText(RegisterActivity.this,"Nhập họ tên ",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Nhập password", Toast.LENGTH_SHORT).show();
                 }
 
-                if (TextUtils.isEmpty(userName)){
+                if (TextUtils.isEmpty(fullName)) {
 
-                    Toast.makeText(RegisterActivity.this,"Nhập tên ",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Nhập họ tên ", Toast.LENGTH_SHORT).show();
+                }
+
+                if (TextUtils.isEmpty(userName)) {
+
+                    Toast.makeText(RegisterActivity.this, "Nhập tên ", Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -91,8 +92,11 @@ public class RegisterActivity extends AppCompatActivity {
                                     Users information = new Users(
                                             fullName,
                                             userName,
+                                            password,
                                             email,
-                                            gender
+                                            gender,
+                                            "Custommer"
+
                                     );
 
                                     FirebaseDatabase.getInstance().getReference("Users")
@@ -100,13 +104,11 @@ public class RegisterActivity extends AppCompatActivity {
                                             .setValue(information).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
-                                            Toast.makeText(RegisterActivity.this,"Đăng kí thành công",Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(RegisterActivity.this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
                                             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                                         }
                                     });
-                                }
-                                else {
-
+                                } else {
 
                                 }
                             }

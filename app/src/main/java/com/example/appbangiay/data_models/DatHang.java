@@ -3,7 +3,7 @@ package com.example.appbangiay.data_models;
 import java.util.ArrayList;
 
 public class DatHang {
-        private  String id;
+        private  String id ;
         private ThanhToanKhachHang thongTinKH;
         private ArrayList<ThanhToan> dsSanPham;
 

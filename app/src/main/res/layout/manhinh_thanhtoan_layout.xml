@@ -149,7 +149,7 @@
                 android:layout_margin="@dimen/layout_margin"
                 android:background="@drawable/vienbutton"
                 android:text="@string/txt_chinhsua_thanhtoan"
-                android:textColor="@color/txt_black" />
+                android:textColor="@color/white" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -188,6 +188,7 @@
         android:background="@color/color_backroud"
         android:orientation="horizontal">
         //buton dang hang
+
         <Button
             android:id="@+id/btn_dathang_thanhtoan"
             android:layout_width="wrap_content"
@@ -195,7 +196,7 @@
             android:layout_margin="@dimen/layout_margin"
             android:background="@drawable/vienbutton"
             android:text="@string/btn_dathan"
-            android:textColor="@color/txt_black" />
+            android:textColor="@color/white" />
         //button huy
         <Button
             android:id="@+id/btn_huy_thanhtoan"
@@ -204,7 +205,7 @@
             android:layout_margin="@dimen/layout_margin"
             android:background="@drawable/vienbutton"
             android:text="@string/btn_huy"
-            android:textColor="@color/txt_black" />
+            android:textColor="@color/white" />
 
 
     </LinearLayout>

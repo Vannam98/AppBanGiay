@@ -38,6 +38,7 @@
     <dimen name="margin15dp">15dp</dimen>
     <dimen name="button">40dp</dimen>
     <dimen name="buttonlist">30dp</dimen>
+    <dimen name="magin5dp">5dp</dimen>
     <!-- Hết Của long -->
 
 

@@ -103,7 +103,7 @@ public class AdapterXacNhan extends ArrayAdapter<DonHangXacNhan> {
         viewHolder.txt_tenKH.setText(dhxn.getTenKhachHang());
         viewHolder.txt_soDT.setText(dhxn.getSoDienThoai());
         viewHolder.txt_diaChi.setText(dhxn.getDiaChi());
-        viewHolder.txt_tongTien.setText(String.valueOf(dhxn.getTongTien()));
+        viewHolder.txt_tongTien.setText(String.valueOf(dhxn.getGia()));
         viewHolder.txt_tinhTrang.setText(dhxn.getTinhTrang());
         viewHolder.btn_XN.setOnClickListener(new View.OnClickListener() {
             @Override

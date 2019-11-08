@@ -116,7 +116,7 @@ public class VanChuyenNhanVienActivity extends AppCompatActivity{
     //them vao firebase
     private void databaseTT() {
         String id = data.child("VanChuyenNhanVien").push().getKey();
-        VanChuyenNhanVien vanchuyen = new VanChuyenNhanVien(id,"01","bitis","5","40","chua xac nhan","long","0961446997","saigon",100000);
+        VanChuyenNhanVien vanchuyen = new VanChuyenNhanVien(id,"02","bitis","5","40","chua xac nhan","long","0961446997","saigon",50000);
         data.child("VanChuyenNhanVien").child(id).setValue(vanchuyen);
     }
     //lay tu farebase

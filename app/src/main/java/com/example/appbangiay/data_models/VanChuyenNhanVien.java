@@ -5,12 +5,12 @@ import android.os.Parcelable;
 
 public class VanChuyenNhanVien implements Parcelable {
     private String id, maDonHang,tenSanPham,soLuong, size,tinhTrang,tenKhachHang,soDienThoai,diaChi;
-    private double tongtien;
+    private double tongTien;
 
     public VanChuyenNhanVien() {
     }
 
-    public VanChuyenNhanVien(String id,String maDonHang, String tenSanPham, String soLuong, String size, String tinhTrang, String tenKhachHang, String soDienThoai, String diaChi, double tongtien) {
+    public VanChuyenNhanVien(String id,String maDonHang, String tenSanPham, String soLuong, String size, String tinhTrang, String tenKhachHang, String soDienThoai, String diaChi, double tongTien) {
         this.maDonHang = maDonHang;
         this.tenSanPham = tenSanPham;
         this.soLuong = soLuong;
@@ -19,7 +19,7 @@ public class VanChuyenNhanVien implements Parcelable {
         this.tenKhachHang = tenKhachHang;
         this.soDienThoai = soDienThoai;
         this.diaChi = diaChi;
-        this.tongtien = tongtien;
+        this.tongTien = tongTien;
         this.id = id;
     }
 
@@ -33,7 +33,7 @@ public class VanChuyenNhanVien implements Parcelable {
         tenKhachHang = in.readString();
         soDienThoai = in.readString();
         diaChi = in.readString();
-        tongtien = in.readDouble();
+        tongTien = in.readDouble();
     }
 
     public static final Creator<VanChuyenNhanVien> CREATOR = new Creator<VanChuyenNhanVien>() {
@@ -113,11 +113,11 @@ public class VanChuyenNhanVien implements Parcelable {
     }
 
     public double getTongtien() {
-        return tongtien;
+        return tongTien;
     }
 
     public void setTongtien(double tongtien) {
-        this.tongtien = tongtien;
+        this.tongTien = tongtien;
     }
 
     public String getId() {
@@ -144,6 +144,6 @@ public class VanChuyenNhanVien implements Parcelable {
         dest.writeString(tenKhachHang);
         dest.writeString(soDienThoai);
         dest.writeString(diaChi);
-        dest.writeDouble(tongtien);
+        dest.writeDouble(tongTien);
     }
 }
